@@ -12,6 +12,7 @@
 .logo {
   color: makerPurple;
   font-size: largeFont;
+  margin: 2px 0;
 }
 
 .name {
@@ -45,6 +46,11 @@
   border: 1px solid makerPink;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.menu_item.active {
+  border: 1px solid makerPink;
+  border-radius: 3px;
 }
 
 .button {

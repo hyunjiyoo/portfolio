@@ -12,7 +12,7 @@ const Navbar = (): JSX.Element => (
       </a>
     </div>
     <ul className={styles.menu}>
-      <li className={styles.menu_item} data-link="#home">Home</li>
+      <li className={`${styles.menu_item} ${styles.active}`} data-link="#home">Home</li>
       <li className={styles.menu_item} data-link="#about">About</li>
       <li className={styles.menu_item} data-link="#note">Note</li>
       <li className={styles.menu_item} data-link="#skills">Skills</li>

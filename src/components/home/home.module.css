@@ -1,0 +1,39 @@
+@value makerWhite, makerLightGrey, makerBlack, makerPurple, makerPink from '../../common/colors.css';
+@value mediumFont from '../../common/size.css';
+
+#home {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.contents {
+  flex-direction: column;
+  margin-right: 2em;
+}
+
+.span {
+  color: makerLightGrey;
+  font-size: mediumFont;
+  font-style: italic;
+}
+
+.title {
+  color: makerPurple;
+  font-size: 3.5rem;
+  margin: 0.2em 0;
+}
+
+.button {
+  color: makerWhite;
+  border-radius: 3px;
+  padding: 0.6em;
+  background: makerPink;
+}
+
+.img {
+  width: 13.5em;
+  float: right;
+  opacity: 0.8;
+}
