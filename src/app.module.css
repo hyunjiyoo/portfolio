@@ -1,5 +1,9 @@
+@value makerLightBlack from './common/colors.css';
+
 .container {
   display: flex;
   flex-direction: column;
-  color: red;
+  background: makerLightBlack;
+  width: 100%;
+  height: 100vh;
 }

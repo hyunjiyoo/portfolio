@@ -1,0 +1,60 @@
+@value makerWhite, makerPurple, makerPink, makerYellow from '../../common/colors.css';
+@value largeFont, mediumFont, smallFont from '../../common/size.css';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em;
+  z-index: 1;
+}
+
+.logo {
+  color: makerPurple;
+  font-size: largeFont;
+}
+
+.name {
+  text-decoration: none;
+  font-size: largeFont;
+  font-weight: bold;
+}
+
+#firstName {
+  color: makerPink;
+  margin-left: 0.6em;
+}
+
+#secondName {
+  color: makerYellow;
+}
+
+.menu {
+  display: flex;
+  /* display: none; */
+}
+
+.menu_item {
+  color: makerWhite;
+  font-size: mediumFont;
+  margin: 0 0.2em;
+  padding: 0.4em;
+}
+
+.menu_item:hover {
+  border: 1px solid makerPink;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.button {
+  display: none;
+  color: makerWhite;
+  background: transparent;
+  font-size: mediumFont;
+}
+
+.button:hover {
+  border: 1px solid makerPink;
+  border-radius: 3px;
+}
