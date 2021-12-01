@@ -3,6 +3,10 @@ import styles from './about.module.css';
 const About = (): JSX.Element => (
   <section id={styles.about}>
     <h1 className={styles.title}>ABOUT ME</h1>
+    <p className={styles.title_desc}>
+      이곳은 about 섹션을 설명하는 곳입니다.<br />
+      이곳은 about 섹션을 설명하는 곳입니다. 이곳은 about 섹션을 설명하는 곳입니다.
+    </p>
     <div className={styles.container}>
       <div className={styles.item}>
         <div className={styles.subject}>FRONT END</div>
