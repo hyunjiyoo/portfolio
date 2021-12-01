@@ -1,3 +1,58 @@
-.test {
-  color: blue;
+@value makerWhite, makerYellow, makerPurple, makerLightBlack from '../../common/colors.css';
+@value titleFont, smallFont from '../../common/size.css';
+
+.title {
+  color: makerWhite;
+  font-size: titleFont;
+  text-align: right;
+  margin-right: 0.8em;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container .item:nth-child(even) .subject {
+  background: makerPurple;
+}
+
+.container .item:nth-child(odd) .subject {
+  background: makerYellow;
+}
+
+.subject {  
+  border-radius: 50%;
+  width: 7em;
+  padding: 2.8em 0;
+  color: makerLightBlack;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.description {
+  color: makerWhite;
+  text-align: center;
+  width: 8em;
+  margin: auto;
+  margin-top: 1em;
+}
+
+.kirbs {
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.kirbs_logo {
+  width: 11rem;
+  opacity: 0.8;
+  margin-right: 1em;
+}
+
+.career {
+  color: makerWhite;
+  font-size: smallFont;
 }

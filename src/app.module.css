@@ -1,9 +1,9 @@
-@value makerLightBlack from './common/colors.css';
+@value mediaQuery from './common/size.css';
 
 .container {
   display: flex;
   flex-direction: column;
-  background: makerLightBlack;
-  width: 100%;
+  width: 80%;
   height: 100vh;
+  max-width: mediaQuery;
 }
