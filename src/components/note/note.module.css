@@ -1,0 +1,5 @@
+@value makerWhite from '../../common/colors.css';
+
+#note {
+  color: makerWhite;
+}
