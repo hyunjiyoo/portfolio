@@ -17,9 +17,11 @@ const Note = (): JSX.Element => (
       </div>
       <div className={styles.contents}>
         <div className={styles.contents_img}>
-          {/* notion link */}
-          <img src="https://picsum.photos/500/300" alt="note" />
-          {/* arrow */}
+          <a className={styles.link} href="https://hjyooo.notion.site/Dream-Coding-92e6b3a0f6e04c9cb2cf7eae5ef0f2b4" target="blank">
+            <img className={styles.notion} src="https://cdn.iconscout.com/icon/free/png-256/notion-1693557-1442598.png" alt="" />
+            <p>Notion Note Link 🔗</p>
+          </a>
+          <img className={styles.main_img} src="https://picsum.photos/500/300" alt="note" />
         </div>
         <div className={styles.contents_img_list}>
           <img src="https://picsum.photos/seed/asdf/120/100" alt="note list" />

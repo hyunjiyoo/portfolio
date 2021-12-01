@@ -1,4 +1,4 @@
-@value makerWhite, makerPink, makerLightGrey from '../../common/colors.css';
+@value makerWhite, makerLightBlack, makerPink, makerLightGrey from '../../common/colors.css';
 @value titleFont, mediumFont from '../../common/size.css';
 
 .title {
@@ -45,6 +45,38 @@
   padding: 0.8rem 0.5rem;
 }
 
+.contents_img {
+  position: relative;
+}
+
+.link {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.notion {
+  width: 1.3em;
+  height: 1.3em;
+}
+
+.notion + p {
+  color: makerWhite;
+  padding: 2px 4px;
+  margin: 0;
+}
+
+.notion + p:hover {
+  color: makerLightBlack;
+  text-decoration: underline;
+}
+
+.main_img {
+  width: 31em;
+}
+
 .contents_img_list {
   margin-left: 1em;
   height: 300px;
@@ -52,6 +84,10 @@
 }
 .contents_img_list img {
   padding: 0.2em;
-  width: 115px;
-  heiight: 90px;
+  width: 9em;
+}
+
+.contents_img_list img:hover {
+  cursor: pointer;
+  transform: scale(1.04);
 }
