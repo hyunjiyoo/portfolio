@@ -4,6 +4,11 @@ import Home from './components/home/home';
 import About from './components/about/about';
 import Note from './components/note/note';
 import Footer from './components/footer/footer';
+import Skills from './components/skills/skills';
+import Work from './components/work/work';
+import Contact from './components/contact/contact';
+import Social from './components/social/social';
+import Testimonials from './components/testimonials/testimonials';
 
 function App(): JSX.Element {
   return (
@@ -12,6 +17,11 @@ function App(): JSX.Element {
       <Home />
       <About />
       <Note />
+      <Skills />
+      <Work />
+      <Testimonials />
+      <Contact />
+      <Social />
       <Footer />
     </div>
   );
