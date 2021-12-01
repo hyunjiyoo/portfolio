@@ -1,5 +1,57 @@
-@value makerWhite from '../../common/colors.css';
+@value makerWhite, makerPink, makerLightGrey from '../../common/colors.css';
+@value titleFont, mediumFont from '../../common/size.css';
 
-#note {
+.title {
   color: makerWhite;
+  font-size: titleFont;
+  margin-bottom: 0;
+}
+
+.title_desc {
+  color: makerLightGrey;
+  margin-bottom: 3rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab_menu {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid makerLightGrey;
+  border-bottom: 1px solid makerLightGrey;
+}
+
+.tab_item {
+  color: makerWhite;
+  font-size: mediumFont;
+  padding: 0.25em 1em;
+  margin: 0.4em 0.5em;
+}
+
+.tab_item.active,
+.tab_item:hover {
+  border: 1px solid makerPink;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contents {
+  display: flex;
+  border-bottom: 1px solid makerLightGrey;
+  padding: 0.8rem 0.5rem;
+}
+
+.contents_img_list {
+  margin-left: 1em;
+  height: 300px;
+  overflow: auto;
+}
+.contents_img_list img {
+  padding: 0.2em;
+  width: 115px;
+  heiight: 90px;
 }
