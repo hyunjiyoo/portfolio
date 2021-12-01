@@ -1,0 +1,26 @@
+@value makerWhite from '../../common/colors.css';
+
+.footer {
+  padding-top: 10rem;
+}
+
+.text {
+  color: makerWhite;
+  text-align: center;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+}
+
+.github {
+  font-size: 3rem;
+  color: makerWhite;
+  margin-right: 0.15em;
+}
+
+.notion {
+  width: 3rem;
+  margin-left: 0.15em;
+}
