@@ -6,9 +6,11 @@
 
 .skillset__left {
   width: 50%;
-  border: 1.5px solid makerPink;
   padding: 1.5em;
+  background: makerDarkPurple;
+  border-radius: 10px;
 }
+
 .skillset__right {
   width: 50%;
 }
@@ -20,17 +22,17 @@
 }
 
 .skillset__backend {
-  border: 1.5px solid makerPurple;
-  border-left: none;
   width: 100%;
   height: 60%;
   padding: 1.5em;
+  background: #4F379CAA;
+  border-radius: 10px;
 }
 
 .skillset__infra {
-  border-bottom: 1.5px solid makerDarkPurple;
-  border-right: 1.5px solid makerDarkPurple;
   width: 100%;
   height: 40%;
   padding: 1.5em;
+  background: #4F379C66;
+  border-radius: 10px;
 }

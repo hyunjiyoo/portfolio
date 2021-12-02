@@ -1,4 +1,4 @@
-@value makerWhite, makerGrey, makerYellow from '../../common/colors.css';
+@value makerWhite, makerLightGrey, makerYellow from '../../common/colors.css';
 
 .skill {
   margin-top: 0.8em;
@@ -16,10 +16,10 @@
 }
 
 .skill__bar {
-  width: 90%;
+  width: 90%; 
   height: 0.25em;
   position: relative;
-  background: makerGrey;
+  background: makerLightGrey;
   margin-right: 1em;
 }
 

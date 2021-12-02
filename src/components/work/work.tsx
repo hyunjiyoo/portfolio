@@ -53,7 +53,7 @@ const Work = (): JSX.Element => {
       />
       <div className={styles.container}>
         <div className={styles.categories}>
-          <h3 className={`${styles.category} ${styles.active}`}>ALL</h3>
+          <h3 className={`${styles.category} ${styles.active}`}>All</h3>
           <h3 className={styles.category}>Front-end</h3>
           <h3 className={styles.category}>Back-end</h3>
         </div>
