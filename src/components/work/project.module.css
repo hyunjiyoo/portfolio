@@ -1,0 +1,29 @@
+@value makerWhite, makerYellow, makerLightGrey from '../../common/colors.css';
+
+.project {
+  color: makerWhite;
+  border: 2px solid makerYellow;
+  border-radius: 10px;
+  padding: 1em;
+  margin-right: 1em;
+}
+
+.project img {
+  width: 11em;
+  height: 8em;
+}
+
+.project h3 {
+  margin: 0;
+  margin-top: 0.5em;
+}
+
+.project hr {
+  border: 0.5px solid makerLightGrey;
+}
+
+.project p {
+  width: 11em;
+  overflow-wrap: break-word;
+  margin: 0;
+}

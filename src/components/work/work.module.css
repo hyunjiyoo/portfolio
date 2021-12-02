@@ -1,0 +1,37 @@
+@value makerWhite, makerGrey, makerPink from '../../common/colors.css';
+
+.container {
+  display: flex;
+  border-top: 1px solid makerGrey;
+  border-bottom: 1px solid makerGrey;
+  padding-left: 1em;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid makerGrey;
+  flex: 0.2;
+  padding: 1em 1.5em 1em 0;
+}
+
+.category {
+  color: makerWhite;
+  margin: 0.2em 0;
+  padding: 0.3em 0.5em;
+}
+
+.category.active,
+.category:hover {
+  border: 1px solid makerPink;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.projects {
+  padding: 1em;
+  display: flex;
+  overflow-x: auto;
+  flex: 0.8;
+}
