@@ -1,0 +1,7 @@
+@value makerWhite from '../../common/colors.css';
+@value titleFont from '../../common/size.css';
+
+.title {
+  color: makerWhite;
+  font-size: titleFont;
+}
