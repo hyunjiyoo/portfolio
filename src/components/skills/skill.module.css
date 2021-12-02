@@ -1,0 +1,38 @@
+@value makerWhite, makerGrey, makerYellow from '../../common/colors.css';
+
+.skill {
+  margin-top: 0.8em;
+}
+
+.skill__title {
+  color: makerWhite;
+  margin: 0;
+}
+
+.skill__desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill__bar {
+  width: 90%;
+  height: 0.25em;
+  position: relative;
+  background: makerGrey;
+  margin-right: 1em;
+}
+
+.skill__value {
+  position: absolute;
+  width: 80%; /* 자바스크립트로 변경예정 */
+  height: 0.25em;
+  background: makerYellow;
+}
+
+.skill__desc span {
+  color: makerWhite;
+  width: 10%;
+  align-self: baseline;
+  flex-basis: content;
+}
