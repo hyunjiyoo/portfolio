@@ -1,18 +1,4 @@
 @value makerWhite, makerDarkPurple, makerPurple, makerPink, makerLightGrey from '../../common/colors.css';
-@value titleFont from '../../common/size.css';
-
-.title {
-  color: makerWhite;
-  font-size: titleFont;
-  text-align: right;
-  margin-bottom: 0;
-}
-
-.title__desc {
-  text-align: right;
-  color: makerLightGrey;
-  margin-bottom: 3rem;
-}
 
 .skillset {
   display: flex;

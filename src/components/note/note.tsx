@@ -1,12 +1,13 @@
+import Title from '../title/title';
 import styles from './note.module.css';
 
 const Note = (): JSX.Element => (
   <section id={styles.note}>
-    <h1 className={styles.title}>MY NOTE</h1>
-    <p className={styles.title_desc}>
-      이곳은 note 섹션을 설명하는 곳입니다.<br />
-      이곳은 note 섹션을 설명하는 곳입니다. 이곳은 note 섹션을 설명하는 곳입니다.
-    </p>
+    <Title 
+      title="MY NOTE" 
+      description="여기는 note 설명구간입니다." 
+      position="L"
+    />
     <div className={styles.container}>
       <div className={styles.tab_menu}>
         <div className={`${styles.tab_item} ${styles.active}`}>All</div>

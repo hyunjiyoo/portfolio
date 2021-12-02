@@ -1,16 +1,5 @@
 @value makerWhite, makerLightBlack, makerPink, makerLightGrey from '../../common/colors.css';
-@value titleFont, mediumFont from '../../common/size.css';
-
-.title {
-  color: makerWhite;
-  font-size: titleFont;
-  margin-bottom: 0;
-}
-
-.title_desc {
-  color: makerLightGrey;
-  margin-bottom: 3rem;
-}
+@value mediumFont from '../../common/size.css';
 
 .container {
   display: flex;

@@ -1,7 +1,21 @@
-@value makerWhite from '../../common/colors.css';
+@value makerWhite, makerLightGrey from '../../common/colors.css';
 @value titleFont from '../../common/size.css';
 
 .title {
   color: makerWhite;
   font-size: titleFont;
+  margin-bottom: 0;
+}
+
+.description {
+  color: makerLightGrey;
+  margin-bottom: 3rem;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
 }
