@@ -90,4 +90,5 @@
 .contents_img_list img:hover {
   cursor: pointer;
   transform: scale(1.04);
+  transition: transform 200ms ease-in;
 }

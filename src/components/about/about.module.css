@@ -5,14 +5,12 @@
   color: makerWhite;
   font-size: titleFont;
   text-align: right;
-  margin-right: 0.8rem;
   margin-bottom: 0;
 }
 
 .title_desc {
   text-align: right;
   color: makerLightGrey;
-  margin-right: 0.8rem;
   margin-bottom: 3rem;
 }
 
