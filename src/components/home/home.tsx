@@ -1,3 +1,4 @@
+import Section from '../section/section';
 import styles from './home.module.css';
 
 const Home = (): JSX.Element => (
@@ -15,6 +16,7 @@ const Home = (): JSX.Element => (
     <img className={styles.img} src="/images/profile.png" alt="profile" />
   </section>
   {/* 구분선 추가 예정 */}
+  <Section />
   </>
 );
 
