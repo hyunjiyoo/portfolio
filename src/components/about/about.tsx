@@ -1,8 +1,11 @@
+import Section from '../section/section';
 import Title from '../title/title';
 import styles from './about.module.css';
 
 const About = (): JSX.Element => (
-    <section id={styles.about} className={styles.section}>
+  <section id={styles.about}>
+    <Section />
+    <aside className={styles.section}>
       <Title 
         title="ABOUT ME" 
         description="여기는 about 설명구간입니다." 
@@ -33,7 +36,8 @@ const About = (): JSX.Element => (
         <img className={styles.kirbs_logo} src="/images/kirbs_logo.png" alt="kirbs logo" />
         <div className={styles.career}>웹 풀스택 개발 | 2019.08 ~ 2021.01 (약 1년 6개월)</div>
       </div> 
-    </section>
+    </aside>
+  </section>
 );
 
 export default About;

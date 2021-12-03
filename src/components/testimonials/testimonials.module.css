@@ -1,5 +1,9 @@
 @value makerWhite from '../../common/colors.css';
-@value mediaQuery from '../../common/size.css';
+@value mediaQuery, sectionMargin from '../../common/size.css';
+
+#testimonials {
+  position: relative;
+}
 
 .testimonials {
   display: flex;
@@ -7,8 +11,7 @@
 }
 
 .section {
-  position: relative;
   width: 100%;
   max-width: mediaQuery;
-  margin: auto;
+  margin: sectionMargin;
 }

@@ -1,11 +1,14 @@
 @value makerWhite, makerGrey, makerPink from '../../common/colors.css';
-@value mediaQuery from '../../common/size.css';
+@value mediaQuery, sectionMargin from '../../common/size.css';
+
+#work {
+  position: relative;
+}
 
 .section {
-  position: relative;
   width: 100%;
   max-width: mediaQuery;
-  margin: auto;
+  margin: sectionMargin;
 }
 
 .container {
