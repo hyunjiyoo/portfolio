@@ -1,0 +1,6 @@
+@value makerWhite from '../../common/colors.css';
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+}

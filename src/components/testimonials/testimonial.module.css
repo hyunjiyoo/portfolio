@@ -1,0 +1,32 @@
+@value makerWhite, makerBlack, makerPurple from '../../common/colors.css';
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5em;
+  padding: 1.5em;
+  border-radius: 8px;
+}
+
+.testimonial__img {
+  border-radius: 50%;
+  width: 9em;
+}
+
+.contents {
+  color: makerWhite;
+  margin-left: 1em;
+}
+
+.contents img {
+  width: 8em;
+}
+
+.contents span {
+  margin-left: 1em;
+  letter-spacing: 0.3em;
+}
+
+.right {
+  order: 1;
+}
