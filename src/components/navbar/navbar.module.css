@@ -1,12 +1,19 @@
 @value makerWhite, makerPurple, makerPink, makerYellow from '../../common/colors.css';
-@value largeFont, mediumFont, smallFont from '../../common/size.css';
+@value mediaQuery, largeFont, mediumFont, smallFont from '../../common/size.css';
 
-.navbar {
+#navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1em 0;
+  margin: 1em auto;
   z-index: 1;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  max-width: mediaQuery;
+  margin: auto;
 }
 
 .logo {

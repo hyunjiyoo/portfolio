@@ -2,7 +2,7 @@ import Title from '../title/title';
 import styles from './note.module.css';
 
 const Note = (): JSX.Element => (
-  <section id={styles.note}>
+  <section id={styles.note} className={styles.section}>
     <Title 
       title="MY NOTE" 
       description="여기는 note 설명구간입니다." 

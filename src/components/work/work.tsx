@@ -45,7 +45,7 @@ const Work = (): JSX.Element => {
   };
 
   return (
-    <section id={styles.about}>
+    <section id={styles.work} className={styles.section}>
       <Title 
         title="MY WORK" 
         description="여기는 work 설명구간입니다." 

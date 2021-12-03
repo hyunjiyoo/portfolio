@@ -1,9 +1,6 @@
-@value mediaQuery from './common/size.css';
 
 .container {
   display: flex;
   flex-direction: column;
-  width: 80%;
   height: 100vh;
-  max-width: mediaQuery;
 }

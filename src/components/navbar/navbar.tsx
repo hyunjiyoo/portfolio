@@ -3,7 +3,7 @@ import styles from './navbar.module.css';
 import { faBars, faGem } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = (): JSX.Element => (
-  <nav className={styles.navbar}>
+  <nav id={styles.navbar} className={styles.section}>
     <div className={styles.logo}>
       <FontAwesomeIcon icon={faGem} />
       <a className={styles.name} href="#top">

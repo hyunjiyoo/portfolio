@@ -1,6 +1,14 @@
 @value makerWhite from '../../common/colors.css';
+@value mediaQuery from '../../common/size.css';
 
 .testimonials {
   display: flex;
   flex-direction: column;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  max-width: mediaQuery;
+  margin: auto;
 }

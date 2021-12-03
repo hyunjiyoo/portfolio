@@ -1,5 +1,12 @@
 @value makerWhite, makerLightGrey, makerYellow, makerPurple, makerLightBlack from '../../common/colors.css';
-@value smallFont from '../../common/size.css';
+@value smallFont, mediaQuery from '../../common/size.css';
+
+.section {
+  position: relative;
+  width: 100%;
+  max-width: mediaQuery;
+  margin: auto;
+}
 
 .container {
   display: flex;
