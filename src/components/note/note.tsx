@@ -10,11 +10,11 @@ const Note = (): JSX.Element => (
     />
     <div className={styles.container}>
       <div className={styles.tab_menu}>
-        <div className={`${styles.tab_item} ${styles.active}`}>All</div>
-        <div className={styles.tab_item}>React</div>
-        <div className={styles.tab_item}>Typescript</div>
-        <div className={styles.tab_item}>Nodejs</div>
-        <div className={styles.tab_item}>Algorithm</div>
+        <h3 className={`${styles.tab_item} ${styles.active}`}>All</h3>
+        <h3 className={styles.tab_item}>React</h3>
+        <h3 className={styles.tab_item}>Typescript</h3>
+        <h3 className={styles.tab_item}>Nodejs</h3>
+        <h3 className={styles.tab_item}>Algorithm</h3>
       </div>
       <div className={styles.contents}>
         <div className={styles.contents_img}>

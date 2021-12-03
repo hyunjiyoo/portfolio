@@ -15,16 +15,15 @@
 
 .tab_item {
   color: makerWhite;
-  font-size: mediumFont;
   padding: 0.25em 1em;
   margin: 0.4em 0.5em;
+  border: 1px solid transparent;
 }
 
 .tab_item.active,
 .tab_item:hover {
   border: 1px solid makerPink;
   border-radius: 3px;
-  font-weight: bold;
   cursor: pointer;
 }
 

@@ -16,7 +16,7 @@ const Navbar = (): JSX.Element => (
       <li className={styles.menu_item} data-link="#about">About</li>
       <li className={styles.menu_item} data-link="#note">Note</li>
       <li className={styles.menu_item} data-link="#skills">Skills</li>
-      <li className={styles.menu_item} data-link="#work">My work</li>
+      <li className={styles.menu_item} data-link="#work">Work</li>
       <li className={styles.menu_item} data-link="#testimonial">Testimonial</li>
       <li className={styles.menu_item} data-link="#contact">Contact</li>
       <li className={styles.menu_item} data-link="#social">Social</li>

@@ -12,9 +12,7 @@ const Home = (): JSX.Element => (
       </h1>
       <button className={styles.button}>CONTACT ME</button>
     </div>
-    <div>
-      <img className={styles.img} src="/images/profile.png" alt="profile" />
-    </div>
+    <img className={styles.img} src="/images/profile.png" alt="profile" />
   </section>
   {/* 구분선 추가 예정 */}
   </>

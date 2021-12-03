@@ -49,7 +49,7 @@ const Work = (): JSX.Element => {
       <Title 
         title="MY WORK" 
         description="여기는 work 설명구간입니다." 
-        position="R"
+        position="L"
       />
       <div className={styles.container}>
         <div className={styles.categories}>
