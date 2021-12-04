@@ -1,16 +1,11 @@
 @value makerWhite, makerLightGrey, makerBlack, makerPurple, makerPink from '../../shared/colors.css';
-@value mediumFont, sectionMargin, mediaQuery from '../../shared/size.css';
+@value mediumFont from '../../shared/size.css';
 
 #intro {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-}
-
-.section {
-  width: 100%;
-  max-width: mediaQuery;
-  margin: auto;
+  margin-top: 2.5rem;
+  margin-bottom: 0;
 }
 
 .contents {
