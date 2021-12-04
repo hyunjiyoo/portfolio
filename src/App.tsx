@@ -9,16 +9,16 @@ import Work from './components/work/work';
 import Contact from './components/contact/contact';
 import Social from './components/social/social';
 import Testimonials from './components/testimonials/testimonials';
-import Section from './components/section/section';
+import Divider from './components/divider/divider';
 
 function App(): JSX.Element {
   return (
     <div className={styles.container}>
       <Navbar />
-      <Home /><Section />
-      <About /><Section />
-      <Note /><Section />
-      <Skills /><Section />
+      <Home /><Divider />
+      <About /><Divider />
+      <Note /><Divider />
+      <Skills /><Divider />
       <Work />
       <Testimonials />
       <Contact />

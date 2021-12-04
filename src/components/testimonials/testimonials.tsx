@@ -1,4 +1,3 @@
-import Section from '../section/section';
 import Title from '../title/title';
 import Testimonial from './testimonial';
 import styles from './testimonials.module.css';
@@ -29,7 +28,6 @@ const testimonials:Record<string, testimonial__info> = {
 
 const Testimonials = () => (
   <section id={styles.testimonials}>
-    <Section />
     <aside className={styles.section}>
       <Title 
         title="TESTIMONIALS" 

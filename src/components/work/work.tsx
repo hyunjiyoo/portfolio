@@ -1,4 +1,3 @@
-import Section from '../section/section';
 import Title from '../title/title';
 import Project from './project';
 import styles from './work.module.css';
