@@ -1,17 +1,17 @@
 @value makerWhite, makerGrey, makerPink from '../../shared/colors.css';
-@value mediaQuery, sectionMargin from '../../shared/size.css';
+@value mediaQuery from '../../shared/size.css';
 
 #work {
-  position: relative;
-}
-
-.section {
-  width: 100%;
-  max-width: mediaQuery;
-  margin: sectionMargin;
+  background: purple;
 }
 
 .container {
+  width: 100%;
+  max-width: mediaQuery;
+  margin: auto;
+}
+
+.workset {
   display: flex;
 }
 

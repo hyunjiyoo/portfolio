@@ -1,15 +1,14 @@
 @value makerWhite, makerDarkBlack, makerPink, makerLightGrey from '../../shared/colors.css';
-@value mediaQuery, sectionMargin, mediumFont from '../../shared/size.css';
+@value mediaQuery, mediumFont from '../../shared/size.css';
 
-.section {
-  width: 100%;
-  max-width: mediaQuery;
-  margin: sectionMargin;
+#note {
+  background-color: green;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  max-width: mediaQuery;
+  margin: auto;
 }
 
 .tab_menu {

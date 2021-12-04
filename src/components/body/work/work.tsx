@@ -45,13 +45,13 @@ const Work = (): JSX.Element => {
   };
 
   return (
-    <section id={styles.work} className={styles.section}>
+    <section id={styles.work}>
       <Title 
         title="MY WORK" 
         description="여기는 work 설명구간입니다." 
         position="L"
       />
-      <div className={styles.container}>
+      <div className={`${styles.container} ${styles.workset}`}>
         <div className={styles.categories}>
           <h3 className={`${styles.category} ${styles.active}`}>All</h3>
           <h3 className={styles.category}>Front-end</h3>

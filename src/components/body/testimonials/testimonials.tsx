@@ -28,20 +28,18 @@ const testimonials:Record<string, testimonial__info> = {
 
 const Testimonials = () => (
   <section id={styles.testimonials}>
-    <aside className={styles.section}>
-      <Title 
-        title="TESTIMONIALS" 
-        description="여기는 testimonials 설명구간입니다." 
-        position="R"
-      />
-      <div className={styles.testimonials}>
-        {
-          Object.keys(testimonials).map((key: string) => (
-            <Testimonial key={key} person={testimonials[key]} />
-          ))
-        }
-      </div>
-    </aside>
+    <Title 
+      title="TESTIMONIALS" 
+      description="여기는 testimonials 설명구간입니다." 
+      position="R"
+    />
+    <div className={`${styles.container} ${styles.testimonialset}`}>
+      {
+        Object.keys(testimonials).map((key: string) => (
+          <Testimonial key={key} person={testimonials[key]} />
+        ))
+      }
+    </div>
   </section>
 );
 

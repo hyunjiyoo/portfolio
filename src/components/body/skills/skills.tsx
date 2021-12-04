@@ -3,13 +3,13 @@ import Skill from './skill';
 import styles from './skills.module.css';
 
 const Skills = (): JSX.Element => (
-  <section id={styles.skills} className={styles.section}>
+  <section id={styles.skills}>
     <Title 
       title="SKILLS"
       description="이곳은 skills 섹션을 설명하는 곳입니다."
       position="R"
     />
-    <div className={styles.skillset}>
+    <div className={`${styles.container} ${styles.skillset}`}>
       <div className={styles.skillset__left}>
         <h2 className={styles.skillset__frontend}>Front-end</h2>
         <Skill title="CSS" value={90} />

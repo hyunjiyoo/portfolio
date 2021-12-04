@@ -1,17 +1,17 @@
 @value makerWhite from '../../shared/colors.css';
-@value mediaQuery, sectionMargin from '../../shared/size.css';
+@value mediaQuery from '../../shared/size.css';
 
 #testimonials {
-  position: relative;
+  background: grey;
 }
 
-.testimonials {
-  display: flex;
-  flex-direction: column;
-}
-
-.section {
+.container {
   width: 100%;
   max-width: mediaQuery;
-  margin: sectionMargin;
+  margin: auto;
+}
+
+.testimonialset {
+  display: flex;
+  flex-direction: column;
 }
