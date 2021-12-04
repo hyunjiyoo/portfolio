@@ -1,4 +1,4 @@
-@value makerWhite from '../../common/colors.css';
+@value makerWhite from '../shared/colors.css';
 
 .footer {
   padding: 2rem 0;

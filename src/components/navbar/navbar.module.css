@@ -1,5 +1,5 @@
-@value makerWhite, makerPurple, makerPink, makerYellow from '../../common/colors.css';
-@value mediaQuery, largeFont, mediumFont, smallFont from '../../common/size.css';
+@value makerWhite, makerPurple, makerPink, makerYellow from '../shared/colors.css';
+@value mediaQuery, largeFont, mediumFont, smallFont from '../shared/size.css';
 
 #navbar {
   display: flex;

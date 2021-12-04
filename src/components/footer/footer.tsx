@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styles from './footer.module.css';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import styles from './footer.module.css';
 
 const Footer = (): JSX.Element => (
   <footer className={styles.footer}>
