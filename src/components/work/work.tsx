@@ -46,31 +46,28 @@ const Work = (): JSX.Element => {
   };
 
   return (
-    <section id={styles.work}>
-      <Section />
-      <aside className={styles.section}>
-        <Title 
-          title="MY WORK" 
-          description="여기는 work 설명구간입니다." 
-          position="L"
-        />
-        <div className={styles.container}>
-          <div className={styles.categories}>
-            <h3 className={`${styles.category} ${styles.active}`}>All</h3>
-            <h3 className={styles.category}>Front-end</h3>
-            <h3 className={styles.category}>Back-end</h3>
-          </div>
-          <div className={styles.projects}>
-            {
-              Object.keys(projects).map((key) => (
-                <Project key={key} project={projects[key]} />
-              ))
-            }
-          </div>
-
+    <section id={styles.work} className={styles.section}>
+      <Title 
+        title="MY WORK" 
+        description="여기는 work 설명구간입니다." 
+        position="L"
+      />
+      <div className={styles.container}>
+        <div className={styles.categories}>
+          <h3 className={`${styles.category} ${styles.active}`}>All</h3>
+          <h3 className={styles.category}>Front-end</h3>
+          <h3 className={styles.category}>Back-end</h3>
         </div>
-      </aside>
-    </section>
+        <div className={styles.projects}>
+          {
+            Object.keys(projects).map((key) => (
+              <Project key={key} project={projects[key]} />
+            ))
+          }
+        </div>
+
+      </div>
+    </section> 
   )
 };
 

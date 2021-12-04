@@ -1,10 +1,6 @@
 @value makerWhite, makerLightGrey, makerYellow, makerPurple, makerDarkBlack from '../../common/colors.css';
 @value smallFont, sectionMargin, mediaQuery from '../../common/size.css';
 
-#about { 
-  position: relative;
-}
-
 .section {
   width: 100%;
   max-width: mediaQuery;

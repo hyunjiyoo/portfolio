@@ -1,18 +1,16 @@
 @value makerWhite, makerLightGrey, makerBlack, makerPurple, makerPink from '../../common/colors.css';
 @value mediumFont, sectionMargin, mediaQuery from '../../common/size.css';
 
-#home__container {
+#home {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* margin-top: 2rem; */
-  margin: sectionMargin;
 }
 
 .section {
   width: 100%;
   max-width: mediaQuery;
-  margin: auto;
+  margin: sectionMargin;
 }
 
 .contents {

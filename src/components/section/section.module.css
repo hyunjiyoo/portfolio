@@ -1,5 +1,9 @@
 @value makerLightBlack from '../../common/colors.css';
 
+#section {
+  position: relative;
+}
+
 .custom_shape_divider_top_1638516468 {
   position: absolute;
   top: 0;
