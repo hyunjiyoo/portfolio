@@ -1,15 +1,8 @@
 @value makerLightBlack, makerDarkBlack, makerWhite, makerLightGrey, makerYellow, makerPurple from '../../shared/colors.css';
-@value smallFont, sectionMargin, mediaQuery from '../../shared/size.css';
+@value smallFont from '../../shared/size.css';
 
 #about {
   background: makerLightBlack;
-  
-}
-
-.container {
-  width: 100%;
-  max-width: mediaQuery;
-  margin: auto;
 }
 
 .items {

@@ -7,6 +7,7 @@ import Contact from './contact/contact';
 import Social from './social/social';
 import Testimonials from './testimonials/testimonials';
 import Divider from './divider/divider';
+import './shared/common.css';
 
 const Body = () => (
   <>

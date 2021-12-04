@@ -1,14 +1,7 @@
-@value makerWhite from '../../shared/colors.css';
-@value mediaQuery from '../../shared/size.css';
+@value makerLightBlack, makerWhite from '../../shared/colors.css';
 
 #testimonials {
-  background: grey;
-}
-
-.container {
-  width: 100%;
-  max-width: mediaQuery;
-  margin: auto;
+  background: makerLightBlack;
 }
 
 .testimonialset {

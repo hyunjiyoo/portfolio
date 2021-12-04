@@ -1,14 +1,8 @@
-@value makerWhite, makerGrey, makerPink from '../../shared/colors.css';
+@value makerDarkBlack, makerWhite, makerGrey, makerPink from '../../shared/colors.css';
 @value mediaQuery from '../../shared/size.css';
 
 #work {
-  background: purple;
-}
-
-.container {
-  width: 100%;
-  max-width: mediaQuery;
-  margin: auto;
+  background: makerDarkBlack;
 }
 
 .workset {

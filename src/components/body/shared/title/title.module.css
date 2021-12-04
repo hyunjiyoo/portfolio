@@ -1,17 +1,11 @@
 @value makerWhite, makerLightGrey from '../../../shared/colors.css';
-@value titleFont, mediaQuery, sectionMargin from '../../../shared/size.css';
-
-.container {
-  width: 100%;
-  max-width: mediaQuery;
-  margin: auto;
-}
+@value titleFont from '../../../shared/size.css';
 
 .title {
   color: makerWhite;
   font-size: titleFont;
   margin-bottom: 0;
-  padding-top: 10rem;
+  padding-top: 9rem;
 }
 
 .description {

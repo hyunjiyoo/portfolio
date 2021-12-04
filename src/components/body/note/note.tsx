@@ -8,7 +8,7 @@ const Note = (): JSX.Element => (
       description="여기는 note 설명구간입니다." 
       position="L"
     />
-    <div className={styles.container}>
+    <div className="container">
       <div className={styles.tab_menu}>
         <h3 className={`${styles.tab_item} ${styles.active}`}>All</h3>
         <h3 className={styles.tab_item}>React</h3>

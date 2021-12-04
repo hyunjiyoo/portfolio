@@ -1,14 +1,7 @@
-@value makerWhite, makerDarkPurple, makerPurple, makerPink, makerLightGrey from '../../shared/colors.css';
-@value mediaQuery from '../../shared/size.css';
+@value makerLightBlack, makerWhite, makerDarkPurple, makerPurple, makerPink, makerLightGrey from '../../shared/colors.css';
 
 #skills {
-  background: darkblue;
-}
-
-.container {
-  width: 100%;
-  max-width: mediaQuery;
-  margin: auto;
+  background: makerLightBlack;
 }
 
 .skillset {

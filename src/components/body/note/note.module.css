@@ -1,14 +1,8 @@
 @value makerWhite, makerDarkBlack, makerPink, makerLightGrey from '../../shared/colors.css';
-@value mediaQuery, mediumFont from '../../shared/size.css';
+@value mediumFont from '../../shared/size.css';
 
 #note {
-  background-color: green;
-}
-
-.container {
-  width: 100%;
-  max-width: mediaQuery;
-  margin: auto;
+  background-color: makerDarkBlack;
 }
 
 .tab_menu {

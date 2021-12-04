@@ -9,7 +9,7 @@ const Skills = (): JSX.Element => (
       description="이곳은 skills 섹션을 설명하는 곳입니다."
       position="R"
     />
-    <div className={`${styles.container} ${styles.skillset}`}>
+    <div className={`container ${styles.skillset}`}>
       <div className={styles.skillset__left}>
         <h2 className={styles.skillset__frontend}>Front-end</h2>
         <Skill title="CSS" value={90} />

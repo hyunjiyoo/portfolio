@@ -7,7 +7,7 @@ interface TitleProps {
 }
 
 const Title = ({ title, description, position }: TitleProps) => (
-  <div className={`${styles.container} ${position === 'R' ? styles.right : styles.left}`}>
+  <div className={`container ${position === 'R' ? styles.right : styles.left}`}>
     <h1 className={styles.title}>{title}</h1>
     <p className={styles.description}>{description}</p>
   </div>

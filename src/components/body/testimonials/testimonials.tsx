@@ -33,7 +33,7 @@ const Testimonials = () => (
       description="여기는 testimonials 설명구간입니다." 
       position="R"
     />
-    <div className={`${styles.container} ${styles.testimonialset}`}>
+    <div className={`container ${styles.testimonialset}`}>
       {
         Object.keys(testimonials).map((key: string) => (
           <Testimonial key={key} person={testimonials[key]} />

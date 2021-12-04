@@ -8,7 +8,7 @@ const About = (): JSX.Element => (
       description="여기는 about 설명구간입니다." 
       position="R"
     />
-    <div className={styles.container}>
+    <div className="container">
       <div className={styles.items}>
         <div className={styles.item}>
           <div className={styles.subject}>FRONT END</div>
