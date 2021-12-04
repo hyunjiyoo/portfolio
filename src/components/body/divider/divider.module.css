@@ -1,10 +1,10 @@
-@value makerLightBlack from '../../shared/colors.css';
+@value makerDarkBlack, makerLightBlack from '../../shared/colors.css';
 
 #section {
   position: relative;
 }
 
-.custom_shape_divider_top_1638516468 {
+.custom_shape_divider_top_1638593839 {
   position: absolute;
   top: 0;
   left: 0;
@@ -13,13 +13,14 @@
   line-height: 0;
 }
 
-.custom_shape_divider_top_1638516468 svg {
+.custom_shape_divider_top_1638593839 svg {
   position: relative;
   display: block;
-  width: calc(154% + 1.3px);
-  height: 177px;
+  width: calc(125% + 1.3px);
+  height: 178px;
+  transform: rotateY(180deg);
 }
 
-.custom_shape_divider_top_1638516468 .shape_fill {
+.custom_shape_divider_top_1638593839 .shape_fill {
   fill: makerLightBlack;
 }

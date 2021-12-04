@@ -1,23 +1,28 @@
-@value makerWhite, makerLightGrey, makerYellow, makerPurple, makerDarkBlack from '../../shared/colors.css';
+@value makerLightBlack, makerDarkBlack, makerWhite, makerLightGrey, makerYellow, makerPurple from '../../shared/colors.css';
 @value smallFont, sectionMargin, mediaQuery from '../../shared/size.css';
 
-.section {
-  width: 100%;
-  max-width: mediaQuery;
-  margin: sectionMargin;
+#about {
+  background: makerDarkBlack;
+  margin-top: 7rem;
 }
 
 .container {
+  width: 100%;
+  max-width: mediaQuery;
+  margin: auto;
+}
+
+.items {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.container .item:nth-child(even) .subject {
+.item:nth-child(even) .subject {
   background: makerPurple;
 }
 
-.container .item:nth-child(odd) .subject {
+.item:nth-child(odd) .subject {
   background: makerYellow;
 }
 

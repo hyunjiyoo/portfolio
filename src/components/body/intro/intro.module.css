@@ -10,7 +10,7 @@
 .section {
   width: 100%;
   max-width: mediaQuery;
-  margin: sectionMargin;
+  margin: auto;
 }
 
 .contents {
