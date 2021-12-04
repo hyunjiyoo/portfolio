@@ -10,11 +10,11 @@ import Divider from './divider/divider';
 
 const Body = () => (
   <>
-    <Intro /><Divider />
-    <About /><Divider />
-    <Note /><Divider />
-    <Skills /><Divider />
-    <Work /><Divider />
+    <Intro /><Divider gradient="asc" />
+    <About /><Divider gradient="desc" />
+    <Note /><Divider gradient="asc" />
+    <Skills /><Divider gradient="desc" />
+    <Work /><Divider gradient="asc" />
     <Testimonials />
     <Contact />
     <Social />

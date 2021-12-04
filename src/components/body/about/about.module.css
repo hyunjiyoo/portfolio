@@ -2,8 +2,8 @@
 @value smallFont, sectionMargin, mediaQuery from '../../shared/size.css';
 
 #about {
-  background: makerDarkBlack;
-  margin-top: 7rem;
+  background: makerLightBlack;
+  
 }
 
 .container {

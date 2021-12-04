@@ -4,6 +4,7 @@
   position: relative;
 }
 
+/* DividerAsc style */
 .custom_shape_divider_top_1638593839 {
   position: absolute;
   top: 0;
@@ -22,5 +23,26 @@
 }
 
 .custom_shape_divider_top_1638593839 .shape_fill {
+  fill: makerDarkBlack;
+}
+
+/* DividerDesc style */
+.custom_shape_divider_top_1638600951 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom_shape_divider_top_1638600951 svg {
+  position: relative;
+  display: block;
+  width: calc(125% + 1.3px);
+  height: 178px;
+}
+
+.custom_shape_divider_top_1638600951 .shape_fill {
   fill: makerLightBlack;
 }
