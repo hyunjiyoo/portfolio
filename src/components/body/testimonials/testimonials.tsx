@@ -1,4 +1,4 @@
-import Title from '../title/title';
+import Title from '../shared/title/title';
 import Testimonial from './testimonial';
 import styles from './testimonials.module.css';
 

@@ -1,5 +1,5 @@
-@value makerWhite from '../../common/colors.css';
-@value mediaQuery, sectionMargin from '../../common/size.css';
+@value makerWhite from '../../shared/colors.css';
+@value mediaQuery, sectionMargin from '../../shared/size.css';
 
 #testimonials {
   position: relative;

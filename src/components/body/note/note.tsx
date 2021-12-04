@@ -1,4 +1,4 @@
-import Title from '../title/title';
+import Title from '../shared/title/title';
 import styles from './note.module.css';
 
 const Note = (): JSX.Element => (

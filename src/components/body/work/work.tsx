@@ -1,4 +1,4 @@
-import Title from '../title/title';
+import Title from '../shared/title/title';
 import Project from './project';
 import styles from './work.module.css';
 

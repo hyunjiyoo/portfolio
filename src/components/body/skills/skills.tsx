@@ -1,4 +1,4 @@
-import Title from '../title/title';
+import Title from '../shared/title/title';
 import Skill from './skill';
 import styles from './skills.module.css';
 

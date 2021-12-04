@@ -1,4 +1,4 @@
-@value makerWhite, makerBlack, makerYellow, makerLightGrey, makerPurple from '../../common/colors.css';
+@value makerWhite, makerBlack, makerYellow, makerLightGrey, makerPurple from '../../shared/colors.css';
 
 .project {
   color: makerWhite;

@@ -1,4 +1,4 @@
-@value makerWhite, makerLightGrey, makerYellow from '../../common/colors.css';
+@value makerWhite, makerLightGrey, makerYellow from '../../shared/colors.css';
 
 .skill {
   margin-top: 0.8em;

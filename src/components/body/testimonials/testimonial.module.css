@@ -1,4 +1,4 @@
-@value makerWhite, makerBlack, makerPurple from '../../common/colors.css';
+@value makerWhite, makerBlack, makerPurple from '../../shared/colors.css';
 
 .testimonial {
   display: flex;
