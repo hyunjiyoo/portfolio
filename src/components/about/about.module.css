@@ -1,4 +1,4 @@
-@value makerWhite, makerLightGrey, makerYellow, makerPurple, makerLightBlack from '../../common/colors.css';
+@value makerWhite, makerLightGrey, makerYellow, makerPurple, makerDarkBlack from '../../common/colors.css';
 @value smallFont, sectionMargin, mediaQuery from '../../common/size.css';
 
 #about { 
@@ -29,7 +29,7 @@
   border-radius: 50%;
   width: 7em;
   padding: 2.8em 0;
-  color: makerLightBlack;
+  color: makerDarkBlack;
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;

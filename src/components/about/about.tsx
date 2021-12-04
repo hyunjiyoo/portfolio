@@ -3,7 +3,7 @@ import Title from '../title/title';
 import styles from './about.module.css';
 
 const About = (): JSX.Element => (
-  <section id={styles.about}>
+  <section>
     <Section />
     <aside className={styles.section}>
       <Title 

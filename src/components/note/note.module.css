@@ -1,4 +1,4 @@
-@value makerWhite, makerLightBlack, makerPink, makerLightGrey from '../../common/colors.css';
+@value makerWhite, makerDarkBlack, makerPink, makerLightGrey from '../../common/colors.css';
 @value mediaQuery, sectionMargin, mediumFont from '../../common/size.css';
 
 #note {
@@ -67,7 +67,7 @@
 }
 
 .notion + p:hover {
-  color: makerLightBlack;
+  color: makerDarkBlack;
   text-decoration: underline;
 }
 

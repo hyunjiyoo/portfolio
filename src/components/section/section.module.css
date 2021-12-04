@@ -1,3 +1,4 @@
+@value makerLightBlack from '../../common/colors.css';
 
 .custom_shape_divider_top_1638516468 {
   position: absolute;
@@ -16,5 +17,5 @@
 }
 
 .custom_shape_divider_top_1638516468 .shape_fill {
-  fill: #2A303C;
+  fill: makerLightBlack;
 }
