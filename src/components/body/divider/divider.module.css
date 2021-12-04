@@ -1,4 +1,4 @@
-@value makerLightBlack from '../../common/colors.css';
+@value makerLightBlack from '../../shared/colors.css';
 
 #section {
   position: relative;
