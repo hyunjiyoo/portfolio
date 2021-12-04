@@ -1,7 +1,7 @@
-import styles from './home.module.css';
+import styles from './intro.module.css';
 
-const Home = (): JSX.Element => (
-  <section id={styles.home} className={styles.section}>
+const Intro = (): JSX.Element => (
+  <section id={styles.intro} className={styles.section}>
     <div className={styles.contents}>
       <span className={styles.span}>___ Hello Hyunji World!</span>
       <h1 className={styles.title}>
@@ -15,4 +15,4 @@ const Home = (): JSX.Element => (
   </section>
 );
 
-export default Home;
+export default Intro;

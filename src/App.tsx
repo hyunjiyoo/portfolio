@@ -1,7 +1,7 @@
 import Navbar from './components/navbar/navbar';
 import styles from './app.module.css';
-import Home from './components/home/home';
-import About from './components/about/about';
+import Intro from './components/body/intro/intro';
+import About from './components/body/about/about';
 import Note from './components/note/note';
 import Footer from './components/footer/footer';
 import Skills from './components/skills/skills';
@@ -15,7 +15,7 @@ function App(): JSX.Element {
   return (
     <div className={styles.container}>
       <Navbar />
-      <Home /><Divider />
+      <Intro /><Divider />
       <About /><Divider />
       <Note /><Divider />
       <Skills /><Divider />

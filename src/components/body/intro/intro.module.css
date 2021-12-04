@@ -1,7 +1,7 @@
-@value makerWhite, makerLightGrey, makerBlack, makerPurple, makerPink from '../../common/colors.css';
-@value mediumFont, sectionMargin, mediaQuery from '../../common/size.css';
+@value makerWhite, makerLightGrey, makerBlack, makerPurple, makerPink from '../../shared/colors.css';
+@value mediumFont, sectionMargin, mediaQuery from '../../shared/size.css';
 
-#home {
+#intro {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

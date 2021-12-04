@@ -1,5 +1,5 @@
-@value makerWhite, makerLightGrey, makerYellow, makerPurple, makerDarkBlack from '../../common/colors.css';
-@value smallFont, sectionMargin, mediaQuery from '../../common/size.css';
+@value makerWhite, makerLightGrey, makerYellow, makerPurple, makerDarkBlack from '../../shared/colors.css';
+@value smallFont, sectionMargin, mediaQuery from '../../shared/size.css';
 
 .section {
   width: 100%;

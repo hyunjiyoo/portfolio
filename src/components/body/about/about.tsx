@@ -1,4 +1,4 @@
-import Title from '../title/title';
+import Title from '../shared/title/title';
 import styles from './about.module.css';
 
 const About = (): JSX.Element => (
