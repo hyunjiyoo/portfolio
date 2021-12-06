@@ -8,6 +8,12 @@ const Navbar = (): JSX.Element => {
     const element = document.querySelector(selector) as HTMLLIElement;
     element.scrollIntoView({behavior: 'smooth'});
   }
+  
+  const activeEffect = (target: HTMLLIElement) => {
+    const prevTarget = document.querySelector(`.${styles.menu_item}.${styles.active}`) as HTMLLIElement;
+    prevTarget.classList.remove(`${styles.active}`);
+    target.classList.add(`${styles.active}`);
+  }
 
   const scrollTo = (event: React.MouseEvent<HTMLUListElement>) => {
     const target = event.target as HTMLLIElement;
@@ -16,7 +22,8 @@ const Navbar = (): JSX.Element => {
     if (link == null) {
       return;
     }
-    
+
+    activeEffect(target);
     scrollIntoView(link);
   }
   
