@@ -7,6 +7,7 @@ import Contact from './contact/contact';
 import Social from './social/social';
 import Testimonials from './testimonials/testimonials';
 import Divider from './divider/divider';
+import Arrow from './arrow/arrow';
 import './shared/common.css';
 
 const Body = () => (
@@ -19,6 +20,7 @@ const Body = () => (
     <Testimonials /><Divider gradient="desc" />
     <Contact />
     <Social />
+    <Arrow />
   </>
 );
 

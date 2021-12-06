@@ -1,0 +1,15 @@
+@value makerLightGrey from '../../shared/colors.css';
+
+.arrow {
+  display: none;
+  background: transparent;
+  position: fixed;
+  right: 3rem;
+  bottom: 2rem;
+  z-index: 2;
+}
+
+.arrow__icon {
+  color: makerLightGrey;
+  font-size: 3rem;
+}
