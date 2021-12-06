@@ -1,17 +1,22 @@
-@value makerWhite, makerPurple, makerPink, makerYellow from '../shared/colors.css';
+@value makerWhite, makerPurple, makerPink, makerYellow, makerDarkBlack from '../shared/colors.css';
 @value mediaQuery, largeFont, mediumFont, smallFont from '../shared/size.css';
 
 #navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 1em auto;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: makerDarkBlack;
+  width: 100%;
+  height: 5.5rem;
   z-index: 1;
 }
 
 .section {
-  width: 100%;
-  max-width: mediaQuery;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: mediaQuery;
+  height: 5.5rem;
   margin: auto;
 }
 
