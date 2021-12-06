@@ -2,7 +2,7 @@ import Title from '../shared/title/title';
 import styles from './contact.module.css';
 
 const Contact = (): JSX.Element => (
-  <section id ={styles.contact}>
+  <section id="contact">
     <Title 
       title="CONTACT ME"
       description="여기는 contact 설명구간입니다."

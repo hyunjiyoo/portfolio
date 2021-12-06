@@ -1,6 +1,6 @@
 @value makerLightBlack, makerWhite from '../../shared/colors.css';
 
-#testimonials {
+.testimonials {
   background: makerLightBlack;
 }
 

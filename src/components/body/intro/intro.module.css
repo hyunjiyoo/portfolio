@@ -1,16 +1,14 @@
 @value makerWhite, makerLightGrey, makerBlack, makerPurple, makerPink from '../../shared/colors.css';
 @value mediumFont from '../../shared/size.css';
 
-#intro {
+.intro {
   display: flex;
   justify-content: space-between;
-  margin-top: 7rem;
-  margin-bottom: 0;
 }
 
 .contents {
   flex-direction: column;
-  margin-right: 2em;
+  margin-top: 8rem;
 }
 
 .span {
@@ -37,4 +35,5 @@
   width: 13.5em;
   float: right;
   opacity: 0.8;
+  margin-top: 8rem;
 }

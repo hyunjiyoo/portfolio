@@ -27,7 +27,7 @@ const testimonials:Record<string, testimonial__info> = {
 };
 
 const Testimonials = () => (
-  <section id={styles.testimonials}>
+  <section id="testimonials" className={styles.testimonials}>
     <Title 
       title="TESTIMONIALS" 
       description="여기는 testimonials 설명구간입니다." 

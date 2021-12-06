@@ -2,7 +2,7 @@ import Title from '../shared/title/title';
 import styles from './about.module.css';
 
 const About = (): JSX.Element => (
-  <section id={styles.about}>
+  <section id="about" className={styles.about}>
     <Title 
       title="ABOUT ME" 
       description="여기는 about 설명구간입니다." 

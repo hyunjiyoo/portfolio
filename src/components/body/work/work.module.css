@@ -1,7 +1,7 @@
 @value makerDarkBlack, makerWhite, makerGrey, makerPink from '../../shared/colors.css';
 @value mediaQuery from '../../shared/size.css';
 
-#work {
+.work {
   background: makerDarkBlack;
 }
 

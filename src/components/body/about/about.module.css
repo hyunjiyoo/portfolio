@@ -1,7 +1,7 @@
 @value makerLightBlack, makerDarkBlack, makerWhite, makerLightGrey, makerYellow, makerPurple from '../../shared/colors.css';
 @value smallFont from '../../shared/size.css';
 
-#about {
+.about {
   background: makerLightBlack;
 }
 

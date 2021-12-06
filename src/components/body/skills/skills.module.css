@@ -1,6 +1,6 @@
 @value makerLightBlack, makerWhite, makerDarkPurple, makerPurple, makerPink, makerLightGrey from '../../shared/colors.css';
 
-#skills {
+.skills {
   background: makerLightBlack;
 }
 

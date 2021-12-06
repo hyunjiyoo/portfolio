@@ -1,7 +1,7 @@
 @value makerWhite, makerDarkBlack, makerPink, makerLightGrey from '../../shared/colors.css';
 @value mediumFont from '../../shared/size.css';
 
-#note {
+.note {
   background-color: makerDarkBlack;
 }
 

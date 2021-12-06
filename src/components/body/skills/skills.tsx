@@ -3,7 +3,7 @@ import Skill from './skill';
 import styles from './skills.module.css';
 
 const Skills = (): JSX.Element => (
-  <section id={styles.skills}>
+  <section id="skills" className={styles.skills}>
     <Title 
       title="SKILLS"
       description="이곳은 skills 섹션을 설명하는 곳입니다."
