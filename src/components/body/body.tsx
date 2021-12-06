@@ -16,7 +16,7 @@ const Body = () => (
     <Note /><Divider gradient="asc" />
     <Skills /><Divider gradient="desc" />
     <Work /><Divider gradient="asc" />
-    <Testimonials />
+    <Testimonials /><Divider gradient="desc" />
     <Contact />
     <Social />
   </>
