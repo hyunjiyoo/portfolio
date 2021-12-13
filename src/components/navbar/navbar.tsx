@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './navbar.module.css';
 import { faBars, faGem } from '@fortawesome/free-solid-svg-icons'
 import { useEffect } from 'react';
-import { updateExpressionWithTypeArguments } from 'typescript';
 
 const Navbar = (): JSX.Element => {
   useEffect(() => {
@@ -16,10 +15,8 @@ const Navbar = (): JSX.Element => {
     navItems = sectionIds.map(sectionId => (document.querySelector(`[data-link="${sectionId}"]`))) as HTMLElement[];  
 
     const observer = new IntersectionObserver(handleIntersect, options);
-    sections.forEach((section: HTMLElement) => {
-      observer.observe(section);
-    });  
-  });
+    sections.forEach((section: HTMLElement) => observer.observe(section));  
+  }, []);
 
   const scrollTo = (event: React.MouseEvent<HTMLUListElement>) => {
     const target = event.target as HTMLLIElement;
@@ -89,41 +86,22 @@ const activeEffect = (target: HTMLElement) => {
 const handleIntersect = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting && entry.intersectionRatio > 0) {
-      
       const index = sectionIds.indexOf(`#${entry.target.id}`);
+      
       if (entry.boundingClientRect.y < 0) {
         selectedNavIndex = (index < navItems.length - 1) ? index + 1: index;
-      } 
-      else {
+      } else {
         selectedNavIndex = index - 1;
       } 
-      
     }
-    else {
-      if (entry.isIntersecting && entry.intersectionRatio > 0) {
-        let maxRatio = entry.intersectionRatio;
-        let id = entry.target.id;
-        if (entry.intersectionRatio > maxRatio) {
-          id = entry.target.id;
-        } 
-
-        const index = sectionIds.indexOf(`#${id}`);
-        selectedNavIndex = index;
-      }
-    }
-
-    activeEffect(navItems[selectedNavIndex]);
-
-
   });
 }
-
 
 window.addEventListener('wheel', () => {
   if (window.scrollY === 0) {
     selectedNavIndex = 0;
   } 
+  activeEffect(navItems[selectedNavIndex]);
 });
-
 
 export default Navbar;
