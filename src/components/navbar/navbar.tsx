@@ -6,8 +6,6 @@ import { updateExpressionWithTypeArguments } from 'typescript';
 
 const Navbar = (): JSX.Element => {
   useEffect(() => {
-
-    let observer;
     const options = {
       root: null,
       rootMargin: "0px",
@@ -17,10 +15,10 @@ const Navbar = (): JSX.Element => {
     sections = sectionIds.map(sectionId => (document.querySelector(sectionId))) as HTMLElement[];
     navItems = sectionIds.map(sectionId => (document.querySelector(`[data-link="${sectionId}"]`))) as HTMLElement[];  
 
+    const observer = new IntersectionObserver(handleIntersect, options);
     sections.forEach((section: HTMLElement) => {
-      observer = new IntersectionObserver(handleIntersect, options);
       observer.observe(section);
-    });
+    });  
   });
 
   const scrollTo = (event: React.MouseEvent<HTMLUListElement>) => {
