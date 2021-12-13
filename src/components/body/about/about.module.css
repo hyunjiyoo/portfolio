@@ -36,20 +36,3 @@
   margin: auto;
   margin-top: 1em;
 }
-
-.kirbs {
-  display: flex;
-  align-items: center;
-  margin-top: 2em;
-}
-
-.kirbs_logo {
-  width: 11rem;
-  opacity: 0.8;
-  margin-right: 1em;
-}
-
-.career {
-  color: makerWhite;
-  font-size: smallFont;
-}

@@ -30,10 +30,6 @@ const About = (): JSX.Element => (
           <p className={styles.description}>Photoshop, Illustrator</p>
         </div>
       </div>
-      <div className={styles.kirbs}>
-        <img className={styles.kirbs_logo} src="/images/kirbs_logo.png" alt="kirbs logo" />
-        <div className={styles.career}>웹 풀스택 개발 | 2019.08 ~ 2021.01 (약 1년 6개월)</div>
-      </div>
     </div>
   </section>
 );
