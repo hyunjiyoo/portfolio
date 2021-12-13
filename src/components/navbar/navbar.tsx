@@ -3,19 +3,44 @@ import styles from './navbar.module.css';
 import { faBars, faGem } from '@fortawesome/free-solid-svg-icons'
 import { useEffect } from 'react';
 
+const sectionIds: string[] = [
+  '#intro',
+  '#about',
+  '#note',
+  '#skills',
+  '#work',
+  '#testimonials',
+  '#contact'
+];
+
+let sections : HTMLElement[];
+let navItems : HTMLElement[];
+let selectedNavIndex : number = 0;
+
 const Navbar = (): JSX.Element => {
-  useEffect(() => {
+  
+  const initSectionInfo = () => {
+
+    sections = sectionIds.map(sectionId => (document.querySelector(sectionId))) as HTMLElement[];
+    navItems = sectionIds.map(sectionId => (document.querySelector(`[data-link="${sectionId}"]`))) as HTMLElement[];  
+
+    return { sections, navItems };
+  }
+
+  const createObserver = (sections: HTMLElement []) => {
     const options = {
       root: null,
       rootMargin: "0px",
       threshold: 0.5
     };
 
-    sections = sectionIds.map(sectionId => (document.querySelector(sectionId))) as HTMLElement[];
-    navItems = sectionIds.map(sectionId => (document.querySelector(`[data-link="${sectionId}"]`))) as HTMLElement[];  
-
     const observer = new IntersectionObserver(handleIntersect, options);
     sections.forEach((section: HTMLElement) => observer.observe(section));  
+  }
+
+  useEffect(() => {
+    const { sections } = initSectionInfo();
+    createObserver(sections);
   }, []);
 
   const scrollTo = (event: React.MouseEvent<HTMLUListElement>) => {
@@ -58,20 +83,6 @@ const Navbar = (): JSX.Element => {
   )
 };
 
-const sectionIds: string[] = [
-  '#intro',
-  '#about',
-  '#note',
-  '#skills',
-  '#work',
-  '#testimonials',
-  '#contact'
-];
-
-let sections : HTMLElement[];
-let navItems : HTMLElement[];
-let selectedNavIndex : number = 0;
-
 const scrollIntoView = (selector: string) => {
   const element = document.querySelector(selector) as HTMLLIElement;
   element.scrollIntoView({behavior: 'smooth'});
@@ -98,9 +109,11 @@ const handleIntersect = (entries: IntersectionObserverEntry[], observer: Interse
 }
 
 window.addEventListener('wheel', () => {
+
   if (window.scrollY === 0) {
     selectedNavIndex = 0;
   } 
+  
   activeEffect(navItems[selectedNavIndex]);
 });
 
