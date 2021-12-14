@@ -1,4 +1,4 @@
-import Title from '../shared/title/title';
+import { Title } from '../shared/title/title';
 import Testimonial from './testimonial';
 import styles from './testimonials.module.css';
 
@@ -28,11 +28,7 @@ const testimonials:Record<string, testimonial__info> = {
 
 const Testimonials = () => (
   <section id="testimonials" className={styles.testimonials}>
-    <Title 
-      title="TESTIMONIALS" 
-      description="여기는 testimonials 설명구간입니다." 
-      position="R"
-    />
+    <Title id="testimonials" />
     <div className={`container ${styles.testimonialset}`}>
       {
         Object.keys(testimonials).map((key: string) => (

@@ -1,14 +1,11 @@
-import Title from '../shared/title/title';
+import { Title } from '../shared/title/title';
 import Career from './career';
 import styles from './about.module.css';
 
 const About = (): JSX.Element => (
   <section id="about" className={styles.about}>
-    <Title 
-      title="ABOUT ME" 
-      description="여기는 about 설명구간입니다." 
-      position="R"
-    />
+    <Title id="about"/>
+    
     <div className="container">
       <div className={styles.items}>
         <div className={styles.item}>

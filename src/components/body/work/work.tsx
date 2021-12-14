@@ -1,4 +1,4 @@
-import Title from '../shared/title/title';
+import { Title } from '../shared/title/title';
 import Project from './project';
 import styles from './work.module.css';
 
@@ -46,11 +46,7 @@ const Work = (): JSX.Element => {
 
   return (
     <section id="work" className={styles.work}>
-      <Title 
-        title="MY WORK" 
-        description="여기는 work 설명구간입니다." 
-        position="L"
-      />
+      <Title id="work" />
       <div className={`container ${styles.workset}`}>
         <div className={styles.categories}>
           <h3 className={`${styles.category} ${styles.active}`}>All</h3>

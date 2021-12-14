@@ -1,14 +1,10 @@
-import Title from '../shared/title/title';
+import { Title } from '../shared/title/title';
 import Skill from './skill';
 import styles from './skills.module.css';
 
 const Skills = (): JSX.Element => (
   <section id="skills" className={styles.skills}>
-    <Title 
-      title="SKILLS"
-      description="이곳은 skills 섹션을 설명하는 곳입니다."
-      position="R"
-    />
+    <Title id="skills" />
     <div className={`container ${styles.skillset}`}>
       <div className={styles.skillset__left}>
         <h2 className={styles.skillset__frontend}>Front-end</h2>
