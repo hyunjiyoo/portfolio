@@ -1,7 +1,7 @@
 import styles from './title.module.css';
-import { getTitle } from '../../../../db/portfolio';
+import { getTitle, SectionKeyType } from '../../../../db/portfolio';
 interface TitleProps {
-  id: string;
+  id: SectionKeyType;
 }
 
 export const Title = ({ id }: TitleProps) => {

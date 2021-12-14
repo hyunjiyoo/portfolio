@@ -1,11 +1,13 @@
 import { Title } from '../shared/title/title';
 import Career from './career';
 import styles from './about.module.css';
+import { SectionKeyType } from '../../../db/portfolio';
+
+const SECTION_KEY: SectionKeyType = "about";
 
 const About = (): JSX.Element => (
   <section id="about" className={styles.about}>
-    <Title id="about"/>
-    
+    <Title id={SECTION_KEY} />
     <div className="container">
       <div className={styles.items}>
         <div className={styles.item}>

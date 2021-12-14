@@ -1,85 +1,46 @@
-type Data = {
-  id: string;
-  section: string;
-}[];
+export type SectionKeyType = 'about' | 'note' | 'skills' | 'work' | 'testimonials' | 'contact';
 
 type Title = {
-  id: string;
   name: string;
   description: string;
   position: 'L' | 'R';
-}[];
+};
 
-export const title: Title = [
-  {
-    id: 'about',
+export const titleset: Record<SectionKeyType, Title> = {
+  'about': {
     name: 'ABOUT ME',
     description: 'hello about',
     position: 'R'
   },
-  {
-    id: 'note',
+  'note': {
     name: 'MY NOTE',
     description: 'hello note',
     position: 'L'
   },
-  {
-    id: 'skills',
+  'skills': {
     name: 'SKILLS',
     description: 'hello note',
-    position: 'L'
+    position: 'R'
   },
-  {
-    id: 'work',
+  'work': {
     name: 'MY WORK',
     description: 'hello note',
-    position: 'R'
-  },
-  {
-    id: 'testimonials',
-    name: 'TESTIMONIALS',
-    description: 'hello note',
     position: 'L'
   },
-  {
-    id: 'contact',
-    name: 'CONTACT',
+  'testimonials': {
+    name: 'TESTIMONIALS',
     description: 'hello note',
     position: 'R'
+  },
+  'contact': {
+    name: 'CONTACT',
+    description: 'hello note',
+    position: 'L'
   }
-];
+};
 
-export const data: Data = [
-  {
-    id: '1',
-    section: 'Intro',
-  },
-  {
-    id: '2',
-    section: 'About',
-  },
-  {
-    id: '3',
-    section: 'Note',
-  },
-  {
-    id: '4',
-    section: 'Skills',
-  },
-  {
-    id: '5',
-    section: 'Work',
-  },
-  {
-    id: '6',
-    section: 'Testimonials',
-  },
-  {
-    id: '7',
-    section: 'Contact',
-  }
-];
-
-export function getTitle(id: string) {
-  return title.filter(t => t.id === id)[0];
+export function getTitle(id: SectionKeyType) {
+  const key: SectionKeyType = Object.keys(titleset).filter(key => key === id)[0] as SectionKeyType;
+  
+  return titleset[key];
 }

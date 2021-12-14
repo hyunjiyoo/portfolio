@@ -1,9 +1,12 @@
 import { Title } from '../shared/title/title';
 import styles from './note.module.css';
+import { SectionKeyType } from '../../../db/portfolio';
+
+const SECTION_KEY: SectionKeyType = "note";
 
 const Note = (): JSX.Element => (
   <section id="note" className={styles.note}>
-    <Title id="note" />
+    <Title id={SECTION_KEY} />
     <div className="container">
       <div className={styles.tab_menu}>
         <h3 className={`${styles.tab_item} ${styles.active}`}>All</h3>

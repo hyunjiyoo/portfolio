@@ -1,10 +1,13 @@
 import { Title } from '../shared/title/title';
 import Skill from './skill';
 import styles from './skills.module.css';
+import { SectionKeyType } from '../../../db/portfolio';
+
+const SECTION_KEY: SectionKeyType = "skills";
 
 const Skills = (): JSX.Element => (
   <section id="skills" className={styles.skills}>
-    <Title id="skills" />
+    <Title id={SECTION_KEY} />
     <div className={`container ${styles.skillset}`}>
       <div className={styles.skillset__left}>
         <h2 className={styles.skillset__frontend}>Front-end</h2>

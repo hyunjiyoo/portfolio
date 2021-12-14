@@ -1,6 +1,9 @@
 import { Title } from '../shared/title/title';
 import Testimonial from './testimonial';
 import styles from './testimonials.module.css';
+import { SectionKeyType } from '../../../db/portfolio';
+
+const SECTION_KEY: SectionKeyType = "testimonials";
 
 export type testimonial__info = {
   name: string;
@@ -28,7 +31,7 @@ const testimonials:Record<string, testimonial__info> = {
 
 const Testimonials = () => (
   <section id="testimonials" className={styles.testimonials}>
-    <Title id="testimonials" />
+    <Title id={SECTION_KEY} />
     <div className={`container ${styles.testimonialset}`}>
       {
         Object.keys(testimonials).map((key: string) => (

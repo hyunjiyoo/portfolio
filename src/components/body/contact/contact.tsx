@@ -1,9 +1,14 @@
 import { Title } from '../shared/title/title';
 import styles from './contact.module.css';
+import { SectionKeyType } from '../../../db/portfolio';
+
+const SECTION_KEY: SectionKeyType = "contact";
 
 const Contact = (): JSX.Element => (
   <section id="contact">
-    <Title id="contact"/>
+
+    <Title id={SECTION_KEY} />
+    
     <div className="container">
       <form className={styles.form}>
 
