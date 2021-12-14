@@ -9,6 +9,27 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+
+#frontend {
+  width: 10em;
+  height: 10em;
+}
+
+#infra {
+  width: 7em;
+  height:7em;
+}
+
+#backend {
+  width: 8em;
+  height:8em;
+}
+
+#design {
+  width: 9em;
+  height: 9em;
 }
 
 .item:nth-child(even) .subject {
@@ -20,13 +41,21 @@
 }
 
 .subject {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   width: 7em;
   padding: 2.8em 0;
   color: makerDarkBlack;
   font-size: 1.5rem;
   font-weight: bold;
-  text-align: center;
+}
+
+.subject:hover {
+  font-style: italic;
+  transform: scale(1.03);
+  transition: all 300ms ease-in;
 }
 
 .description {
