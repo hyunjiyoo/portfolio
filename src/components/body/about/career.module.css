@@ -1,4 +1,4 @@
-@value makerLightBlack, makerDarkBlack, makerWhite, makerYellow, makerPurple, makerPink from '../../shared/colors.css';
+@value makerLightBlack, makerLightGrey, makerDarkBlack, makerWhite, makerYellow, makerPurple, makerPink from '../../shared/colors.css';
 
 .container {
   display: flex;
@@ -27,7 +27,7 @@
   flex: 0.35;  
 }
 
-.number {
+.decoration {
   background-color: makerYellow;
   color: makerDarkBlack;
   width: 4em;
@@ -57,7 +57,7 @@
 }
 
 .icon {
-  background: makerWhite;
+  background: makerLightGrey;
   width: 3em;
   height: 3em;
   border-radius: 2em;

@@ -5,7 +5,7 @@ import styles from './career.module.css';
 const Career = () => (
   <div className={styles.container}>
     <div className={styles.title}>
-      <span className={styles.number}>✔️</span>
+      <span className={styles.decoration}>✔️</span>
       <img className={styles.logo} src="/images/kirbs_logo.png" alt="kirbs__logo" />
     </div>
     <div className={styles.contents}>
