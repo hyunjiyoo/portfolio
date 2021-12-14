@@ -1,5 +1,5 @@
 @value makerLightBlack, makerDarkBlack, makerWhite, makerLightGrey, makerYellow, makerPurple from '../../shared/colors.css';
-@value smallFont from '../../shared/size.css';
+@value smallFont, mediaWidth from '../../shared/size.css';
 
 .about {
   background: makerLightBlack;
@@ -68,4 +68,18 @@
 
 .career {
   margin-top: 4rem;
+}
+
+@media screen and (max-width: mediaWidth) {
+  .items {
+    flex-direction: column;
+  }
+
+  .item {
+    margin-bottom: 2rem;
+  }
+
+  .career {
+    margin-top: 1rem;
+  }
 }
