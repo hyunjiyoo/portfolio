@@ -26,6 +26,10 @@ button {
   outline: none;
 }
 
+section {
+  padding: 0 2.5rem;
+}
+
 #root {
   display: flex;
   justify-content: center;
