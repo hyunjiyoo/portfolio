@@ -73,7 +73,6 @@ const Navbar = (): JSX.Element => {
           <li className={styles.menu_item} data-link="#work">Work</li>
           <li className={styles.menu_item} data-link="#testimonials">Testimonial</li>
           <li className={styles.menu_item} data-link="#contact">Contact</li>
-          <li className={styles.menu_item} data-link="#social">Social</li>
         </ul>
         <button className={styles.button}>
           <FontAwesomeIcon icon={faBars} />
