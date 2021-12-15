@@ -13,23 +13,23 @@
 }
 
 #frontend {
-  width: 10em;
-  height: 10em;
+  width: 14rem;
+  height: 14rem;
 }
 
 #infra {
-  width: 7em;
-  height:7em;
+  width: 9rem;
+  height:9rem;
 }
 
 #backend {
-  width: 8em;
-  height:8em;
+  width: 11rem;
+  height: 11rem;
 }
 
 #design {
-  width: 9em;
-  height: 9em;
+  width: 12.5rem;
+  height: 12.5rem;
 }
 
 .item:nth-child(even) .subject {
@@ -38,10 +38,6 @@
 
 .item:nth-child(odd) .subject {
   background: makerYellow;
-}
-
-.item:nth-child(-n+3) {
-  margin-right:30px;
 }
 
 .subject {  
@@ -90,7 +86,7 @@
   }
 
   .item:nth-child(3) {
-    margin-left: 1rem;
+    margin-left: 3rem;
     margin-right: 3.5rem;
   }
 

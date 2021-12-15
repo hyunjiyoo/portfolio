@@ -1,4 +1,4 @@
-@value makerLightBlack, makerWhite, makerDarkPurple, makerPurple, makerPink, makerLightGrey from '../../shared/colors.css';
+@value makerLightBlack, makerWhite, makerBlackPurple, makerDarkPurple, makerPurple, makerPink, makerLightGrey from '../../shared/colors.css';
 
 .skills {
   background: makerLightBlack;
@@ -29,7 +29,7 @@
   width: 100%;
   height: 60%;
   padding: 1.5em;
-  background: #4F379CAA;
+  background: makerBlackPurple;
   border-radius: 10px;
 }
 

@@ -1,5 +1,5 @@
-@value makerWhite, makerDarkBlack, makerPink, makerLightGrey from '../../shared/colors.css';
-@value mediumFont from '../../shared/size.css';
+@value makerWhite, makerBlackPurple, makerDarkPurple, makerPurple, makerDarkBlack, makerPink, makerLightGrey from '../../shared/colors.css';
+@value mediumFont, tabletWidth, mobileWidth from '../../shared/size.css';
 
 .note {
   background-color: makerDarkBlack;
@@ -8,8 +8,8 @@
 .tab_menu {
   display: flex;
   align-items: center;
-  border-top: 1px solid makerLightGrey;
-  border-bottom: 1px solid makerLightGrey;
+  background: makerBlackPurple;
+  border-radius: 5px;
 }
 
 .tab_item {
@@ -28,12 +28,12 @@
 
 .contents {
   display: flex;
-  border-bottom: 1px solid makerLightGrey;
-  padding: 0.8rem 0.5rem;
+  margin: 1rem 0;
 }
 
 .contents_img {
   position: relative;
+  flex-basis: 50%;
 }
 
 .link {
@@ -61,21 +61,49 @@
 }
 
 .main_img {
-  width: 31em;
+  width: 100%;
+  height: 100%;
 }
 
 .contents_img_list {
-  margin-left: 1em;
   height: 300px;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-basis: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .contents_img_list img {
-  padding: 0.2em;
-  width: 9em;
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;
+  height: 115px;
+  flex: 1;
 }
 
 .contents_img_list img:hover {
   cursor: pointer;
   transform: scale(1.04);
   transition: transform 200ms ease-in;
+}
+
+/* tablet CSS */
+@media only screen and (max-width: tabletWidth) {
+  .contents {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .contents_img_list {
+    margin-top: 1rem;
+    height: 200px;
+    width: 100%;
+    flex-basis: unset;
+  }
+
+  .contents_img_list img {
+    padding-left: 0;
+    padding-right: 0.5rem;
+  }
 }
