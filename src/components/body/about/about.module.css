@@ -1,5 +1,5 @@
 @value makerLightBlack, makerDarkBlack, makerWhite, makerLightGrey, makerYellow, makerPurple from '../../shared/colors.css';
-@value smallFont, mediaWidth from '../../shared/size.css';
+@value smallFont, tabletWidth, mobileWidth from '../../shared/size.css';
 
 .about {
   background: makerLightBlack;
@@ -40,6 +40,10 @@
   background: makerYellow;
 }
 
+.item:nth-child(-n+3) {
+  margin-right:30px;
+}
+
 .subject {  
   display: flex;
   justify-content: center;
@@ -70,16 +74,38 @@
   margin-top: 4rem;
 }
 
-@media screen and (max-width: mediaWidth) {
+/* tablet CSS */
+@media only screen and (max-width: tabletWidth) {
   .items {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .item {
     margin-bottom: 2rem;
   }
 
+  .item:first-child {
+    margin-right: 3rem;
+  }
+
+  .item:nth-child(3) {
+    margin-left: 1rem;
+    margin-right: 3.5rem;
+  }
+
   .career {
     margin-top: 1rem;
+  }
+}
+
+/* mobile CSS */
+@media only screen and (max-width: mobileWidth) {
+  .items {
+    flex-direction: column;
+  }
+
+  .item:nth-child(-n+3) {
+    margin: 0 0 2.5rem 0;
   }
 }
