@@ -1,69 +1,86 @@
-export type ImgType = 'React' | 'Typescript' | 'Nodejs' | 'Algorithm';
+export type NoteCategoryType = 'React' | 'Typescript' | 'Nodejs' | 'Algorithm';
 
 type ImgData = {
-  sep: Lowercase<ImgType>;
+  sep?: string;
   src: string;
   alt?: string;
 }[];
 
-const noteData: Record<ImgType, ImgData> = {
-  'React': [
-    {
-      sep: 'react',
-      src: 'https://picsum.photos/seed/llskd/120/100',
-      alt: 'note list'
-    },
-    {
-      sep: 'react',
-      src: 'https://picsum.photos/seed/aadf/120/100',
-      alt: 'note list'
-    }
-  ],
-  'Typescript': [
-    {
-      sep: 'typescript',
-      src: 'https://picsum.photos/seed/gg/120/100',
-      alt: 'note list'
-    },
-    {
-      sep: 'typescript',
-      src: 'https://picsum.photos/seed/as/120/100',
-      alt: 'note list'
-    },
-  ],
-  'Nodejs': [
-    {
-      sep: 'nodejs',
-      src: 'https://picsum.photos/seed/df/120/100',
-      alt: 'note list'
-    },
-  ],
-  'Algorithm': [
-    {
-      sep: 'algorithm',
-      src: 'https://picsum.photos/seed/ghd/120/100',
-      alt: 'note list'
-    }
-  ],
+type NoteData = {
+  sep: Lowercase<NoteCategoryType>;
+  data: ImgData;
 };
 
-export function getTypes() {
-  return Object.keys(noteData);
+const noteData: Record<NoteCategoryType, NoteData> = {
+  'React': {
+    sep: 'react',
+    data: 
+      [
+        {
+          src: 'https://picsum.photos/seed/llskd/120/100',
+          alt: 'note list'
+        },
+        {
+          src: 'https://picsum.photos/seed/aadf/120/100',
+          alt: 'note list'
+        }
+      ]
+    },
+  'Typescript': {
+    sep: 'typescript',
+    data: [
+      {
+        src: 'https://picsum.photos/seed/gg/120/100',
+        alt: 'note list'
+      },
+      {
+        src: 'https://picsum.photos/seed/as/120/100',
+        alt: 'note list'
+      },
+    ]
+  },
+  'Nodejs': {
+    sep: 'nodejs',
+    data: [
+      {
+        src: 'https://picsum.photos/seed/df/120/100',
+        alt: 'note list'
+      },
+      {
+        src: 'https://picsum.photos/seed/gggg/120/100',
+        alt: 'note list'
+      },
+    ]
+  },
+  'Algorithm': {
+    sep: 'algorithm',
+    data: [
+      {
+        src: 'https://picsum.photos/seed/ghd/120/100',
+        alt: 'note list'
+      }
+    ],
+  }
+};
+
+export function getTypes(): NoteCategoryType[] {
+  return (Object.keys(noteData) as NoteCategoryType[]);
 }
 
 export function getAllImg() {
-  let data: ImgData = [];
+  let dataset: ImgData = [];
 
   Object.values(noteData).forEach(note => {
-    data.push(...note);
+    const data = note.data.map(row => ({...row, sep: note.sep}));
+    dataset.push(...data);
   });
   
-  return data;
+  return dataset;
 }
 
-export function getImgByType(type: ImgType) {
+export function getImgByType(type: NoteCategoryType) {
 
-  const key = Object.keys(noteData).filter(key => (key === type))[0] as ImgType;
+  const key = Object.keys(noteData).filter(key => (key === type))[0] as NoteCategoryType;
   
   return noteData[key];
 }

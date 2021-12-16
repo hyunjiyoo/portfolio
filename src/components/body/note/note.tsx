@@ -4,43 +4,41 @@ import { Title } from '../shared/title/title';
 import { SectionKeyType } from '../../../db/title';
 import styles from './note.module.css';
 import { useRef } from 'react';
-import { getTypes, getImgByType, getAllImg } from '../../../db/note';
+import { getTypes, getAllImg, NoteCategoryType } from '../../../db/note';
 
 const SECTION_KEY: SectionKeyType = "note";
 
-const menus: string[] = getTypes();
-console.log(getImgByType('React'));
+const menus: NoteCategoryType[] = getTypes();
 
 const Note = (): JSX.Element => {
 
   const imgRef = useRef<HTMLDivElement>(null);
 
-  // ref를 배열형태로 변경해서 리팩토링 시도 예정
   const onShowNote = (event: React.MouseEvent<HTMLLIElement>) => {
     
     const target = event.target as HTMLLIElement;
     const selectedMenu = target.textContent?.toLowerCase();
-
     const imgList = imgRef.current?.childNodes as NodeListOf<HTMLImageElement>;
+    
+    if (selectedMenu == null || imgList == null) {
+      throw new Error('Invalid data: target.textContent or imgRef.current');
+    }
 
-    imgList.forEach((img: HTMLImageElement) => {
-
-      if (selectedMenu === 'all') {
+    if (selectedMenu === 'all') {
+      imgList.forEach((img: HTMLImageElement) => {
         img.style.display = "block";
-        return;
-      }
-
-      img.style.display = "none";
-
-      const sep = img.dataset.sep;
-      
-      if (selectedMenu === sep) {
-        const selectedImgs = document.querySelectorAll(`img[data-sep=${sep}]`) as NodeListOf<HTMLImageElement>;
-        selectedImgs.forEach((img: HTMLImageElement) => {
+      });
+    } 
+    else {
+      imgList.forEach((img: HTMLImageElement) => {
+        if (img.dataset.sep === selectedMenu) {
           img.style.display = "block";
-        });
-      } 
-    });
+        } 
+        else {
+          img.style.display = "none";
+        }
+      });
+    }
   }
 
   return (
@@ -50,7 +48,7 @@ const Note = (): JSX.Element => {
         <ul className={styles.tab_menu}>
           <li className={`${styles.tab_item} ${styles.active}`} onClick={onShowNote}>All</li>
           {
-            menus.map((menu: string) => (
+            menus.map((menu: NoteCategoryType) => (
               <li key={uuidv4()} className={styles.tab_item} onClick={onShowNote}>{menu}</li>
             ))
           }
