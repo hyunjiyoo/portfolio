@@ -52,7 +52,13 @@ export function getTypes() {
 }
 
 export function getAllImg() {
-  return Object.values(noteData);
+  let data: ImgData = [];
+
+  Object.values(noteData).forEach(note => {
+    data.push(...note);
+  });
+  
+  return data;
 }
 
 export function getImgByType(type: ImgType) {

@@ -1,3 +1,5 @@
+import React from 'react'
+import {v4 as uuidv4} from 'uuid'
 import { Title } from '../shared/title/title';
 import { SectionKeyType } from '../../../db/title';
 import styles from './note.module.css';
@@ -13,6 +15,7 @@ const Note = (): JSX.Element => {
 
   const imgRef = useRef<HTMLDivElement>(null);
 
+  // ref를 배열형태로 변경해서 리팩토링 시도 예정
   const onShowNote = (event: React.MouseEvent<HTMLLIElement>) => {
     
     const target = event.target as HTMLLIElement;
@@ -48,7 +51,7 @@ const Note = (): JSX.Element => {
           <li className={`${styles.tab_item} ${styles.active}`} onClick={onShowNote}>All</li>
           {
             menus.map((menu: string) => (
-              <li key={menu} className={styles.tab_item} onClick={onShowNote}>{menu}</li>
+              <li key={uuidv4()} className={styles.tab_item} onClick={onShowNote}>{menu}</li>
             ))
           }
         </ul>
@@ -62,10 +65,8 @@ const Note = (): JSX.Element => {
           </div>
           <div ref={imgRef} className={styles.contents_img_list}>
             {
-              getAllImg().map(imgs => (
-                imgs.map(img => (
-                  <img key={img.src} src={img.src} alt={img.alt} data-sep={img.sep} />
-                ))
+              getAllImg().map(img => (
+                <img key={uuidv4()} src={img.src} alt={img.alt} data-sep={img.sep} />
               ))
             }
           </div>
