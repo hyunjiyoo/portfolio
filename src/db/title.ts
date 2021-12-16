@@ -6,7 +6,7 @@ type Title = {
   position: 'L' | 'R';
 };
 
-export const titleset: Record<SectionKeyType, Title> = {
+const titleset: Record<SectionKeyType, Title> = {
   'about': {
     name: 'ABOUT ME',
     description: 'hello about',

@@ -1,6 +1,6 @@
 import { Title } from '../shared/title/title';
 import styles from './contact.module.css';
-import { SectionKeyType } from '../../../db/portfolio';
+import { SectionKeyType } from '../../../db/title';
 
 const SECTION_KEY: SectionKeyType = "contact";
 
@@ -14,7 +14,7 @@ const Contact = (): JSX.Element => (
 
         <div className={styles.info}>
           <div className={styles.name}>
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">NaRme</label>
             <input type="text" id="name" name="user_name" placeholder="성함을 입력해주세요"/>
           </div>
           <div className={styles.email}>

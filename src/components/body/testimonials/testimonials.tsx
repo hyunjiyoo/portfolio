@@ -1,7 +1,7 @@
 import { Title } from '../shared/title/title';
 import Testimonial from './testimonial';
 import styles from './testimonials.module.css';
-import { SectionKeyType } from '../../../db/portfolio';
+import { SectionKeyType } from '../../../db/title';
 
 const SECTION_KEY: SectionKeyType = "testimonials";
 

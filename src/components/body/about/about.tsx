@@ -1,7 +1,7 @@
 import { Title } from '../shared/title/title';
 import Career from './career';
 import styles from './about.module.css';
-import { SectionKeyType } from '../../../db/portfolio';
+import { SectionKeyType } from '../../../db/title';
 
 const SECTION_KEY: SectionKeyType = "about";
 

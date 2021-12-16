@@ -1,5 +1,5 @@
 import { Title } from '../shared/title/title';
-import { SectionKeyType } from '../../../db/portfolio';
+import { SectionKeyType } from '../../../db/title';
 import styles from './note.module.css';
 import { useRef } from 'react';
 import { getTypes, getImgByType, getAllImg } from '../../../db/note';

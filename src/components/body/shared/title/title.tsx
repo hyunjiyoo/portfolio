@@ -1,5 +1,5 @@
 import styles from './title.module.css';
-import { getTitle, SectionKeyType } from '../../../../db/portfolio';
+import { getTitle, SectionKeyType } from '../../../../db/title';
 interface TitleProps {
   id: SectionKeyType;
 }
