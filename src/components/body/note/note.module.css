@@ -79,8 +79,7 @@
 .contents_img_list img {
   padding-left: 0.5em;
   padding-bottom: 0.5em;
-  height: 115px;
-  flex: 1;
+  height: 50%;
 }
 
 .contents_img_list img:hover {
