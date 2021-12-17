@@ -6,6 +6,7 @@ import styles from './note.module.css';
 import { useRef } from 'react';
 import { NoteCategoryType } from '../../../db/dataStructure';
 import { getTypes, getAllImg } from '../../../controller/note';
+import { onCategory } from '../shared/common';
 
 const SECTION_KEY: SectionKeyType = "note";
 
@@ -15,31 +16,8 @@ const Note = (): JSX.Element => {
 
   const imgRef = useRef<HTMLDivElement>(null);
 
-  const onShowNote = (event: React.MouseEvent<HTMLLIElement>) => {
-    
-    const target = event.target as HTMLLIElement;
-    const selectedMenu = target.textContent?.toLowerCase();
-    const imgList = imgRef.current?.childNodes as NodeListOf<HTMLImageElement>;
-    
-    if (selectedMenu == null || imgList == null) {
-      throw new Error('Invalid data: target.textContent or imgRef.current');
-    }
-
-    if (selectedMenu === 'all') {
-      imgList.forEach((img: HTMLImageElement) => {
-        img.style.display = "block";
-      });
-    } 
-    else {
-      imgList.forEach((img: HTMLImageElement) => {
-        if (img.dataset.category === selectedMenu) {
-          img.style.display = "block";
-        } 
-        else {
-          img.style.display = "none";
-        }
-      });
-    }
+  const handleCategory = (event: React.MouseEvent<HTMLLIElement>) => {
+    onCategory(event, imgRef);
   }
 
   return (
@@ -47,10 +25,10 @@ const Note = (): JSX.Element => {
       <Title id={SECTION_KEY} />
       <div className="container">
         <ul className={styles.tab_menu}>
-          <li className={`${styles.tab_item} ${styles.active}`} onClick={onShowNote}>All</li>
+          <li className={`${styles.tab_item} ${styles.active}`} onClick={handleCategory}>All</li>
           {
             menus.map((menu: NoteCategoryType) => (
-              <li key={uuidv4()} className={styles.tab_item} onClick={onShowNote}>{menu}</li>
+              <li key={uuidv4()} className={styles.tab_item} onClick={handleCategory}>{menu}</li>
             ))
           }
         </ul>
