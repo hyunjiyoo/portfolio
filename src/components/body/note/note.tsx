@@ -1,10 +1,11 @@
 import React from 'react'
 import {v4 as uuidv4} from 'uuid'
 import { Title } from '../shared/title/title';
-import { SectionKeyType } from '../../../db/title';
+import { SectionKeyType } from '../../../db/dataStructure';
 import styles from './note.module.css';
 import { useRef } from 'react';
-import { getTypes, getAllImg, NoteCategoryType } from '../../../db/note';
+import { NoteCategoryType } from '../../../db/dataStructure';
+import { getTypes, getAllImg } from '../../../db/note';
 
 const SECTION_KEY: SectionKeyType = "note";
 

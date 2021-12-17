@@ -1,6 +1,6 @@
 import { Title } from '../shared/title/title';
 import styles from './contact.module.css';
-import { SectionKeyType } from '../../../db/title';
+import { SectionKeyType } from '../../../db/dataStructure';
 
 const SECTION_KEY: SectionKeyType = "contact";
 

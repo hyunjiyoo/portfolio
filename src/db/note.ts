@@ -1,18 +1,4 @@
-export type NoteCategoryType = 'React' | 'Typescript' | 'Nodejs' | 'Algorithm';
-
-interface NoteImgInterface {
-  src: string;
-  alt?: string;
-};
-
-interface NoteImgElement extends NoteImgInterface {
-  sep: Lowercase<NoteCategoryType>;
-}
-
-type NoteType = {
-  sep: Lowercase<NoteCategoryType>;
-  images: NoteImgInterface[];
-};
+import { NoteCategoryType, NoteType, NoteImgElement } from "./dataStructure";
 
 const notes: Record<NoteCategoryType, NoteType> = {
   'React': {
@@ -82,7 +68,6 @@ export function getAllImg() {
 }
 
 export function getImgByType(type: NoteCategoryType) {
-
   const key = Object.keys(notes).filter(key => (key === type))[0] as NoteCategoryType;
   
   return notes[key];

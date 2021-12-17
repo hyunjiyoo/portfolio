@@ -1,10 +1,11 @@
-export type SectionKeyType = 'about' | 'note' | 'skills' | 'work' | 'testimonials' | 'contact';
+// export type SectionKeyType = 'about' | 'note' | 'skills' | 'work' | 'testimonials' | 'contact';
 
-type Title = {
-  name: string;
-  description: string;
-  position: 'L' | 'R';
-};
+// type Title = {
+//   name: string;
+//   description: string;
+//   position: 'L' | 'R';
+// };
+import { SectionKeyType, Title } from './dataStructure';
 
 const titleset: Record<SectionKeyType, Title> = {
   'about': {
