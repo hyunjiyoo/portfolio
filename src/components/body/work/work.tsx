@@ -1,29 +1,50 @@
 import { Title } from '../shared/title/title';
 import Project from './project';
 import styles from './work.module.css';
-import { SectionKeyType } from '../../../db/dataStructure';
-import { getAllProjects, getAllCategory } from '../../../controller/work';
+import { SectionKeyType, WorkCategoryType, WorkType } from '../../../db/dataStructure';
+import { getAllProjects, getAllCategory, getProjectByCategory } from '../../../controller/work';
 import {v4 as uuidv4} from 'uuid'
+import { useState } from 'react';
 
 const SECTION_KEY: SectionKeyType = "work";
+const categories = getAllCategory();
 
 const Work = (): JSX.Element => {
+  const [projects, setProjects] = useState<WorkType[]>(getAllProjects());
 
+  const onCategory = <T extends HTMLElement>(event: React.MouseEvent<T>) => {
+    const target = event.target as T;
+    const category = target.textContent as (WorkCategoryType & 'All');
+
+    setProjects(() => {
+      let updated: WorkType[];
+
+      if (category === 'All') {
+        updated = getAllProjects();
+      }
+      else {
+        updated = getProjectByCategory(category);
+      }
+
+      return updated;
+    });
+  }
+  
   return (
     <section id="work" className={styles.work}>
       <Title id={SECTION_KEY} />
       <div className={`container ${styles.workset}`}>
         <ul className={styles.categories}>
-          <li className={`${styles.category} ${styles.active}`}>All</li>
+          <li className={`${styles.category} ${styles.active}`} onClick={onCategory}>All</li>
           {
-            getAllCategory().map(category => (
-              <li className={styles.category}>{category}</li>    
+            categories.map(category => (
+              <li key={uuidv4()} className={styles.category} onClick={onCategory}>{category}</li>    
             ))
           }
         </ul>
         <div className={styles.projects}>
           {
-            getAllProjects().map(project => (
+            projects.map(project => (
               <Project key={uuidv4()} project={project} />
             ))
           }
