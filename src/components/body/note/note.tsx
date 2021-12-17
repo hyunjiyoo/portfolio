@@ -32,7 +32,7 @@ const Note = (): JSX.Element => {
     } 
     else {
       imgList.forEach((img: HTMLImageElement) => {
-        if (img.dataset.sep === selectedMenu) {
+        if (img.dataset.category === selectedMenu) {
           img.style.display = "block";
         } 
         else {
@@ -65,7 +65,7 @@ const Note = (): JSX.Element => {
           <div ref={imgRef} className={styles.contents_img_list}>
             {
               getAllImg().map(img => (
-                <img key={uuidv4()} src={img.src} alt={img.alt} data-sep={img.sep} />
+                <img key={uuidv4()} src={img.src} alt={img.alt} data-category={img.category} />
               ))
             }
           </div>

@@ -14,10 +14,10 @@ interface NoteImgInterface {
 };
 
 export interface NoteImgElement extends NoteImgInterface {
-  sep: Lowercase<NoteCategoryType>;
+  category: Lowercase<NoteCategoryType>;
 }
 
 export type NoteType = {
-  sep: Lowercase<NoteCategoryType>;
+  category: Lowercase<NoteCategoryType>;
   images: NoteImgInterface[];
 };

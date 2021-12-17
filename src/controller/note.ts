@@ -9,7 +9,7 @@ export function getAllImg() {
   let noteImgElements: NoteImgElement[] = [];
 
   Object.values(notes).forEach(note => {
-    const data: NoteImgElement[] = note.images.map(image => ({...image, sep: note.sep}));
+    const data: NoteImgElement[] = note.images.map(image => ({...image, category: note.category}));
     noteImgElements.push(...data);
   });
   

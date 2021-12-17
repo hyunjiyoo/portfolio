@@ -2,7 +2,7 @@ import { NoteCategoryType, NoteType } from "./dataStructure";
 
 export const notes: Record<NoteCategoryType, NoteType> = {
   'React': {
-    sep: 'react',
+    category: 'react',
     images: 
       [
         {
@@ -16,7 +16,7 @@ export const notes: Record<NoteCategoryType, NoteType> = {
       ]
     },
   'Typescript': {
-    sep: 'typescript',
+    category: 'typescript',
     images: [
       {
         src: 'https://picsum.photos/seed/gg/120/100',
@@ -29,7 +29,7 @@ export const notes: Record<NoteCategoryType, NoteType> = {
     ]
   },
   'Nodejs': {
-    sep: 'nodejs',
+    category: 'nodejs',
     images: [
       {
         src: 'https://picsum.photos/seed/df/120/100',
@@ -42,7 +42,7 @@ export const notes: Record<NoteCategoryType, NoteType> = {
     ]
   },
   'Algorithm': {
-    sep: 'algorithm',
+    category: 'algorithm',
     images: [
       {
         src: 'https://picsum.photos/seed/ghd/120/100',
