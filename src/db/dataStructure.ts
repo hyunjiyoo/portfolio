@@ -22,10 +22,12 @@ export type NoteType = {
   images: NoteImgInterface[];
 };
 
+export type WorkCategoryType = 'Front-end' | 'Back-end';
+
 export type WorkType = {
   title : string;
   description: string;
   imgUrl: string;
   imgAlt?: string;
   color: 'yellow' | 'purple';
-}
+};
