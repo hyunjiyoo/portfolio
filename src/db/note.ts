@@ -1,20 +1,23 @@
 export type NoteCategoryType = 'React' | 'Typescript' | 'Nodejs' | 'Algorithm';
 
-type ImgData = {
-  sep?: string;
+interface NoteImgInterface {
   src: string;
   alt?: string;
-}[];
-
-type NoteData = {
-  sep: Lowercase<NoteCategoryType>;
-  data: ImgData;
 };
 
-const noteData: Record<NoteCategoryType, NoteData> = {
+interface NoteImgElement extends NoteImgInterface {
+  sep: Lowercase<NoteCategoryType>;
+}
+
+type NoteType = {
+  sep: Lowercase<NoteCategoryType>;
+  images: NoteImgInterface[];
+};
+
+const notes: Record<NoteCategoryType, NoteType> = {
   'React': {
     sep: 'react',
-    data: 
+    images: 
       [
         {
           src: 'https://picsum.photos/seed/llskd/120/100',
@@ -28,7 +31,7 @@ const noteData: Record<NoteCategoryType, NoteData> = {
     },
   'Typescript': {
     sep: 'typescript',
-    data: [
+    images: [
       {
         src: 'https://picsum.photos/seed/gg/120/100',
         alt: 'note list'
@@ -41,7 +44,7 @@ const noteData: Record<NoteCategoryType, NoteData> = {
   },
   'Nodejs': {
     sep: 'nodejs',
-    data: [
+    images: [
       {
         src: 'https://picsum.photos/seed/df/120/100',
         alt: 'note list'
@@ -54,7 +57,7 @@ const noteData: Record<NoteCategoryType, NoteData> = {
   },
   'Algorithm': {
     sep: 'algorithm',
-    data: [
+    images: [
       {
         src: 'https://picsum.photos/seed/ghd/120/100',
         alt: 'note list'
@@ -64,23 +67,23 @@ const noteData: Record<NoteCategoryType, NoteData> = {
 };
 
 export function getTypes(): NoteCategoryType[] {
-  return (Object.keys(noteData) as NoteCategoryType[]);
+  return (Object.keys(notes) as NoteCategoryType[]);
 }
 
 export function getAllImg() {
-  let dataset: ImgData = [];
+  let noteImgElements: NoteImgElement[] = [];
 
-  Object.values(noteData).forEach(note => {
-    const data = note.data.map(row => ({...row, sep: note.sep}));
-    dataset.push(...data);
+  Object.values(notes).forEach(note => {
+    const data: NoteImgElement[] = note.images.map(image => ({...image, sep: note.sep}));
+    noteImgElements.push(...data);
   });
   
-  return dataset;
+  return noteImgElements;
 }
 
 export function getImgByType(type: NoteCategoryType) {
 
-  const key = Object.keys(noteData).filter(key => (key === type))[0] as NoteCategoryType;
+  const key = Object.keys(notes).filter(key => (key === type))[0] as NoteCategoryType;
   
-  return noteData[key];
+  return notes[key];
 }
