@@ -13,11 +13,11 @@ const Work = (): JSX.Element => {
     <section id="work" className={styles.work}>
       <Title id={SECTION_KEY} />
       <div className={`container ${styles.workset}`}>
-        <div className={styles.categories}>
-          <h3 className={`${styles.category} ${styles.active}`}>All</h3>
-          <h3 className={styles.category}>Front-end</h3>
-          <h3 className={styles.category}>Back-end</h3>
-        </div>
+        <ul className={styles.categories}>
+          <li className={`${styles.category} ${styles.active}`}>All</li>
+          <li className={styles.category}>Front-end</li>
+          <li className={styles.category}>Back-end</li>
+        </ul>
         <div className={styles.projects}>
           {
             getAllProjects().map(project => (
