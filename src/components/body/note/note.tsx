@@ -5,12 +5,10 @@ import { SectionKeyType } from '../../../db/dataStructure';
 import styles from './note.module.css';
 import { useRef } from 'react';
 import { NoteCategoryType } from '../../../db/dataStructure';
-import { getTypes, getAllImg } from '../../../controller/note';
+import { getAllCategory, getAllImg } from '../../../controller/note';
 import { onCategory } from '../shared/common';
 
 const SECTION_KEY: SectionKeyType = "note";
-
-const menus: NoteCategoryType[] = getTypes();
 
 const Note = (): JSX.Element => {
 
@@ -27,8 +25,8 @@ const Note = (): JSX.Element => {
         <ul className={styles.tab_menu}>
           <li className={`${styles.tab_item} ${styles.active}`} onClick={handleCategory}>All</li>
           {
-            menus.map((menu: NoteCategoryType) => (
-              <li key={uuidv4()} className={styles.tab_item} onClick={handleCategory}>{menu}</li>
+            getAllCategory().map((category: NoteCategoryType) => (
+              <li key={uuidv4()} className={styles.tab_item} onClick={handleCategory}>{category}</li>
             ))
           }
         </ul>

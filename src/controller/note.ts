@@ -1,7 +1,7 @@
 import { NoteCategoryType, NoteImgElement } from "../db/dataStructure";
 import { notes } from "../db/note";
 
-export function getTypes(): NoteCategoryType[] {
+export function getAllCategory(): NoteCategoryType[] {
   return (Object.keys(notes) as NoteCategoryType[]);
 }
 
