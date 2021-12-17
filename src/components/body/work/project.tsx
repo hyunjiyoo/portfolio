@@ -1,19 +1,15 @@
+import { WorkType } from '../../../db/dataStructure';
 import styles from './project.module.css';
-import { Contents } from './work';
 
 interface ProjectProps {
-  project: Contents
+  project: WorkType;
 }
 
 const Project = ({ project }: ProjectProps): JSX.Element => {
   const { title, description, imgUrl, imgAlt, color } = project;
 
-  const colorStyle = (color: 'yellow' | 'purple') => {
-    return color === 'yellow' ? styles.yellow : styles.purple;
-  }
-
   return (
-      <div className={`${styles.project} ${colorStyle(color)}`}>
+      <div className={`${styles.project} ${getStyle(color)}`}>
       <img src={imgUrl} alt={imgAlt} />
       <h3>{title}</h3>
       <hr />
@@ -23,3 +19,14 @@ const Project = ({ project }: ProjectProps): JSX.Element => {
 };
 
 export default Project;
+
+const getStyle = (color: WorkType["color"]) => {
+  switch(color) {
+    case 'yellow':
+      return styles.yellow;
+    case 'purple':
+      return styles.purple;
+    default:
+      throw new Error(`unknown color: ${color}`);
+  }
+}

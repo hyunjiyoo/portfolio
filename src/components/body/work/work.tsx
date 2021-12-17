@@ -2,50 +2,11 @@ import { Title } from '../shared/title/title';
 import Project from './project';
 import styles from './work.module.css';
 import { SectionKeyType } from '../../../db/dataStructure';
+import { works } from '../../../db/work';
 
 const SECTION_KEY: SectionKeyType = "work";
 
-export type Contents = {
-  title : string;
-  description: string;
-  imgUrl: string;
-  imgAlt: string;
-  color: 'yellow' | 'purple';
-}
-
 const Work = (): JSX.Element => {
-
-  // database 로 이동예정
-  const projects : Record<string, Contents> = {
-    '1': {
-      title: 'P-SEEK',
-      description: 'Nodejs, MySQL, CentOS7...sdafsadfsadfsadfsadfsad',
-      imgUrl: 'https://picsum.photos/seed/aasd/200/150',
-      imgAlt: 'p-seek',
-      color: 'yellow'
-    },
-    '2': {
-      title: 'P-SEEK22',
-      description: 'Nodejs, MySQL, CentOS7...sdafsadfsadfsadfsadfsad',
-      imgUrl: 'https://picsum.photos/seed/aasasd/200/150',
-      imgAlt: 'p-seek22',
-      color: 'purple'
-    },
-    '3': {
-      title: 'P-SEEK22',
-      description: 'Nodejs, MySQL, CentOS7...sdafsadfsadfsadfsadfsad',
-      imgUrl: 'https://picsum.photos/seed/aeesd/200/150',
-      imgAlt: 'p-seek22',
-      color: 'yellow'
-    },
-    '4': {
-      title: 'P-SEEK22',
-      description: 'Nodejs, MySQL, CentOS7...sdafsadfsadfsadfsadfsad',
-      imgUrl: 'https://picsum.photos/seed/tsd/200/150',
-      imgAlt: 'p-seek22',
-      color: 'purple'
-    },
-  };
 
   return (
     <section id="work" className={styles.work}>
@@ -58,8 +19,8 @@ const Work = (): JSX.Element => {
         </div>
         <div className={styles.projects}>
           {
-            Object.keys(projects).map((key) => (
-              <Project key={key} project={projects[key]} />
+            Object.keys(works).map((key) => (
+              <Project key={key} project={works[key]} />
             ))
           }
         </div>

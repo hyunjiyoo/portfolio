@@ -21,3 +21,11 @@ export type NoteType = {
   category: Lowercase<NoteCategoryType>;
   images: NoteImgInterface[];
 };
+
+export type WorkType = {
+  title : string;
+  description: string;
+  imgUrl: string;
+  imgAlt?: string;
+  color: 'yellow' | 'purple';
+}
