@@ -1,13 +1,6 @@
-// export type SectionKeyType = 'about' | 'note' | 'skills' | 'work' | 'testimonials' | 'contact';
-
-// type Title = {
-//   name: string;
-//   description: string;
-//   position: 'L' | 'R';
-// };
 import { SectionKeyType, Title } from './dataStructure';
 
-const titleset: Record<SectionKeyType, Title> = {
+export const titleset: Record<SectionKeyType, Title> = {
   'about': {
     name: 'ABOUT ME',
     description: 'hello about',
@@ -39,9 +32,3 @@ const titleset: Record<SectionKeyType, Title> = {
     position: 'L'
   }
 };
-
-export function getTitle(id: SectionKeyType) {
-  const key: SectionKeyType = Object.keys(titleset).filter(key => key === id)[0] as SectionKeyType;
-  
-  return titleset[key];
-}

@@ -1,6 +1,6 @@
-import { NoteCategoryType, NoteType, NoteImgElement } from "./dataStructure";
+import { NoteCategoryType, NoteType } from "./dataStructure";
 
-const notes: Record<NoteCategoryType, NoteType> = {
+export const notes: Record<NoteCategoryType, NoteType> = {
   'React': {
     sep: 'react',
     images: 
@@ -51,24 +51,3 @@ const notes: Record<NoteCategoryType, NoteType> = {
     ],
   }
 };
-
-export function getTypes(): NoteCategoryType[] {
-  return (Object.keys(notes) as NoteCategoryType[]);
-}
-
-export function getAllImg() {
-  let noteImgElements: NoteImgElement[] = [];
-
-  Object.values(notes).forEach(note => {
-    const data: NoteImgElement[] = note.images.map(image => ({...image, sep: note.sep}));
-    noteImgElements.push(...data);
-  });
-  
-  return noteImgElements;
-}
-
-export function getImgByType(type: NoteCategoryType) {
-  const key = Object.keys(notes).filter(key => (key === type))[0] as NoteCategoryType;
-  
-  return notes[key];
-}

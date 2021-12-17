@@ -1,6 +1,7 @@
 import styles from './title.module.css';
 import { SectionKeyType } from '../../../../db/dataStructure';
-import { getTitle } from '../../../../db/title';
+import { getTitle } from '../../../../controller/title';
+
 interface TitleProps {
   readonly id: SectionKeyType;
 }

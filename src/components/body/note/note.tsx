@@ -5,7 +5,7 @@ import { SectionKeyType } from '../../../db/dataStructure';
 import styles from './note.module.css';
 import { useRef } from 'react';
 import { NoteCategoryType } from '../../../db/dataStructure';
-import { getTypes, getAllImg } from '../../../db/note';
+import { getTypes, getAllImg } from '../../../controller/note';
 
 const SECTION_KEY: SectionKeyType = "note";
 
