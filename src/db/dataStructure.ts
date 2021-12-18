@@ -8,23 +8,18 @@ export interface Title {
 
 export type NoteCategoryType = 'React' | 'Typescript' | 'Nodejs' | 'Algorithm';
 
-interface NoteImgInterface {
+export interface NoteImgElement extends NoteType {
+  category: Lowercase<NoteCategoryType>;
+}
+
+export interface NoteType {
   src: string;
   alt?: string;
 };
 
-export interface NoteImgElement extends NoteImgInterface {
-  category: Lowercase<NoteCategoryType>;
-}
-
-export type NoteType = {
-  category: Lowercase<NoteCategoryType>;
-  images: NoteImgInterface[];
-};
-
 export type WorkCategoryType = 'Front-end' | 'Back-end';
 
-export type WorkType = {
+export interface WorkType {
   title : string;
   description: string;
   imgUrl: string;

@@ -1,21 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {v4 as uuidv4} from 'uuid'
 import { Title } from '../shared/title/title';
-import { SectionKeyType } from '../../../db/dataStructure';
+import { SectionKeyType, NoteCategoryType, NoteType } from '../../../db/dataStructure';
 import styles from './note.module.css';
-import { useRef } from 'react';
-import { NoteCategoryType } from '../../../db/dataStructure';
-import { getAllCategory, getAllImg } from '../../../controller/note';
-import { onCategory } from '../shared/common';
+import * as Controller from '../../../controller/note';
 
 const SECTION_KEY: SectionKeyType = "note";
 
+const categories = Controller.getAllCategory();
+const initImgs = Controller.getAllImgs();
+
 const Note = (): JSX.Element => {
 
-  const imgRef = useRef<HTMLDivElement>(null);
+  const [imgs, setImgs] = useState<NoteType[]>(initImgs);
 
-  const handleCategory = (event: React.MouseEvent<HTMLLIElement>) => {
-    onCategory(event, imgRef);
+  const onCategory = <T extends HTMLElement>(event: React.MouseEvent<T>) => {
+    const target = event.target as T;
+    const category = target.textContent as (NoteCategoryType & 'All');
+
+    setImgs(() => {
+      let updated: NoteType[];
+
+      if (category === 'All') {
+        updated = Controller.getAllImgs();
+      }
+      else {
+        updated = Controller.getImgByCategory(category);
+      }
+
+      return updated;
+    });
   }
 
   return (
@@ -23,10 +37,10 @@ const Note = (): JSX.Element => {
       <Title id={SECTION_KEY} />
       <div className="container">
         <ul className={styles.tab_menu}>
-          <li className={`${styles.tab_item} ${styles.active}`} onClick={handleCategory}>All</li>
+          <li className={`${styles.tab_item} ${styles.active}`} onClick={onCategory}>All</li>
           {
-            getAllCategory().map((category: NoteCategoryType) => (
-              <li key={uuidv4()} className={styles.tab_item} onClick={handleCategory}>{category}</li>
+            categories.map((category: NoteCategoryType) => (
+              <li key={uuidv4()} className={styles.tab_item} onClick={onCategory}>{category}</li>
             ))
           }
         </ul>
@@ -38,10 +52,10 @@ const Note = (): JSX.Element => {
             </a>
             <img className={styles.main_img} src="https://picsum.photos/800/400" alt="note" />
           </div>
-          <div ref={imgRef} className={styles.contents_img_list}>
+          <div className={styles.contents_img_list}>
             {
-              getAllImg().map(img => (
-                <img key={uuidv4()} src={img.src} alt={img.alt} data-category={img.category} />
+              imgs.map(img => (
+                <img key={uuidv4()} src={img.src} alt={img.alt} />
               ))
             }
           </div>
