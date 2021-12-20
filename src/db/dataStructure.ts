@@ -8,10 +8,6 @@ export interface Title {
 
 export type NoteCategoryType = 'React' | 'Typescript' | 'Nodejs' | 'Algorithm';
 
-export interface NoteImgElement extends NoteType {
-  category: Lowercase<NoteCategoryType>;
-}
-
 export interface NoteType {
   src: string;
   alt?: string;
