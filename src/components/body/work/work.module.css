@@ -23,15 +23,13 @@
   text-align: center;
   border: 1px solid transparent;
   font-size: 1.2rem;
-  font-weight: bold;
+  cursor: pointer;
 }
 
-.category.active,
+.active,
 .category:hover {
   border: 1px solid makerPink;
   border-radius: 3px;
-  cursor: pointer;
-  font-weight: bold;
 }
 
 .projects {

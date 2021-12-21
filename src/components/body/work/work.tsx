@@ -11,6 +11,7 @@ const categories = getAllCategory();
 
 const Work = (): JSX.Element => {
   const [projects, setProjects] = useState<WorkType[]>(getAllProjects());
+  const [activeTarget, setActiveTarget] = useState<(WorkCategoryType | 'All')>('All');
 
   const onCategory = <T extends HTMLElement>(event: React.MouseEvent<T>) => {
     const target = event.target as T;
@@ -28,6 +29,18 @@ const Work = (): JSX.Element => {
 
       return updated;
     });
+
+    setActiveTarget(category);
+  }
+
+  const getStyle = (category: WorkCategoryType | 'All') => {
+    let classList = styles.category;
+
+    if (activeTarget === category) {
+      classList += ` ${styles.active}`;
+    }
+
+    return classList;
   }
   
   return (
@@ -35,10 +48,10 @@ const Work = (): JSX.Element => {
       <Title id={SECTION_KEY} />
       <div className={`container ${styles.workset}`}>
         <ul className={styles.categories}>
-          <li className={`${styles.category} ${styles.active}`} onClick={onCategory}>All</li>
+          <li className={getStyle('All')} onClick={onCategory}>All</li>
           {
             categories.map(category => (
-              <li key={uuidv4()} className={styles.category} onClick={onCategory}>{category}</li>    
+              <li key={uuidv4()} className={getStyle(category)} onClick={onCategory}>{category}</li>    
             ))
           }
         </ul>
