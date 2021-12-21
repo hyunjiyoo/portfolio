@@ -10,8 +10,14 @@ const SECTION_KEY: SectionKeyType = "note";
 const categories = Controller.getAllCategory();
 const initImgs = Controller.getAllImgs();
 
+type selectedImgType = {
+  src: string;
+  alt: string;
+};
+
 const Note = (): JSX.Element => {
 
+  const [selectedImg, setSelectedImg] = useState<selectedImgType>({src: 'https://picsum.photos/800/400', alt: 'note'});
   const [imgs, setImgs] = useState<NoteType[]>(initImgs);
   const [activeTarget, setActiveTarget] = useState<(NoteCategoryType | 'All')>('All');
 
@@ -45,6 +51,11 @@ const Note = (): JSX.Element => {
     return classList;
   }
 
+  const selectImg = (event: React.MouseEvent) => {
+    const { src, alt } = event.target as HTMLImageElement;
+    setSelectedImg({ src, alt });
+  }
+
   return (
     <section id="note" className={styles.note}>
       <Title id={SECTION_KEY} />
@@ -65,9 +76,9 @@ const Note = (): JSX.Element => {
               <img className={styles.notion} src="https://cdn.iconscout.com/icon/free/png-256/notion-1693557-1442598.png" alt="" />
               <p>Notion Note Link 🔗</p>
             </a>
-            <img className={styles.main_img} src="https://picsum.photos/800/400" alt="note" />
+            <img className={styles.main_img} src={selectedImg.src} alt={selectedImg.alt} />
           </div>
-          <div className={styles.contents_img_list}>
+          <div className={styles.contents_img_list} onClick={selectImg}>
             {
               imgs.map(img => (
                 <img key={uuidv4()} src={img.src} alt={img.alt} />
