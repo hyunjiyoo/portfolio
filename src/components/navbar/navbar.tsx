@@ -88,7 +88,7 @@ const scrollIntoView = (selector: string) => {
 }
 
 const activeEffect = (target: HTMLElement) => {
-  const prevTarget = document.querySelector(`.${styles.menu_item}.${styles.active}`) as HTMLLIElement;
+  const prevTarget = document.querySelector(`.${styles.active}`) as HTMLLIElement;
   prevTarget.classList.remove(`${styles.active}`);
   target.classList.add(`${styles.active}`);
 }

@@ -13,6 +13,13 @@ const initImgs = Controller.getAllImgs();
 const Note = (): JSX.Element => {
 
   const [imgs, setImgs] = useState<NoteType[]>(initImgs);
+  const [active, setActive] = useState<Record<string, boolean>>({
+    'All': true,
+    'React': false,
+    'Typescript': false,
+    'Nodejs': false,
+    'Algorithm': false
+  });
 
   const onCategory = <T extends HTMLElement>(event: React.MouseEvent<T>) => {
     const target = event.target as T;
@@ -20,27 +27,34 @@ const Note = (): JSX.Element => {
 
     setImgs(() => {
       let updated: NoteType[];
-
+      
       if (category === 'All') {
         updated = Controller.getAllImgs();
       }
       else {
         updated = Controller.getImgByCategory(category);
       }
-
+      
       return updated;
     });
-  }
+
+    const prevTarget = document.querySelector(`.${styles.active}`)?.textContent as string;
+    setActive(() => {
+      active[prevTarget] = false;
+      active[category] = true;
+      return active;
+    })
+  };
 
   return (
     <section id="note" className={styles.note}>
       <Title id={SECTION_KEY} />
       <div className="container">
         <ul className={styles.tab_menu}>
-          <li className={`${styles.tab_item} ${styles.active}`} onClick={onCategory}>All</li>
+          <li className={`${styles.tab_item} ${active['All'] && styles.active}`} onClick={onCategory}>All</li>
           {
             categories.map((category: NoteCategoryType) => (
-              <li key={uuidv4()} className={styles.tab_item} onClick={onCategory}>{category}</li>
+              <li key={uuidv4()} className={`${styles.tab_item} ${active[category] && styles.active}`} onClick={onCategory}>{category}</li>
             ))
           }
         </ul>
@@ -66,3 +80,9 @@ const Note = (): JSX.Element => {
 };
 
 export default Note;
+
+// const activeEffect = (target: HTMLElement) => {
+//   const prevTarget = document.querySelector(`.${styles.active}`) as HTMLLIElement;
+//   prevTarget.classList.remove(`${styles.active}`);
+//   target.classList.add(`${styles.active}`);
+// }

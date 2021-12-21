@@ -60,7 +60,7 @@
   cursor: pointer;
 }
 
-.menu_item.active {
+.active {
   border: 1px solid makerPink;
   border-radius: 3px;
 }
