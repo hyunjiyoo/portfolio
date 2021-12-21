@@ -6,19 +6,16 @@ import styles from './note.module.css';
 import * as Controller from '../../../controller/note';
 
 const SECTION_KEY: SectionKeyType = "note";
+const NOTION_URL: string = "https://hjyooo.notion.site/Dream-Coding-92e6b3a0f6e04c9cb2cf7eae5ef0f2b4";
+const NOTION_ICON: string = "https://cdn.iconscout.com/icon/free/png-256/notion-1693557-1442598.png";
 
 const categories = Controller.getAllCategory();
 const initImgs = Controller.getAllImgs();
 
-type selectedImgType = {
-  src: string;
-  alt: string;
-};
-
 const Note = (): JSX.Element => {
 
-  const [selectedImg, setSelectedImg] = useState<selectedImgType>({src: 'https://picsum.photos/800/400', alt: 'note'});
   const [imgs, setImgs] = useState<NoteType[]>(initImgs);
+  const [selectedImg, setSelectedImg] = useState<NoteType>({ src: imgs[0].src, alt: imgs[0].alt });
   const [activeTarget, setActiveTarget] = useState<(NoteCategoryType | 'All')>('All');
 
   const onCategory = <T extends HTMLElement>(event: React.MouseEvent<T>) => {
@@ -34,6 +31,9 @@ const Note = (): JSX.Element => {
       else {
         updated = Controller.getImgByCategory(category);
       }
+
+      const { src, alt } = updated[0];
+      setSelectedImg({ src, alt });
       
       return updated;
     });
@@ -61,19 +61,17 @@ const Note = (): JSX.Element => {
       <Title id={SECTION_KEY} />
       <div className="container">
         <ul className={styles.tab_menu}>
-          
           <li className={getStyle('All')} onClick={onCategory}>All</li>
           {
             categories.map((category: NoteCategoryType) => (
               <li key={uuidv4()} className={getStyle(category)} onClick={onCategory}>{category}</li>
             ))
           }
-          
         </ul>
         <div className={styles.contents}>
           <div className={styles.contents_img}>
-            <a className={styles.link} href="https://hjyooo.notion.site/Dream-Coding-92e6b3a0f6e04c9cb2cf7eae5ef0f2b4" target="blank">
-              <img className={styles.notion} src="https://cdn.iconscout.com/icon/free/png-256/notion-1693557-1442598.png" alt="" />
+            <a className={styles.link} href={NOTION_URL} target="blank">
+              <img className={styles.notion} src={NOTION_ICON} alt="notion icon" />
               <p>Notion Note Link 🔗</p>
             </a>
             <img className={styles.main_img} src={selectedImg.src} alt={selectedImg.alt} />
