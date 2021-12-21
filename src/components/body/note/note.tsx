@@ -35,25 +35,26 @@ const Note = (): JSX.Element => {
     setActiveTarget(category);
   };
 
+  const getStyle = (category: NoteCategoryType | 'All') => {
+    let classList = styles.tab_item;
+
+    if (activeTarget === category) {
+      classList += ` ${styles.active}`;
+    }
+
+    return classList;
+  }
+
   return (
     <section id="note" className={styles.note}>
       <Title id={SECTION_KEY} />
       <div className="container">
         <ul className={styles.tab_menu}>
           
-          <li className={
-            (activeTarget === 'All')
-            ? `${styles.tab_item} ${styles.active}`
-            : `${styles.tab_item}`
-          } onClick={onCategory}>All</li>
-
+          <li className={getStyle('All')} onClick={onCategory}>All</li>
           {
             categories.map((category: NoteCategoryType) => (
-              <li key={uuidv4()} className={
-                (activeTarget === category)
-                ? `${styles.tab_item} ${styles.active}`
-                : `${styles.tab_item}`
-              } onClick={onCategory}>{category}</li>
+              <li key={uuidv4()} className={getStyle(category)} onClick={onCategory}>{category}</li>
             ))
           }
           
