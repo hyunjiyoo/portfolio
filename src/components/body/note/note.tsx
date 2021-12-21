@@ -13,17 +13,11 @@ const initImgs = Controller.getAllImgs();
 const Note = (): JSX.Element => {
 
   const [imgs, setImgs] = useState<NoteType[]>(initImgs);
-  const [active, setActive] = useState<Record<string, boolean>>({
-    'All': true,
-    'React': false,
-    'Typescript': false,
-    'Nodejs': false,
-    'Algorithm': false
-  });
+  const [activeTarget, setActiveTarget] = useState<(NoteCategoryType | 'All')>('All');
 
   const onCategory = <T extends HTMLElement>(event: React.MouseEvent<T>) => {
     const target = event.target as T;
-    const category = target.textContent as (NoteCategoryType & 'All');
+    const category = target.textContent as (NoteCategoryType | 'All');
 
     setImgs(() => {
       let updated: NoteType[];
@@ -38,12 +32,7 @@ const Note = (): JSX.Element => {
       return updated;
     });
 
-    const prevTarget = document.querySelector(`.${styles.active}`)?.textContent as string;
-    setActive(() => {
-      active[prevTarget] = false;
-      active[category] = true;
-      return active;
-    })
+    setActiveTarget(category);
   };
 
   return (
@@ -51,12 +40,23 @@ const Note = (): JSX.Element => {
       <Title id={SECTION_KEY} />
       <div className="container">
         <ul className={styles.tab_menu}>
-          <li className={`${styles.tab_item} ${active['All'] && styles.active}`} onClick={onCategory}>All</li>
+          
+          <li className={
+            (activeTarget === 'All')
+            ? `${styles.tab_item} ${styles.active}`
+            : `${styles.tab_item}`
+          } onClick={onCategory}>All</li>
+
           {
             categories.map((category: NoteCategoryType) => (
-              <li key={uuidv4()} className={`${styles.tab_item} ${active[category] && styles.active}`} onClick={onCategory}>{category}</li>
+              <li key={uuidv4()} className={
+                (activeTarget === category)
+                ? `${styles.tab_item} ${styles.active}`
+                : `${styles.tab_item}`
+              } onClick={onCategory}>{category}</li>
             ))
           }
+          
         </ul>
         <div className={styles.contents}>
           <div className={styles.contents_img}>
@@ -80,9 +80,3 @@ const Note = (): JSX.Element => {
 };
 
 export default Note;
-
-// const activeEffect = (target: HTMLElement) => {
-//   const prevTarget = document.querySelector(`.${styles.active}`) as HTMLLIElement;
-//   prevTarget.classList.remove(`${styles.active}`);
-//   target.classList.add(`${styles.active}`);
-// }
