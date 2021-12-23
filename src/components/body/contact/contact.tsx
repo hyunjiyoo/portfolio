@@ -14,7 +14,7 @@ const Contact = (): JSX.Element => (
 
         <div className={styles.info}>
           <div className={styles.name}>
-            <label htmlFor="name">NaRme</label>
+            <label htmlFor="name">Name</label>
             <input type="text" id="name" name="user_name" placeholder="성함을 입력해주세요"/>
           </div>
           <div className={styles.email}>
