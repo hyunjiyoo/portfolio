@@ -1,4 +1,5 @@
 @value makerLightBlack, makerWhite, makerBlackPurple, makerDarkPurple, makerPurple, makerPink, makerLightGrey from '../../shared/colors.css';
+@value tabletWidth from '../../shared/size.css';
 
 .skills {
   background: makerLightBlack;
@@ -39,4 +40,15 @@
   padding: 1.5em;
   background: #4F379C66;
   border-radius: 10px;
+}
+
+/* tablet CSS */
+@media only screen and (max-width: tabletWidth) {
+  .skillset {
+    flex-direction: column;
+
+  }
+  .skillset__left, .skillset__right {
+    width: 100%;
+  }
 }

@@ -1,5 +1,5 @@
 @value makerWhite, makerBlackPurple, makerDarkPurple, makerPurple, makerDarkBlack, makerPink, makerLightGrey from '../../shared/colors.css';
-@value mediumFont, tabletWidth, mobileWidth from '../../shared/size.css';
+@value mediumFont, tabletWidth from '../../shared/size.css';
 
 .note {
   background-color: makerDarkBlack;
