@@ -1,5 +1,5 @@
 @value makerWhite, makerLightGrey, makerBlack, makerPurple, makerPink from '../../shared/colors.css';
-@value mediumFont from '../../shared/size.css';
+@value mediumFont, tabletWidth, mobileWidth from '../../shared/size.css';
 
 .intro {
   display: flex;
@@ -37,4 +37,38 @@
   float: right;
   opacity: 0.8;
   margin-left: 2rem;
+}
+
+
+@media only screen and (max-width: tabletWidth) {
+  .title {
+    font-size: 2.8rem;
+  }
+}
+
+@media only screen and (max-width: mobileWidth) {
+  .title {
+    font-size: 3.2rem;
+  }
+
+  .intro {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .img {
+    width: 12em;
+    height: 16em;
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  .contents {
+    text-align: center;
+  }
+
+  .title {
+    margin: 0.5em 0;
+  }
 }

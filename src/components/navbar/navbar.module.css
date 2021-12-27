@@ -35,10 +35,12 @@
 #firstName {
   color: makerPink;
   margin-left: 0.3em;
+  font-size: largeFont;
 }
 
 #secondName {
   color: makerYellow;
+  font-size: largeFont;
 }
 
 .menu {
@@ -66,7 +68,7 @@
 }
 
 .button {
-  display: none;
+  /* display: none; */
   color: makerWhite;
   background: transparent;
   font-size: mediumFont;
