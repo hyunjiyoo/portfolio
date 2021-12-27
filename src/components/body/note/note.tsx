@@ -11,11 +11,12 @@ const NOTION_ICON: string = "https://cdn.iconscout.com/icon/free/png-256/notion-
 
 const categories = Controller.getAllCategory();
 const initImgs = Controller.getAllImgs();
+const { src, alt } = initImgs[0];
 
 const Note = (): JSX.Element => {
 
   const [imgs, setImgs] = useState<NoteType[]>(initImgs);
-  const [selectedImg, setSelectedImg] = useState<NoteType>({ src: imgs[0].src, alt: imgs[0].alt });
+  const [selectedImg, setSelectedImg] = useState<NoteType>({ src, alt });
   const [activeTarget, setActiveTarget] = useState<(NoteCategoryType | 'All')>('All');
 
   const onCategory = <T extends HTMLElement>(event: React.MouseEvent<T>) => {
