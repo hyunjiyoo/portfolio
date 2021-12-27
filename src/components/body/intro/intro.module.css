@@ -48,7 +48,7 @@
 
 @media only screen and (max-width: mobileWidth) {
   .title {
-    font-size: 3.2rem;
+    font-size: 2.5rem;
   }
 
   .intro {
@@ -58,8 +58,8 @@
   }
   
   .img {
-    width: 12em;
-    height: 16em;
+    width: 10em;
+    height: 13em;
     margin-left: 0;
     margin-bottom: 2rem;
   }

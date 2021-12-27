@@ -10,21 +10,22 @@
   align-items: center;
   background: makerBlackPurple;
   border-radius: 5px;
-  padding-left: 0;
+  padding: 0.4rem;
 }
 
 .tab_item {
   color: makerWhite;
   padding: 0.25em 1em;
-  margin: 0.4em 0.5em;
   border: 1px solid transparent;
   font-size: mediumFont;
+  margin: 0 0.1rem;
 }
 
 .tab_item:hover {
   border: 1px solid makerPink;
   border-radius: 3px;
   cursor: pointer;
+  background: #FF6F9122;
 }
 
 .active {
@@ -110,5 +111,16 @@
   .contents_img_list img {
     padding-left: 0;
     padding-right: 0.5rem;
+  }
+
+  .tab_menu {
+    align-items: initial;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .tab_item {
+    font-size: 1.2rem;
   }
 }
