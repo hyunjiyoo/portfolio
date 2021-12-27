@@ -1,29 +1,31 @@
-@value makerWhite, makerPurple, makerPink, makerYellow, makerDarkBlack from '../shared/colors.css';
-@value mediaQuery, largeFont, mediumFont, smallFont from '../shared/size.css';
+@value makerWhite, makerPurple, makerPink, makerYellow, makerDarkBlack, makerGray from '../shared/colors.css';
+@value tabletWidth, mediaQuery, largeFont, mediumFont, smallFont from '../shared/size.css';
 
 #navbar {
+  background: makerDarkBlack;
   position: fixed;
   left: 50%;
   transform: translate(-50%, 0);
-  background: makerDarkBlack;
   width: 100%;
-  height: 5.5rem;
   z-index: 1;
+}
+
+#navbar.dark {
+  background: #2A3448;
 }
 
 .section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: mediaQuery;
-  height: 5.5rem;
-  margin: auto;
+  padding: 1rem;
 }
 
 .logo {
   color: makerPurple;
   font-size: largeFont;
-  margin: 2px 0;
+  padding-left: 1rem;
+  line-height: 1.2rem;
 }
 
 .name {
@@ -35,28 +37,30 @@
 #firstName {
   color: makerPink;
   margin-left: 0.3em;
-  font-size: largeFont;
 }
 
 #secondName {
   color: makerYellow;
-  font-size: largeFont;
 }
 
 .menu {
   display: flex;
-  /* display: none; */
+  padding-left: 0;
+  margin: 0;
 }
 
 .menu_item {
   color: makerWhite;
   font-size: mediumFont;
+  width: 100%;
   margin: 0 0.2em;
   padding: 0.4em;
   border: 1px solid transparent;
+  text-align: center;
 }
 
 .menu_item:hover {
+  background: #2A303C;
   border: 1px solid makerPink;
   border-radius: 3px;
   cursor: pointer;
@@ -68,13 +72,41 @@
 }
 
 .button {
-  /* display: none; */
+  display: none;
+  position: absolute;
+  top: 16px;
+  right: 20px;
   color: makerWhite;
   background: transparent;
   font-size: mediumFont;
 }
 
-.button:hover {
-  border: 1px solid makerPink;
-  border-radius: 3px;
+@media only screen and (max-width: tabletWidth) {
+  .logo, .name {
+    font-size: 1.5rem;
+    padding-left: 0;
+  }
+
+  .section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .menu {
+    display: none;
+  }
+
+  .button {
+    display: block;
+  }
+
+  .menu.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  
 }

@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './navbar.module.css';
 import { faBars, faGem } from '@fortawesome/free-solid-svg-icons'
 import { useEffect } from 'react';
+import { useRef } from 'react';
 
 const sectionIds: string[] = [
   '#intro',
@@ -18,6 +19,8 @@ let navItems : HTMLElement[];
 let selectedNavIndex : number = 0;
 
 const Navbar = (): JSX.Element => {
+
+  const ulRef = useRef<HTMLUListElement>(null);
   
   const initSectionInfo = () => {
 
@@ -39,6 +42,12 @@ const Navbar = (): JSX.Element => {
   }
 
   useEffect(() => {
+    const nav = document.querySelector('nav') as HTMLElement;
+    window.addEventListener('scroll', () => {
+      navDarkStyle(nav);
+      closeMenu();
+    });
+
     const { sections } = initSectionInfo();
     createObserver(sections);
   }, []);
@@ -55,6 +64,23 @@ const Navbar = (): JSX.Element => {
     scrollIntoView(link);
   }
   
+  const navDarkStyle = (nav: HTMLElement) => {
+    if (window.scrollY > 0) {
+      nav.classList.add(`${styles.dark}`)
+    } 
+    else {
+      nav.classList.remove(`${styles.dark}`)
+    }
+  }
+
+  const openMenu = () => {
+    ulRef.current?.classList.toggle(`${styles.open}`);    
+  }
+
+  const closeMenu = () => {
+    ulRef.current?.classList.remove(`${styles.open}`);
+  }
+  
   return (
     <nav id={styles.navbar}>
       <div className={styles.section}>
@@ -65,7 +91,7 @@ const Navbar = (): JSX.Element => {
             <span id={styles.secondName}>YOO</span>
           </a>
         </div>
-        <ul className={styles.menu} onClick={scrollTo}>
+        <ul ref={ulRef} className={styles.menu} onClick={scrollTo}>
           <li className={`${styles.menu_item} ${styles.active}`} data-link="#intro">Home</li>
           <li className={styles.menu_item} data-link="#about">About</li>
           <li className={styles.menu_item} data-link="#note">Note</li>
@@ -74,7 +100,7 @@ const Navbar = (): JSX.Element => {
           <li className={styles.menu_item} data-link="#testimonials">Testimonial</li>
           <li className={styles.menu_item} data-link="#contact">Contact</li>
         </ul>
-        <button className={styles.button}>
+        <button className={styles.button} onClick={openMenu} >
           <FontAwesomeIcon icon={faBars} />
         </button>
       </div>
