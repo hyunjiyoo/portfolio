@@ -1,5 +1,5 @@
-@value makerDarkBlack, makerWhite, makerGrey, makerPink from '../../shared/colors.css';
-@value mediaQuery from '../../shared/size.css';
+@value makerPinkHover, makerDarkBlack, makerWhite, makerGrey, makerPink from '../../shared/colors.css';
+@value mediaQuery, tabletWidth from '../../shared/size.css';
 
 .work {
   background: makerDarkBlack;
@@ -26,15 +26,31 @@
   cursor: pointer;
 }
 
-.active,
-.category:hover {
+.active {
   border: 1px solid makerPink;
   border-radius: 3px;
 }
 
+.category:hover {
+  border: 1px solid makerPink;
+  border-radius: 3px;
+  background: makerPinkHover;
+}
+
 .projects {
-  padding: 1.5em;
+  padding: 1em;
   display: flex;
   overflow-x: auto;
   flex: 0.85;
+}
+
+/* tablet CSS */
+@media only screen and (max-width: tabletWidth) {
+  .workset {
+    flex-direction: column;
+  }
+
+  .categories {
+    padding: 0;
+  }
 }

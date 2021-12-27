@@ -1,5 +1,5 @@
 @value makerWhite, makerLightGrey from '../../../shared/colors.css';
-@value titleFont from '../../../shared/size.css';
+@value titleFont, tabletWidth from '../../../shared/size.css';
 
 .title {
   color: makerWhite;

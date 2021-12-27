@@ -1,4 +1,4 @@
-@value makerWhite, makerBlackPurple, makerDarkPurple, makerPurple, makerDarkBlack, makerPink, makerLightGrey from '../../shared/colors.css';
+@value makerWhite, makerPinkHover, makerBlackPurple, makerDarkPurple, makerPurple, makerDarkBlack, makerPink, makerLightGrey from '../../shared/colors.css';
 @value mediumFont, tabletWidth from '../../shared/size.css';
 
 .note {
@@ -25,7 +25,7 @@
   border: 1px solid makerPink;
   border-radius: 3px;
   cursor: pointer;
-  background: #FF6F9122;
+  background: makerPinkHover;
 }
 
 .active {
@@ -121,6 +121,6 @@
   }
 
   .tab_item {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }

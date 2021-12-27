@@ -1,7 +1,7 @@
 @value makerWhite from '../shared/colors.css';
 
 .footer {
-  padding: 2rem 0;
+  padding: 4rem 0 2rem 0;
 }
 
 .text {
