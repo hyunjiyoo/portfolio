@@ -7,6 +7,7 @@
   border-radius: 50px;
   padding: 1em;
   color: makerWhite;
+  cursor: pointer;
 }
 
 .container:hover > .icon {
@@ -70,7 +71,6 @@
   flex: 0.02;
   color: makerDarkBlack;
   font-size: 1.5rem;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
