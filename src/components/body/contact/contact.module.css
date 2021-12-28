@@ -46,7 +46,11 @@ input, textarea {
   background: makerLightGrey;
   font-size: 1rem;
   border: 2px solid makerGrey;
+}
 
+input:focus,
+textarea:focus {
+  border: 2px solid makerWhite;
 }
 
 .button {
