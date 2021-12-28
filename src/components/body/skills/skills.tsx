@@ -11,22 +11,22 @@ const Skills = (): JSX.Element => (
     <div className={`container ${styles.skillset}`}>
       <div className={styles.skillset__left}>
         <h2 className={styles.skillset__frontend}>Front-end</h2>
-        <Skill title="CSS" value={90} />
-        <Skill title="Javascript" value={80} />
-        <Skill title="React" value={70} />
-        <Skill title="Typescript" value={60} />
+        <Skill title="CSS" value={99} />
+        <Skill title="Javascript" value={95} />
+        <Skill title="React" value={85} />
+        <Skill title="Typescript" value={80} />
       </div>
 
       <div className={styles.skillset__right}>
         <div className={styles.skillset__backend}>
           <h2>Back-end</h2>
           <Skill title="Nodejs" value={80} />
-          <Skill title="Python" value={70} />
+          <Skill title="Python" value={90} />
         </div>
         
         <div className={styles.skillset__infra}>
           <h2>Infra</h2>
-          <Skill title="Docker" value={70} />
+          <Skill title="Docker" value={90} />
         </div>
       </div>
     </div>
