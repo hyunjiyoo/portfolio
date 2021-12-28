@@ -1,4 +1,5 @@
 @value makerWhite, makerLightGrey, makerYellow from '../../shared/colors.css';
+@value tabletWidth, smallFont from '../../shared/size.css';
 
 .skill {
   margin-top: 0.8em;
@@ -35,4 +36,11 @@
   width: 10%;
   align-self: baseline;
   flex-basis: content;
+}
+
+/* tablet CSS */
+@media only screen and (max-width: tabletWidth) {
+  .skill {
+    font-size: smallFont;
+  }
 }

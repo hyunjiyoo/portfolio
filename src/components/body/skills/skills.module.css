@@ -51,4 +51,9 @@
   .skillset__left, .skillset__right {
     width: 100%;
   }
+
+  .skillset__left h2,
+  .skillset__right h2 {
+    font-size: 1.2rem;
+  }
 }
