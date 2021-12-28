@@ -14,13 +14,12 @@
   margin-bottom: 2em;
 }
 
-.name {
-  flex: 0.5;
+.info > div {
+  flex: 1;
   margin-right: 0.5em;
 }
 
-.email {
-  flex: 0.5;
+.info div:last-child {
   margin-left: 0.5em;
 }
 
@@ -75,12 +74,13 @@ input, textarea {
     flex-direction: column;
   }
 
-  .email { 
-    margin: 0;
+  .info > div { 
+    margin-right: 0;
+    margin-bottom: 2em;
   }
 
-  .name {
-    margin: 0 0 2em 0;
+  .info > div:last-child {
+    margin-left: 0;
+    margin-bottom: 0;
   }
-
 }
