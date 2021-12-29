@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import styles from './skill.module.css';
 
 interface SkillProps {
@@ -8,17 +8,15 @@ interface SkillProps {
 
 const Skill = ({ title, value }: SkillProps) => {
 
-  let loading: boolean = false;
   const valueRef = useRef<HTMLDivElement>(null);
 
-  const valueBarAnimation = () => {
+  const handleAnimation = (valueRef: React.RefObject<HTMLDivElement>, value: number): void => {
     let width: number = 0;
     const valueDiv = valueRef.current as HTMLDivElement;
 
     const interval = setInterval(() => {
 
       if (width === value) {
-        loading = false;
         clearInterval(interval);
       }
 
@@ -26,21 +24,23 @@ const Skill = ({ title, value }: SkillProps) => {
     }, 18);
   }
 
-  
+  const handleIntersect = useCallback((entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+    if (entries[0].isIntersecting) {
+      handleAnimation(valueRef, value);
+    }
+  }, [value]);
+
   useEffect(() => {
     const skillSection = document.querySelector('#skills') as HTMLElement;
-
-    window.addEventListener('scroll', () => {
-
-      const enterToArea = window.scrollY + window.innerHeight > skillSection.offsetTop;
-
-      if (!loading && enterToArea) {
-        loading = true;
-        valueBarAnimation();
-      }
-    });
-
-  }, []);
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5
+    }
+    
+    const observer = new IntersectionObserver(handleIntersect, options);
+    observer.observe(skillSection);
+  }, [handleIntersect]);
 
   return (
     <div className={styles.skill}>
