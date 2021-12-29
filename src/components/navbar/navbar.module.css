@@ -1,11 +1,9 @@
-@value makerWhite, makerPurple, makerPink, makerYellow, makerDarkBlack, makerGray from '../shared/colors.css';
+@value makerWhite, makerPinkHover, makerPurple, makerPink, makerYellow, makerDarkBlack, makerGray from '../shared/colors.css';
 @value tabletWidth, mediaQuery, largeFont, mediumFont, smallFont from '../shared/size.css';
 
 #navbar {
-  background: makerDarkBlack;
   position: fixed;
-  left: 50%;
-  transform: translate(-50%, 0);
+  background: makerDarkBlack;
   width: 100%;
   z-index: 1;
 }
@@ -15,6 +13,9 @@
 }
 
 .section {
+  width: 100%;
+  max-width: 62rem;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,7 +61,7 @@
 }
 
 .menu_item:hover {
-  background: #2A303C;
+  background: makerPinkHover;
   border: 1px solid makerPink;
   border-radius: 3px;
   cursor: pointer;
