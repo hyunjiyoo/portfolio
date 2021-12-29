@@ -46,11 +46,11 @@ const Contact = (): JSX.Element => {
             </div>
             <div className={styles.email}>
               <label htmlFor="email">Email</label>
-              <input type="email" id="email" name="user_email" placeholder="example@gmail.com"required />
+              <input type="email" id="email" name="user_email" placeholder="이메일을 입력해주세요"required />
             </div>
             <div className={styles.phone}>
               <label htmlFor="phone">Phone</label>
-              <input type="tel" id="phone" name="user_phone" placeholder="010-0000-0000 (형식을 맞춰주세요)" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required />
+              <input type="tel" id="phone" name="user_phone" placeholder="연락처를 입력해주세요" required />
             </div>
           </div>
           
