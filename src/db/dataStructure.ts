@@ -11,6 +11,7 @@ export type NoteCategoryType = 'React' | 'Typescript' | 'Nodejs' | 'Algorithm';
 export interface NoteType {
   src: string;
   alt?: string;
+  url: string;
 };
 
 export type WorkCategoryType = 'Front-end' | 'Back-end';
