@@ -89,7 +89,12 @@ const Note = (): JSX.Element => {
           }
         </ul>
         <div className={styles.contents}>
-          <div className={styles.contents_img} onMouseOver={() => showLink(true)} onMouseOut={() => showLink(false)} >
+          <div 
+            className={styles.contents_img} 
+            onClick={() => linkRef.current?.click()}
+            onMouseOver={() => showLink(true)} 
+            onMouseOut={() => showLink(false)} 
+          >
             <a ref={linkRef} className={styles.link} href={selectedImg.url} target="blank">
               <img className={styles.notion} src={NOTION_ICON} alt="notion icon" />
               <p>Notion Note Link 🔗</p>
