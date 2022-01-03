@@ -72,7 +72,7 @@
   width: 100%;
   height: 300px;
   cursor: pointer;
-  transition: all 300ms ease-in;
+  transition: all 200ms ease-in;
 }
 
 .contents_img_list {
@@ -96,6 +96,26 @@
   cursor: pointer;
   transform: scale(1.04);
   transition: transform 200ms ease-in;
+}
+
+.info {
+  font-size: 0.8rem;
+  padding-left: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  animation: color 1.5s ease-in-out infinite;
+}
+
+@keyframes color {
+  0% {
+    color: makerWhite;
+  }
+  50% {
+    color: makerLightGrey;
+  }
+  100% {
+    color: makerWhite;
+  }
 }
 
 /* tablet CSS */

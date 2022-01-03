@@ -27,3 +27,6 @@ yarn-error.log*
 
 # history
 /.history
+
+# image
+/public/images/note/

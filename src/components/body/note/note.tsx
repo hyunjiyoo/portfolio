@@ -6,7 +6,7 @@ import styles from './note.module.css';
 import * as Controller from '../../../controller/note';
 
 const SECTION_KEY: SectionKeyType = "note";
-const NOTION_ICON: string = "https://cdn.iconscout.com/icon/free/png-256/notion-1693557-1442598.png";
+const NOTION_ICON: string = "https://bit.ly/3r19OMX";
 
 const categories = Controller.getAllCategory();
 const initImgs = Controller.getAllImgs();
@@ -54,8 +54,13 @@ const Note = (): JSX.Element => {
   }
 
   const selectImg = (event: React.MouseEvent) => {
+    
     const target = event.target as HTMLImageElement;
 
+    if (target.src == null) {
+      return;
+    }
+    
     const { src, alt } = target;
     const url = target.dataset.url!;
     
@@ -109,6 +114,10 @@ const Note = (): JSX.Element => {
             }
           </div>
         </div>
+        <p className={styles.info}>
+          * 노트의 일부분만 발췌하여 미리보기로 제공합니다. <br />
+          * 전체 노트를 확인하고 싶으시면 맨 아래 노션 아이콘을 클릭해주세요.
+        </p>
       </div>
     </section>
   )
