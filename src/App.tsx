@@ -1,31 +1,14 @@
-import Navbar from './components/navbar/navbar';
 import styles from './app.module.css';
-import Footer from './components/footer/footer';
+import Navbar from './components/navbar/navbar';
 import Body from './components/body/body';
-import { useEffect } from 'react';
+import Footer from './components/footer/footer';
 
-function App(): JSX.Element {
-  
-  useEffect(() => {
-    document.addEventListener('scroll', () => {
-      const arrow = document.querySelector('#arrow') as HTMLButtonElement;
-      const position = window.pageYOffset;
-      
-      if (position > 100) {
-        arrow.style.display = "block";
-      } else {
-        arrow.style.display = "none";
-      }
-    });
-  });
-
-  return (
-    <div className={styles.container}>
-      <Navbar />
-      <Body />
-      <Footer />
-    </div>
-  );
-}
+const App = (): JSX.Element => (
+  <div className={styles.container}>
+    <Navbar />
+    <Body />
+    <Footer />
+  </div>
+);
 
 export default App;
