@@ -1,20 +1,32 @@
 import { WorkType } from '../../../db/dataStructure';
 import styles from './project.module.css';
+import {v4 as uuidv4} from 'uuid'
 
 interface ProjectProps {
   project: WorkType;
 }
 
 const Project = ({ project }: ProjectProps): JSX.Element => {
-  const { title, description, imgUrl, imgAlt, color } = project;
+  const { title, projectUrl, imgUrl, imgAlt, skillset, color } = project;
 
   return (
-      <div className={`${styles.project} ${getStyle(color)}`}>
-      <img src={imgUrl} alt={imgAlt} />
+    <a 
+      className={`${styles.project} ${getStyle(color)}`}
+      href={projectUrl}
+      target="_blank"
+    >
+      <div className={styles.img__container}>
+        <img className={styles.img} src={imgUrl} alt={imgAlt} />
+      </div>
       <h3>{title}</h3>
       <hr />
-      <p>{description}</p>
-    </div>
+      {
+        skillset.map((skill: string) => (
+          <img key={uuidv4()} className={styles.icon} src={`/images/project/icon/${skill}.png`} alt={skill} />
+        ))
+      }
+      {/* <p>{description}</p> */}
+    </a>
   )
 };
 
@@ -30,3 +42,4 @@ const getStyle = (color: WorkType["color"]) => {
       throw new Error(`unknown color: ${color}`);
   }
 }
+

@@ -19,13 +19,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 0;
 }
 
 .logo {
   color: makerPurple;
   font-size: largeFont;
-  padding-left: 1rem;
   line-height: 1.2rem;
 }
 

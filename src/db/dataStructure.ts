@@ -17,7 +17,9 @@ export interface NoteType {
 export interface WorkType {
   title : string;
   description: string;
+  projectUrl: string;
   imgUrl: string;
   imgAlt?: string;
+  skillset: string[];
   color: 'yellow' | 'purple';
 };
