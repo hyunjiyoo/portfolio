@@ -21,10 +21,10 @@ const testimonials:Record<string, testimonial__info> = {
     company: '/images/kirbs_logo.png',
   },
   '2': {
-    name: '서상덕 이사',
-    img: 'https://picsum.photos/seed/awqq/150/150',
+    name: '유원상 검색엔진팀',
+    img: '/images/testimonials/ws_profile.png',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptatibus, illo iure saepe, quaerat quia ab quam iusto error nesciunt architecto at libero explicabo odit. Temporibus voluptas ipsum omnis eius.',
-    company: '/images/kirbs_logo.png',
+    company: '/images/testimonials/naver_logo.png',
     position: 'R'
   },
 };
