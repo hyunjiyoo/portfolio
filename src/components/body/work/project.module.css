@@ -1,30 +1,32 @@
 @value makerWhite, makerBlack, makerYellow, makerLightGrey, makerPurple from '../../shared/colors.css';
+@value tabletWidth, mobileWidth from '../../shared/size.css';
 
 .project {
   color: makerWhite;
   border-radius: 10px;
   padding: 1em;
   margin-right: 1.5em;
+  flex-shrink: 1;
+  justify-content: space-evenly
+}
+
+.project:hover {
+  transform: scale(1.05);
+  transition: all 300ms ease-in;
+  cursor: pointer;
+  color: makerBlack;
 }
 
 .project.yellow:hover {
-  transform: scale(1.1);
-  transition: all 300ms ease-in;
-  cursor: pointer;
   background: makerYellow;
-  color: makerBlack;
 }
 
 .project.purple:hover {
-  transform: scale(1.1);
-  transition: all 300ms ease-in;
-  cursor: pointer;
   background: makerPurple;
-  color: makerBlack;
 }
 
 .project img {
-  width: 11em;
+  width: 100%;
   height: 8em;
 }
 
@@ -49,4 +51,19 @@
 
 .purple {
   border: 2px solid makerPurple;
+}
+
+/* tablet CSS */
+@media only screen and (max-width: tabletWidth) {
+  .project {
+    margin-right: 0;
+    margin: 1em;
+  }
+}
+
+/* mobile CSS */
+@media only screen and (max-width: mobileWidth) {
+  .project {
+    flex: 1;
+  }
 }

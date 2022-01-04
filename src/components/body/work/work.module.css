@@ -1,5 +1,5 @@
-@value makerPinkHover, makerDarkBlack, makerWhite, makerGrey, makerPink from '../../shared/colors.css';
-@value mediaQuery, tabletWidth from '../../shared/size.css';
+@value makerDarkBlack from '../../shared/colors.css';
+@value tabletWidth from '../../shared/size.css';
 
 .work {
   background: makerDarkBlack;
@@ -9,39 +9,10 @@
   display: flex;
 }
 
-.categories {
-  display: flex;
-  flex-direction: column;
-  flex: 0.15;
-  padding: 1em 1.5em 1em 0;
-}
-
-.category {
-  color: makerWhite;
-  margin: 0.2em 0;
-  padding: 0.3em 0.5em;
-  text-align: center;
-  border: 1px solid transparent;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.active {
-  border: 1px solid makerPink;
-  border-radius: 3px;
-}
-
-.category:hover {
-  border: 1px solid makerPink;
-  border-radius: 3px;
-  background: makerPinkHover;
-}
-
 .projects {
-  padding: 1em;
+  padding: 0.5em;
   display: flex;
   overflow-x: auto;
-  flex: 0.85;
 }
 
 /* tablet CSS */
@@ -50,11 +21,10 @@
     flex-direction: column;
   }
 
-  .categories {
+  .projects {
     padding: 0;
-  }
-
-  .category {
-    font-size: 1rem;
+    overflow-x: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 }

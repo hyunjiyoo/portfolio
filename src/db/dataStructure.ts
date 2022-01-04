@@ -14,8 +14,6 @@ export interface NoteType {
   url: string;
 };
 
-export type WorkCategoryType = 'Front-end' | 'Back-end';
-
 export interface WorkType {
   title : string;
   description: string;
