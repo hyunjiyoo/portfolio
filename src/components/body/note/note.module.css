@@ -65,7 +65,7 @@
 }
 
 .notion + p:hover {
-  text-decoration: underline;
+  font-weight: bold;
 }
 
 .main_img {
@@ -87,7 +87,7 @@
 }
 
 .contents_img_list img {
-  padding-left: 0.5em;
+  margin-left: 0.5em;
   width: 200px;
   height: 49%;
 }
