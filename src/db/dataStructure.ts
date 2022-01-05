@@ -23,3 +23,11 @@ export interface WorkType {
   skillset: string[];
   color: 'yellow' | 'purple';
 };
+
+export type testimonial = {
+  name: string;
+  img: string;
+  text: string;
+  company: string;
+  position?: 'R';
+}

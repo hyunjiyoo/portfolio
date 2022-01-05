@@ -1,9 +1,9 @@
+import { testimonial } from '../../../db/dataStructure';
 import styles from './testimonial.module.css';
-import { testimonial__info } from './testimonials';
 
 interface TestimonialProp {
   key: string;
-  person: testimonial__info;
+  person: testimonial;
 }
 
 const Testimonial = ({ person }: TestimonialProp):JSX.Element => {
