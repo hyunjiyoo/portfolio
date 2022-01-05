@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400&display=swap');
+
 body {
   margin: 0;
   background: #1C1F24;
@@ -10,6 +12,7 @@ code {
 
 * {
   box-sizing: border-box;
+  font-family: 'Spline Sans', sans-serif;
 }
 
 a {
