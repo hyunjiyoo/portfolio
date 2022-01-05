@@ -76,7 +76,7 @@
   font-size: mediumFont;
 }
 
-@media only screen and (max-width: tabletWidth) {
+@media only screen and (max-width: 875px) {
   .logo, .name {
     font-size: 1.5rem;
     padding-left: 0;

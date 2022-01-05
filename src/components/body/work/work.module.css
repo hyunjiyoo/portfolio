@@ -24,6 +24,6 @@
   .projects {
     overflow-x: none;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 }

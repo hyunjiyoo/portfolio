@@ -36,6 +36,8 @@
 .contents_img {
   position: relative;
   flex-basis: 50%;
+  display: block;
+  width: 100%;
 }
 
 .link {
