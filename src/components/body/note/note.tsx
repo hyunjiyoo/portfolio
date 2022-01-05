@@ -16,12 +16,18 @@ const Note = (): JSX.Element => {
 
   const linkRef = useRef<HTMLAnchorElement>(null);
   const mainImgRef = useRef<HTMLImageElement>(null);
+  const imgListRef = useRef<HTMLDivElement>(null);
   const [imgs, setImgs] = useState<NoteType[]>(initImgs);
   const [selectedImg, setSelectedImg] = useState<NoteType>({ src, alt, url });
   const [activeTarget, setActiveTarget] = useState<(NoteCategoryType | 'All')>('All');
 
-  const onCategory = <T extends HTMLElement>(event: React.MouseEvent<T>) => {
-    const target = event.target as T;
+  const scrollPositionInit = () => {
+    const target = imgListRef.current as HTMLDivElement;
+    target.scrollLeft = 0;
+  }
+
+  const onCategory = (event: React.MouseEvent<HTMLElement>) => {
+    const target = event.target as HTMLElement;
     const category = target.textContent as (NoteCategoryType | 'All');
 
     setImgs(() => {
@@ -41,20 +47,20 @@ const Note = (): JSX.Element => {
     });
 
     setActiveTarget(category);
+    scrollPositionInit();
   };
 
   const getStyle = (category: NoteCategoryType | 'All') => {
     let classList = styles.tab_item;
 
     if (activeTarget === category) {
-      classList += ` ${styles.active}`;
+      classList += ` active`;
     }
 
     return classList;
   }
 
   const selectImg = (event: React.MouseEvent) => {
-    
     const target = event.target as HTMLImageElement;
 
     if (target.src == null) {
@@ -63,9 +69,8 @@ const Note = (): JSX.Element => {
     
     const { src, alt } = target;
     const url = target.dataset.url!;
-    
     setSelectedImg({ src, alt, url });
-  }
+  };
 
   const showLink = (isFocus: boolean) => {
     const link = linkRef.current as HTMLAnchorElement;
@@ -106,7 +111,7 @@ const Note = (): JSX.Element => {
             </a>
             <img ref={mainImgRef} className={styles.main_img} src={selectedImg.src} alt={selectedImg.alt} />
           </div>
-          <div className={styles.contents_img_list} onClick={selectImg}>
+          <div ref={imgListRef} className={styles.contents_img_list} onClick={selectImg}>
             {
               imgs.map(img => (
                 <img key={uuidv4()} src={img.src} alt={img.alt} data-url={img.url} />
