@@ -7,7 +7,7 @@ interface TestimonialProp {
 }
 
 const Testimonial = ({ person }: TestimonialProp):JSX.Element => {
-  const { name, img, text, company, position } = person;
+  const { name, img, text, company, position, part } = person;
 
   const rightStyle = (position?: 'R') => {
     return position && styles.right;
@@ -15,11 +15,14 @@ const Testimonial = ({ person }: TestimonialProp):JSX.Element => {
 
   return (
     <div className={styles.testimonial}>
-      <img className={`${styles.testimonial__img} ${rightStyle(position)}`} src={img} alt="" />
+      <img className={`${styles.img} ${rightStyle(position)}`} src={img} alt="" />
       <div className={styles.contents}>
-        <p>{text}</p>
-        <img src={company} alt="kirbs__logo" />
-        <span>{name}</span>
+        <p className={styles.text}>{text}</p>
+        <div className={styles.tag}>
+          <img className={styles.logo} src={company} alt="kirbs__logo" />
+          <span className={styles.name}>{name}</span>
+          <span className={styles.part}>{part}</span>
+        </div>
       </div>
     </div>
   )

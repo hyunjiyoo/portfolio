@@ -1,17 +1,18 @@
 @value makerWhite, makerBlack, makerPurple from '../../shared/colors.css';
-@value mobileWidth from '../../shared/size.css';
+@value tabletWidth from '../../shared/size.css';
 
 .testimonial {
   display: flex;
   align-items: center;
   margin-bottom: 1.5em;
-  padding: 1.5em;
+  padding: 1.5em 0;
   border-radius: 8px;
 }
 
-.testimonial__img {
+.img {
   border-radius: 50%;
   width: 9em;
+  margin: 0 1rem;
 }
 
 .contents {
@@ -19,29 +20,53 @@
   margin-left: 1em;
 }
 
-.contents img {
-  height: 15px;
+.tag {
+  display: flex;
+  align-items: center;
 }
 
-.contents span {
+.logo {
+  height: 25px;
+}
+
+.text {
+  line-height: 1.5rem;
+  letter-spacing: 0.06rem;
+  text-align: justify;
+}
+
+.name {
   margin-left: 1em;
   letter-spacing: 0.3em;
+}
+
+.part {
+  margin-left: 0.5em;
+  letter-spacing: 0.1em;
 }
 
 .right {
   order: 1;
 }
 
-@media only screen and (max-width: mobileWidth) {
+@media only screen and (max-width: tabletWidth) {
   .testimonial {
     flex-direction: column;
   }
 
-  .testimonial__img {
+  .img {
     margin-bottom: 2rem;
   }
 
   .contents {
     order: 1;
+  }
+
+  .tag {
+    justify-content: center;
+  }
+
+  .text {
+    margin-bottom: 2rem;
   }
 }

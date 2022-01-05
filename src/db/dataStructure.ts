@@ -29,5 +29,6 @@ export type testimonial = {
   img: string;
   text: string;
   company: string;
+  part: string;
   position?: 'R';
 }
