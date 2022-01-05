@@ -3,12 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef } from 'react';
 import styles from './arrow.module.css';
 
-const Arrow = () => {
+interface ArrowProps {
+  activeEffect: (target: HTMLElement) => void;
+}
+
+const Arrow = ({activeEffect}: ArrowProps) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const clickArrow = () => {
     const root = document.querySelector('#root') as HTMLDivElement;
+    const homeNavItem = document.querySelector(`[data-link="#intro"]`) as HTMLLIElement;
+
     root.scrollIntoView({behavior: 'smooth'});
+    activeEffect(homeNavItem);
   }
 
   const showArrow = () => {

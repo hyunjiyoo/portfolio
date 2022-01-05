@@ -1,8 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styles from './navbar.module.css';
 import { faBars, faGem } from '@fortawesome/free-solid-svg-icons'
-import { useEffect } from 'react';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import styles from './navbar.module.css';
+
+interface NavbarProps {
+  activeEffect: (target: HTMLElement) => void;
+}
 
 const sectionIds: string[] = [
   '#intro',
@@ -18,16 +21,30 @@ let sections : HTMLElement[];
 let navItems : HTMLElement[];
 let selectedNavIndex : number = 0;
 
-const Navbar = (): JSX.Element => {
+const Navbar = ({activeEffect} : NavbarProps): JSX.Element => {
 
   const ulRef = useRef<HTMLUListElement>(null);
-  
+
   const initSectionInfo = () => {
 
     sections = sectionIds.map(sectionId => (document.querySelector(sectionId))) as HTMLElement[];
     navItems = sectionIds.map(sectionId => (document.querySelector(`[data-link="${sectionId}"]`))) as HTMLElement[];  
 
     return { sections, navItems };
+  }
+
+  const handleIntersect = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting && entry.intersectionRatio > 0) {
+        const index = sectionIds.indexOf(`#${entry.target.id}`);
+        
+        if (entry.boundingClientRect.y < 0) {
+          selectedNavIndex = (index < navItems.length - 1) ? index + 1: index;
+        } else {
+          selectedNavIndex = index - 1;
+        } 
+      }
+    });
   }
 
   const createObserver = (sections: HTMLElement []) => {
@@ -41,16 +58,24 @@ const Navbar = (): JSX.Element => {
     sections.forEach((section: HTMLElement) => observer.observe(section));  
   }
 
-  useEffect(() => {
+  const scrollTopByWheel = () => {
+    window.addEventListener('wheel', () => {
+
+      if (window.scrollY === 0) {
+        selectedNavIndex = 0;
+      } 
+      
+      activeEffect(navItems[selectedNavIndex]);
+    });
+  }
+
+  const downScrollNavStyle = () => {
     const nav = document.querySelector('nav') as HTMLElement;
     window.addEventListener('scroll', () => {
       navDarkStyle(nav);
       closeMenu();
     });
-
-    const { sections } = initSectionInfo();
-    createObserver(sections);
-  }, []);
+  }
 
   const scrollTo = (event: React.MouseEvent<HTMLUListElement>) => {
     const target = event.target as HTMLLIElement;
@@ -63,24 +88,22 @@ const Navbar = (): JSX.Element => {
     activeEffect(target);
     scrollIntoView(link);
   }
-  
-  const navDarkStyle = (nav: HTMLElement) => {
-    if (window.scrollY > 0) {
-      nav.classList.add(`${styles.dark}`)
-    } 
-    else {
-      nav.classList.remove(`${styles.dark}`)
-    }
-  }
 
   const openMenu = () => {
-    ulRef.current?.classList.toggle(`${styles.open}`);    
+    ulRef.current!.classList.toggle(`${styles.open}`);    
   }
 
   const closeMenu = () => {
-    ulRef.current?.classList.remove(`${styles.open}`);
+    ulRef.current!.classList.remove(`${styles.open}`);
   }
-  
+
+  useEffect(scrollTopByWheel, []);
+  useEffect(downScrollNavStyle, []);
+  useEffect(() => {
+    const { sections } = initSectionInfo();
+    createObserver(sections);
+  }, []);
+
   return (
     <nav id={styles.navbar}>
       <div className={styles.section}>
@@ -92,7 +115,7 @@ const Navbar = (): JSX.Element => {
           </a>
         </div>
         <ul ref={ulRef} className={styles.menu} onClick={scrollTo}>
-          <li className={`${styles.menu_item} ${styles.active}`} data-link="#intro">Home</li>
+          <li className={`${styles.menu_item} active`} data-link="#intro">Home</li>
           <li className={styles.menu_item} data-link="#about">About</li>
           <li className={styles.menu_item} data-link="#note">Note</li>
           <li className={styles.menu_item} data-link="#skills">Skills</li>
@@ -113,33 +136,13 @@ const scrollIntoView = (selector: string) => {
   element.scrollIntoView({behavior: 'smooth'});
 }
 
-const activeEffect = (target: HTMLElement) => {
-  const prevTarget = document.querySelector(`.${styles.active}`) as HTMLLIElement;
-  prevTarget.classList.remove(`${styles.active}`);
-  target.classList.add(`${styles.active}`);
-}
-
-const handleIntersect = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting && entry.intersectionRatio > 0) {
-      const index = sectionIds.indexOf(`#${entry.target.id}`);
-      
-      if (entry.boundingClientRect.y < 0) {
-        selectedNavIndex = (index < navItems.length - 1) ? index + 1: index;
-      } else {
-        selectedNavIndex = index - 1;
-      } 
-    }
-  });
-}
-
-window.addEventListener('wheel', () => {
-
-  if (window.scrollY === 0) {
-    selectedNavIndex = 0;
+const navDarkStyle = (nav: HTMLElement) => {
+  if (window.scrollY > 0) {
+    nav.classList.add(`${styles.dark}`)
   } 
-  
-  activeEffect(navItems[selectedNavIndex]);
-});
+  else {
+    nav.classList.remove(`${styles.dark}`)
+  }
+}
 
 export default Navbar;

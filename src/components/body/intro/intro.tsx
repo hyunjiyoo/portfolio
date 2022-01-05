@@ -1,10 +1,17 @@
 import styles from './intro.module.css';
 
-const Intro = (): JSX.Element => {
+interface IntroProps {
+  activeEffect: (target: HTMLElement) => void;
+}
+
+const Intro = ({activeEffect}: IntroProps): JSX.Element => {
 
   const moveContactSection = () => {
     const contact = document.querySelector('#contact') as HTMLElement;
+    const contactNavItem = document.querySelector(`[data-link="#contact"]`) as HTMLLIElement;
+
     contact.scrollIntoView({behavior: 'smooth'});
+    activeEffect(contactNavItem);
   }
 
   return (

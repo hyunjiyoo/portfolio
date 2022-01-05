@@ -28,11 +28,6 @@
   background: makerPinkHover;
 }
 
-.active {
-  border: 1px solid makerPink;
-  border-radius: 3px;
-}
-
 .contents {
   display: flex;
   margin: 1rem 0;
@@ -133,8 +128,8 @@
   }
 
   .contents_img_list img {
-    padding-left: 0;
-    padding-right: 0.5rem;
+    margin-left: 0;
+    margin-right: 0.5rem;
   }
 
   .tab_menu {

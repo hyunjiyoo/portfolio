@@ -66,11 +66,6 @@
   cursor: pointer;
 }
 
-.active {
-  border: 1px solid makerPink;
-  border-radius: 3px;
-}
-
 .button {
   display: none;
   position: absolute;

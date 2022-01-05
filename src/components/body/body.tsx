@@ -9,16 +9,20 @@ import Divider from './divider/divider';
 import Arrow from './arrow/arrow';
 import './shared/common.css';
 
-const Body = () => (
+interface BodyProps {
+  activeEffect: (target: HTMLElement) => void;
+}
+
+const Body = ({activeEffect}: BodyProps) => (
   <>
-    <Intro /><Divider gradient="asc" />
+    <Intro activeEffect={activeEffect} /><Divider gradient="asc" />
     <About /><Divider gradient="desc" />
     <Note /><Divider gradient="asc" />
     <Skills /><Divider gradient="desc" />
     <Work /><Divider gradient="asc" />
     <Testimonials /><Divider gradient="desc" />
     <Contact />
-    <Arrow />
+    <Arrow activeEffect={activeEffect} />
   </>
 );
 
