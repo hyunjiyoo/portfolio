@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faGem } from '@fortawesome/free-solid-svg-icons'
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import styles from './navbar.module.css';
 
 interface NavbarProps {
@@ -47,7 +47,7 @@ const Navbar = ({activeEffect} : NavbarProps): JSX.Element => {
     });
   }
 
-  const createObserver = (sections: HTMLElement []) => {
+  const createObserver = useCallback((sections: HTMLElement []) => {
     const options = {
       root: null,
       rootMargin: "0px",
@@ -56,7 +56,7 @@ const Navbar = ({activeEffect} : NavbarProps): JSX.Element => {
 
     const observer = new IntersectionObserver(handleIntersect, options);
     sections.forEach((section: HTMLElement) => observer.observe(section));  
-  }
+  }, []);
 
   const scrollTopByWheel = () => {
     window.addEventListener('wheel', () => {
@@ -97,12 +97,12 @@ const Navbar = ({activeEffect} : NavbarProps): JSX.Element => {
     ulRef.current!.classList.remove(`${styles.open}`);
   }
 
-  useEffect(scrollTopByWheel, []);
+  useEffect(scrollTopByWheel, [activeEffect]);
   useEffect(downScrollNavStyle, []);
   useEffect(() => {
     const { sections } = initSectionInfo();
     createObserver(sections);
-  }, []);
+  }, [createObserver]);
 
   return (
     <nav id={styles.navbar}>
