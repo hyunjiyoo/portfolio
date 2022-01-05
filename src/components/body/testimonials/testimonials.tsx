@@ -14,18 +14,18 @@ export type testimonial__info = {
 }
 
 const testimonials:Record<string, testimonial__info> = {
+  // '1': {
+  //   name: '',
+  //   img: 'https://picsum.photos/seed/paoppps/150/150',
+  //   text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptatibus, illo iure saepe, quaerat quia ab quam iusto error nesciunt architecto at libero explicabo odit. Temporibus voluptas ipsum omnis eius.',
+  //   company: '/images/kirbs_logo.png',
+  // },
   '1': {
-    name: '서상덕 이사',
-    img: 'https://picsum.photos/seed/paoppps/150/150',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptatibus, illo iure saepe, quaerat quia ab quam iusto error nesciunt architecto at libero explicabo odit. Temporibus voluptas ipsum omnis eius.',
-    company: '/images/kirbs_logo.png',
-  },
-  '2': {
     name: '유원상 검색엔진팀',
     img: '/images/testimonials/ws_profile.png',
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptatibus, illo iure saepe, quaerat quia ab quam iusto error nesciunt architecto at libero explicabo odit. Temporibus voluptas ipsum omnis eius.',
     company: '/images/testimonials/naver_logo.png',
-    position: 'R'
+    // position: 'L'
   },
 };
 
