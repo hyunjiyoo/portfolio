@@ -1,4 +1,5 @@
 @value makerLightGrey from '../../shared/colors.css';
+@value mobileWidth from '../../shared/size.css';
 
 .arrow {
   display: none;
@@ -12,4 +13,15 @@
 .arrow__icon {
   color: makerLightGrey;
   font-size: 3rem;
+}
+
+@media screen and (max-width: mobileWidth) {
+  .arrow {
+    right: 0.5rem;
+    bottom: 0.8rem;
+  }
+
+  .arrow__icon {
+    font-size: 2rem;
+  }
 }
