@@ -12,7 +12,7 @@ const Footer = (): JSX.Element => (
         <img className={styles.notion} src="https://bit.ly/3r19OMX" alt="" />
       </a>
     </div>
-    <p className={styles.text}>HyunjiYoo portfolio © 2021 | All rights reserved. </p>
+    <p className={styles.text}>HyunjiYoo portfolio © {new Date().getFullYear()} | All rights reserved. </p>
   </footer>
 );
 
