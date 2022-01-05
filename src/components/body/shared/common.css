@@ -1,10 +1,13 @@
-@value makerPurple, makerPink from '../../shared/colors.css';
-
 .container {
   width: 100%;
   max-width: 62rem;
   margin: auto;
   padding-bottom: 2rem;
+}
+
+.active {
+  border: 1px solid #FF6F91;
+  border-radius: 3px;
 }
 
 /* 스크롤 스타일링 */
