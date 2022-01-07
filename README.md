@@ -1,46 +1,113 @@
-# Getting Started with Create React App
+<div align="center">
+  <img 
+    src="https://user-images.githubusercontent.com/23496927/148518992-ae8372ed-41b3-4cba-b8bd-d8f1d18c0189.png" 
+    width="120px" height="120px" />
+  <h2><i>HYUNJI.YOO PORTFOLIO</i></h2>
+  <br />
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c730d3b1-2881-4489-8ed1-cad7c221ce74/deploy-status)](https://www.netlify.com/)
+[![React](https://img.shields.io/badge/React-17.0.2-blue)](https://reactjs.org/)
+[![Typescript](https://img.shields.io/badge/typescript-4.1.2-blue)](https://www.typescriptlang.org/)
+[![PostCSS](https://img.shields.io/badge/postcss-8.1.2-red)](https://postcss.org/)
+[![Package - Yarn](https://img.shields.io/badge/yarn->=1-yellowgreen?logo=yarn&logoColor=white)](https://classic.yarnpkg.com "Go to Yarn classic homepage")
 
-## Available Scripts
+## ✨ Demo 
+- [HYUNJI.YOO PORTFOLIO](https://hjyoo-portfolio.netlify.app/)
 
-In the project directory, you can run:
 
-### `yarn start`
+## 📝 Description
+제가 그동안 쌓아온 `기술 스택`, `경력`, `노션 노트`, `프로젝트`들을 한눈에 볼 수 있는 포트폴리오 홈페이지입니다.   
+이 포트폴리오는 현재까지의 제 모습을 담아냈으며, 앞으로도 계속 업데이트 될 예정입니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br />
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## ⚒️ Quick Start
+```sh
+$ git clone https://github.com/hyunjiyoo/portfolio.git
+```
+```sh
+$ npm install
+```
+```sh
+$ yarn start
+```
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 💡 Section List
+### 1. About
+ - 분야별 주요 기술과 경력에 대해 나타냅니다.
+### 2. Note
+- 노션 어플리케이션을 이용해 메모하며 공부하는 습관을 가지고 있습니다.
+### 3. Skills
+- 분야별 기술 수준을 나타냅니다.
+### 4. Work
+- 팀 프로젝트 및 개인 프로젝트를 꾸준히 해오고 있습니다.
+### 5. Testimonial
+- 함께 일을 했거나 스터디를 했던 사람들의 코멘트입니다.
+### 6. Contact
+- 궁금하신 점이나 문의사항을 이메일로 보낼 수 있습니다.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 👉 Structure
+```sh
+src
+├── components // Just component with styling
+│   ├── footer
+│   ├── navbar
+│   ├── shared // common color, size
+│   └── body
+│       ├── intro
+│       ├── about
+│       ├── note
+│       ├── ...
+│       └── shared // title component, common body style
+├── controller // note, title controller
+└── db // data type, file database
+    ├── dataStructure.ts
+    ├── title.ts
+    ├── note.ts
+    └── ...
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🍭 Wireframe 
+<div>
+  <img 
+    src="https://user-images.githubusercontent.com/23496927/148517481-d081c447-b1e1-48b8-8c5a-0e3dbb4be181.jpeg" 
+    width="20%" height="300px" />
+    <img 
+    src="https://user-images.githubusercontent.com/23496927/148517492-2c01d49c-67a3-49fc-8954-8ede4c150495.jpeg" 
+    width="20%" height="300px" />
+    <img 
+    src="https://user-images.githubusercontent.com/23496927/148517497-5058fc24-f7bf-4bc9-bf4d-826bb59145fc.jpeg" 
+    width="20%" height="300px" />
+</div>
 
-### `yarn eject`
+## 🗓 Period
+- 2021.12.01 ~ 2022.01.05
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🔖 Language
+<img 
+  src="./public/images/project/icon/react.png" 
+  width="60px" 
+  height="60px" 
+  title="React_Logo"/>
+<img 
+  src="./public/images/project/icon/typescript.png" 
+  width="60px" 
+  height="60px" 
+  styles="margin: 0 30px;"
+  title="Typescript_Logo"/>
+<img 
+  src="./public/images/project/icon/postcss.png" 
+  width="60px" 
+  height="60px" 
+  title="PostCSS_Logo"/>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🚀 Deploy
+<img 
+  src="https://user-images.githubusercontent.com/23496927/148517276-c7fe849e-0921-4a75-88f8-959e2b7a8328.jpeg" 
+  width="30%" 
+  title="Netlify_Logo"/>
