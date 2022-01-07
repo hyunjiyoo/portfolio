@@ -10,13 +10,12 @@ export const testimonials:Record<string, testimonial> = {
     좋은 개발자들과 함께한다면 회사에 큰 기여를 할 친구라고 생각되어 이렇게 추천사를 작성합니다.`,
     company: '/images/testimonials/naver_logo.png',
   },
-  // '2': {
-  //   name: '임세윤',
-  //   part: '데이터정보플랫폼팀',
-  //   img: '/images/testimonials/ws_profile.png',
-  //   text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus magnam perspiciatis excepturi provident illum et autem quidem esse, consequuntur facilis, ab unde. Magnam quidem qui aliquid ad perspiciatis, illum omnis.',
-  //   company: '/images/testimonials/kakao_logo.png',
-  //   position: 'R',
-  // },
-
+  '2': {
+    name: '임세윤',
+    part: '데이터정보플랫폼팀',
+    img: '/images/testimonials/sw_profile.png',
+    text: '현지님은 성실합니다. 자신이 정한 장기 목표를 미루거나 포기하지 않고 성실하게 달성해 나갑니다. 다음으로, 실천력이 강합니다. 본인이 흥미를 느끼는 분야가 있다면, 단순한 호기심에 머무르지 않고 배우고 익혀 결과물을 만들어 냅니다. 마지막으로, 기록을 잘 합니다. 사소한 내용부터 중요한 논의 사항 까지 항상 꼼꼼하게 정리하고 기록합니다. 이러한 현지님의 강점은 개발자로 성장해 나아가기에 큰 도움이 될 것이라 생각합니다.',
+    company: '/images/testimonials/kakao_logo.png',
+    position: 'R',
+  }
 };
