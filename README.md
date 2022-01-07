@@ -20,8 +20,6 @@
 제가 그동안 쌓아온 `기술 스택`, `경력`, `노션 노트`, `프로젝트`들을 한눈에 볼 수 있는 포트폴리오 홈페이지입니다.   
 이 포트폴리오는 현재까지의 제 모습을 담아냈으며, 앞으로도 계속 업데이트 될 예정입니다.
 
-<br />
-
 ## ⚒️ Quick Start
 ```sh
 $ git clone https://github.com/hyunjiyoo/portfolio.git
@@ -32,7 +30,6 @@ $ npm install
 ```sh
 $ yarn start
 ```
-
 
 ## 💡 Section List
 ### 1. About
@@ -89,22 +86,14 @@ src
 
 ## 🔖 Language
 <img 
-  src="./public/images/project/icon/react.png" 
-  width="60px" 
-  height="60px" 
-  title="React_Logo"/>
+  src="https://user-images.githubusercontent.com/23496927/148519290-7ba474cb-a1d3-49fc-9da9-ede3555130eb.png" 
+  width="60px" height="60px" />
 <img 
-  src="./public/images/project/icon/typescript.png" 
-  width="60px" 
-  height="60px" 
-  styles="margin: 0 30px;"
-  title="Typescript_Logo"/>
+  src="https://user-images.githubusercontent.com/23496927/148519299-97198ced-65ad-4fc7-94c2-ec706404901c.png" 
+  width="60px" height="60px" />
 <img 
-  src="./public/images/project/icon/postcss.png" 
-  width="60px" 
-  height="60px" 
-  title="PostCSS_Logo"/>
-
+  src="https://user-images.githubusercontent.com/23496927/148519305-e4e8a8f4-bdf0-423c-9b51-d60370d0575c.png" 
+  width="60px" height="60px" />
 
 ## 🚀 Deploy
 <img 
