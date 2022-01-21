@@ -33,6 +33,7 @@
   line-height: 1.5rem;
   letter-spacing: 0.06rem;
   text-align: justify;
+  white-space: pre-line;
 }
 
 .name {
