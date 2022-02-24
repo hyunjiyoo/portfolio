@@ -1,5 +1,5 @@
 @value makerWhite, makerBlack, makerPurple from '../../shared/colors.css';
-@value tabletWidth from '../../shared/size.css';
+@value tabletWidth, mobileWidth from '../../shared/size.css';
 
 .testimonial {
   display: flex;
@@ -69,5 +69,18 @@
 
   .text {
     margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: mobileWidth) {
+  .tag {
+    flex-direction: column;
+  }
+
+  .name {
+    margin: 0.5em 0;
+  }
+  .part {
+    margin-left: 0;
   }
 }

@@ -2,8 +2,8 @@ import { testimonial } from "./dataStructure";
 
 export const testimonials:Record<string, testimonial> = {
   '1': {
-    name: '서상덕',
-    part: '이사',
+    name: '서상덕 이사',
+    part: '',
     img: '/images/testimonials/sd_profile.png',
     text: `유현지 씨를 소프트웨어 엔지니어로 추천합니다. 저는 그와 2년간 같이 일한 경험이 있습니다.
     
