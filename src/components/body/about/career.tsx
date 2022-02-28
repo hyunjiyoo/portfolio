@@ -25,7 +25,7 @@ const Career = () => {
       <a 
         ref={aRef}
         className={styles.icon} 
-        href="https://hjyooo.notion.site/3635ae9f47f04b57ba4731d828de225d" 
+        href="https://www.notion.so/hjyooo/b77e2ecdc3d64b9ba673acec984a1815" 
         target="_blank" 
         rel="noreferrer"
       >
