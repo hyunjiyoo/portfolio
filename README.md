@@ -6,7 +6,7 @@
   <br />
 </div>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d749c4c9-a977-4a11-a339-22cdaec3390e/deploy-status)](https://www.netlify.com/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/53133e1b-86f5-45e5-945c-bb1760da5859/deploy-status)](https://www.netlify.com/)
 [![React](https://img.shields.io/badge/React-17.0.2-blue)](https://reactjs.org/)
 [![Typescript](https://img.shields.io/badge/typescript-4.1.2-blue)](https://www.typescriptlang.org/)
 [![PostCSS](https://img.shields.io/badge/postcss-8.1.2-red)](https://postcss.org/)
