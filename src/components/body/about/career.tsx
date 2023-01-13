@@ -1,38 +1,43 @@
-import { faLink } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useRef } from 'react';
-import styles from './career.module.css';
+import { useRef } from "react";
+import styles from "./career.module.css";
+import { BiLinkExternal } from 'react-icons/bi';
 
 const Career = () => {
-
   const aRef = useRef<HTMLAnchorElement>(null);
 
-  const clickLink = () => {
+  const gotoResume = () => {
     const link = aRef.current as HTMLElement;
     link.click();
   }
 
   return (
-    <div className={styles.container} onClick={clickLink}>
-      <div className={styles.title}>
-        <span className={styles.decoration}>✔️</span>
-        <img className={styles.logo} src="/images/kirbs_logo.png" alt="kirbs__logo" />
+    <div className={styles.container}>
+      <div className={styles.logo__wrapper}>
+        <img
+          className={styles.logo}
+          src="/images/career/kirbs_logo.png"
+          alt="kirbs__logo"
+        />
+        <img
+          className={styles.logo}
+          src="/images/career/yogiyo_logo.png"
+          alt="yogiyo__logo"
+        />
       </div>
-      <div className={styles.contents}>
-        <p>[기간] 2019.08 ~ 2021.01 (약 1년 6개월)</p>
-        <p>[업무] 기존 시스템 유지보수 및 신규 프로젝트 개발</p>
+      <div className={styles.resume}>
+        <p onClick={gotoResume}>Go to resume</p>
+        <a
+          ref={aRef}
+          className={styles.icon}
+          href="https://bit.ly/3VxlCE6"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <BiLinkExternal className={styles.icon__link} />
+        </a>
       </div>
-      <a 
-        ref={aRef}
-        className={styles.icon} 
-        href="https://bit.ly/3HSZmNV" 
-        target="_blank" 
-        rel="noreferrer"
-      >
-        <FontAwesomeIcon className={styles.icon__link} icon={faLink} />
-      </a>
     </div>
-  )
+  );
 };
 
-export default Career
+export default Career;
