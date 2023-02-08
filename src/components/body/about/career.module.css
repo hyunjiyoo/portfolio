@@ -85,4 +85,9 @@
     width: 2em;
     height: 2em;
   }
+
+  .logo {
+    height: 18px;
+    margin: 0;
+  }
 }
