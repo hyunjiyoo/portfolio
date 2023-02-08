@@ -2,6 +2,15 @@ import { WorkType } from "./dataStructure";
 
 export const works : WorkType[] = [
   {
+    title: 'BALANCED LUNCH (B-LUNCH)',
+    description: '나만의 도시락을 만들어 주는 쇼핑몰입니다.',
+    projectUrl: 'https://github.com/hyunjiyoo/b-lunch',
+    imgUrl: '/images/project/project-6.png',
+    imgAlt: 'portfolio',
+    skillset: ['react', 'typescript', 'tailwind'],
+    color: 'purple'
+  },
+  {
     title: 'HYUNJI.YOO PORTFOLIO',
     description: '레이아웃 디자인부터 기획, 개발을 하여 만든 포트폴리오입니다.',
     projectUrl: 'https://github.com/hyunjiyoo/portfolio',
