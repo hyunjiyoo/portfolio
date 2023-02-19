@@ -2,6 +2,24 @@ import { testimonial } from "./dataStructure";
 
 export const testimonials:Record<string, testimonial> = {
   '1': {
+    name: '강푸름',
+    part: 'FE Chapter',
+    img: '/images/testimonials/pr_profile.png',
+    text: `현지님을 동료 엔지니어로써 추천합니다.
+    자신이 맡은 일뿐만 아니라 그 외적인 일에도 항상 관심과 추진력을 가지고 수행해냅니다.
+    
+    현지님은 문서 정리와 기록을 잘합니다.
+    기존에 작성되어 있던 팀 내 위키 문서를 다른 사람들이 쉽게 이해할 수 있도록 직관적으로 구조를 개선하였고 그 결과 누구나 쉽게 관리할 수 있게 되었습니다. 기존 팀원들뿐 아니라 신규 입사자들이 업무를 파악하는 데에 많은 시간이 단축될 수 있었습니다.
+    
+    또한 배려심이 깊고 다른 동료들과의 관계가 좋습니다.
+    Frontend 엔지니어는 특히 다른 직군들 과의 커뮤니케이션이 중요한데 의사소통 능력이 뛰어나 큰 문제 없이 협업을 잘 해냅니다. 
+    
+    추진력뿐만 아니라 배려심 깊은 성격은 주변 사람들에게 긍정적인 업무 환경을 만들어 주어 시간이 지나면 팀원들을 이끄는 좋은 리더가 될 수 있을 거라 기대합니다.
+    
+    결론적으로 뛰어난 협업 능력, 리더십 자질, 배려심을 갖춘 엔지니어로써 어느 조직에서도 필요한 동료가 될 것입니다.`,
+    company: '/images/career/yogiyo_logo.png'
+  },
+  '2': {
     name: '서상덕 이사',
     part: '',
     img: '/images/testimonials/sd_profile.png',
@@ -19,9 +37,10 @@ export const testimonials:Record<string, testimonial> = {
     그는 정리를 잘합니다. 문서나 생각을 정리하는 능력이 뛰어납니다. 팀에서 논의된 내용을 정리하여 말이나 문서로 작성하여 전달하는 능력이 좋으며 작은 부분도 놓치지 않는 세밀한 능력을 갖추고 있습니다. 또한 표현력도 좋아서 FrontEnd 엔지니어로도 훌륭한 재목이라 생각합니다.
     
     아직은 경험이 적어서 실수도 있었지만, 그는 재능 있고 성실한 소프트웨어 엔지니어이기에, 우리는 그와 같이 일하고 싶었습니다. 그러나 그가 하고 싶은 일이 우리와 조금은 다르기에 기꺼이 이별하였습니다. 만약 그에게 기회가 주어진다면 그가 가지고 있는 역량으로 충분히 잘 해낼 거라 믿어 의심치 않기에 강력히 추천합니다. `,
-    company: '/images/career/kirbs_logo.png'
+    company: '/images/career/kirbs_logo.png',
+    position: 'R',
   },
-  '2': {
+  '3': {
     name: '유원상',
     part: '검색엔진팀',
     img: '/images/testimonials/ws_profile.png',
@@ -31,9 +50,8 @@ export const testimonials:Record<string, testimonial> = {
     
     좋은 개발자들과 함께한다면 회사에 큰 기여를 할 친구라고 생각되어 이렇게 추천사를 작성합니다.`,
     company: '/images/testimonials/naver_logo.png',
-    position: 'R',
   },
-  '3': {
+  '4': {
     name: '임세윤',
     part: '데이터정보플랫폼팀',
     img: '/images/testimonials/sw_profile.png',
@@ -43,5 +61,6 @@ export const testimonials:Record<string, testimonial> = {
     
     마지막으로, 기록을 잘 합니다. 사소한 내용부터 중요한 논의 사항 까지 항상 꼼꼼하게 정리하고 기록합니다. 이러한 현지님의 강점은 개발자로 성장해 나아가기에 큰 도움이 될 것이라 생각합니다.`,
     company: '/images/testimonials/kakao_logo.png',
+    position: 'R',
   }
 };
