@@ -20,6 +20,19 @@ export const testimonials:Record<string, testimonial> = {
     company: '/images/career/yogiyo_logo.png'
   },
   '2': {
+    name: '김하진',
+    part: 'FE Chapter',
+    img: '/images/testimonials/hj_profile.png',
+    text: `현지님은 책임감있고, 성실합니다.
+    저와 함께 스터디를 진행했는데, 현지님은 스터디 목표를 정확하게 설정하고, 계획을 꼼꼼하게 세워주었습니다. 그리고 함께 완주할 수 있도록 책임감 있게 리더로서 이끌어주었습니다.
+    
+    뿐만아니라 궁금한 것은 깊이 파고들고, 알게된 지식을 적극적으로 공유합니다. 스터디 중 모르는 내용이 나와서 토론하다 잘 모르는 상태로 마친 적이 있는데, 다음날 현지님이 제대로 된 내용을 찾아서 공유해주었습니다. 현지님 덕분에 긍정적인 자극을 많이 받게 됩니다.
+    
+    이런 모습을 가진 현지님은 좋은 동료, 좋은 개발자가 될 것이라 생각합니다.`,
+    company: '/images/career/yogiyo_logo.png',
+    position: 'R',
+  },
+  '3': {
     name: '서상덕 이사',
     part: '',
     img: '/images/testimonials/sd_profile.png',
@@ -38,9 +51,8 @@ export const testimonials:Record<string, testimonial> = {
     
     아직은 경험이 적어서 실수도 있었지만, 그는 재능 있고 성실한 소프트웨어 엔지니어이기에, 우리는 그와 같이 일하고 싶었습니다. 그러나 그가 하고 싶은 일이 우리와 조금은 다르기에 기꺼이 이별하였습니다. 만약 그에게 기회가 주어진다면 그가 가지고 있는 역량으로 충분히 잘 해낼 거라 믿어 의심치 않기에 강력히 추천합니다. `,
     company: '/images/career/kirbs_logo.png',
-    position: 'R',
   },
-  '3': {
+  '4': {
     name: '유원상',
     part: '검색엔진팀',
     img: '/images/testimonials/ws_profile.png',
@@ -50,8 +62,9 @@ export const testimonials:Record<string, testimonial> = {
     
     좋은 개발자들과 함께한다면 회사에 큰 기여를 할 친구라고 생각되어 이렇게 추천사를 작성합니다.`,
     company: '/images/testimonials/naver_logo.png',
+    position: 'R',
   },
-  '4': {
+  '5': {
     name: '임세윤',
     part: '데이터정보플랫폼팀',
     img: '/images/testimonials/sw_profile.png',
@@ -61,6 +74,5 @@ export const testimonials:Record<string, testimonial> = {
     
     마지막으로, 기록을 잘 합니다. 사소한 내용부터 중요한 논의 사항 까지 항상 꼼꼼하게 정리하고 기록합니다. 이러한 현지님의 강점은 개발자로 성장해 나아가기에 큰 도움이 될 것이라 생각합니다.`,
     company: '/images/testimonials/kakao_logo.png',
-    position: 'R',
   }
 };
