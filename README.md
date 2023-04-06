@@ -10,43 +10,59 @@
 [![React](https://img.shields.io/badge/React-17.0.2-blue)](https://reactjs.org/)
 [![Typescript](https://img.shields.io/badge/typescript-4.1.2-blue)](https://www.typescriptlang.org/)
 [![PostCSS](https://img.shields.io/badge/postcss-8.1.2-red)](https://postcss.org/)
-[![Package - Yarn](https://img.shields.io/badge/yarn->=1-yellowgreen?logo=yarn&logoColor=white)](https://classic.yarnpkg.com "Go to Yarn classic homepage")
+[![Package - Yarn](https://img.shields.io/badge/yarn->=1-yellowgreen?logo=yarn&logoColor=white)](https://classic.yarnpkg.com 'Go to Yarn classic homepage')
 
-## ✨ Demo 
+## ✨ Demo
+
 - [HYUNJI.YOO PORTFOLIO](https://hjyoo-portfolio.netlify.app/)
 
-
 ## 📝 Description
-제가 그동안 쌓아온 `기술 스택`, `경력`, `노션 노트`, `프로젝트`들을 한눈에 볼 수 있는 포트폴리오 홈페이지입니다.   
+
+제가 그동안 쌓아온 `기술 스택`, `경력`, `노션 노트`, `프로젝트`들을 한눈에 볼 수 있는 포트폴리오 홈페이지입니다.  
 이 포트폴리오는 현재까지의 제 모습을 담아냈으며, 앞으로도 계속 업데이트 될 예정입니다.
 
 ## ⚒️ Quick Start
+
 ```sh
 $ git clone https://github.com/hyunjiyoo/portfolio.git
 ```
+
 ```sh
-$ npm install
+$ yarn install
 ```
+
 ```sh
 $ yarn start
 ```
 
 ## 💡 Section List
+
 ### 1. About
- - 분야별 주요 기술과 경력에 대해 나타냅니다.
+
+- 분야별 주요 기술과 경력에 대해 나타냅니다.
+
 ### 2. Note
+
 - 노션 어플리케이션을 이용해 메모하며 공부하는 습관을 가지고 있습니다.
+
 ### 3. Skills
+
 - 분야별 기술 수준을 나타냅니다.
+
 ### 4. Work
+
 - 팀 프로젝트 및 개인 프로젝트를 꾸준히 해오고 있습니다.
+
 ### 5. Testimonial
+
 - 함께 일을 했거나 스터디를 했던 사람들의 코멘트입니다.
+
 ### 6. Contact
+
 - 궁금하신 점이나 문의사항을 이메일로 보낼 수 있습니다.
 
-
 ## 👉 Structure
+
 ```sh
 src
 ├── components // Just component with styling
@@ -67,8 +83,8 @@ src
     └── ...
 ```
 
+## 🍭 Wireframe
 
-## 🍭 Wireframe 
 <div>
   <img 
     src="https://user-images.githubusercontent.com/23496927/148517481-d081c447-b1e1-48b8-8c5a-0e3dbb4be181.jpeg" 
@@ -82,9 +98,11 @@ src
 </div>
 
 ## 🗓 Period
+
 - 2021.12.01 ~ 2022.01.05
 
 ## 🔖 Language
+
 <img 
   src="https://user-images.githubusercontent.com/23496927/148519290-7ba474cb-a1d3-49fc-9da9-ede3555130eb.png" 
   width="60px" height="60px" />
@@ -96,6 +114,7 @@ src
   width="60px" height="60px" />
 
 ## 🚀 Deploy
+
 <img 
   src="https://user-images.githubusercontent.com/23496927/148517276-c7fe849e-0921-4a75-88f8-959e2b7a8328.jpeg" 
   width="30%" 
