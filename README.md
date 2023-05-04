@@ -16,7 +16,9 @@
 
 ## ✨ Demo
 
-- https://hjyoo-portfolio.vercel.app/
+https://hjyoo-portfolio.vercel.app/
+
+<img src="https://res.cloudinary.com/dg0bagjoq/image/upload/v1683188046/iysfxw01vp8bm7eqspiv.png"  height="300px" alt="preview" />
 
 ## 📝 Description
 
