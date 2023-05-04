@@ -6,15 +6,15 @@
   <br />
 </div>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/53133e1b-86f5-45e5-945c-bb1760da5859/deploy-status)](https://www.netlify.com/)
-[![React](https://img.shields.io/badge/React-17.0.2-blue)](https://reactjs.org/)
-[![Typescript](https://img.shields.io/badge/typescript-4.1.2-blue)](https://www.typescriptlang.org/)
-[![PostCSS](https://img.shields.io/badge/postcss-8.1.2-red)](https://postcss.org/)
-[![Package - Yarn](https://img.shields.io/badge/yarn->=1-yellowgreen?logo=yarn&logoColor=white)](https://classic.yarnpkg.com 'Go to Yarn classic homepage')
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=black"/>
+<img src="https://img.shields.io/badge/Typescript-3178C6?style=flat-square&logo=Typescript&logoColor=white"/>
+<img src="https://img.shields.io/badge/PostCSS-DD3A0B?style=flat-square&logo=PostCSS&logoColor=white"/>
+<img src="https://img.shields.io/badge/Yarn-2B8EBB?style=flat-square&logo=Yarn&logoColor=white"/>
+<img src="https://img.shields.io/badge/EmailJS-FCA253?style=flat-square&logo=emailjs&logoColor=white"/>
 
 ## ✨ Demo
 
-- [HYUNJI.YOO PORTFOLIO](https://hjyoo-portfolio.netlify.app/)
+- https://hjyoo-portfolio.vercel.app/
 
 ## 📝 Description
 
@@ -25,13 +25,7 @@
 
 ```sh
 $ git clone https://github.com/hyunjiyoo/portfolio.git
-```
-
-```sh
 $ yarn install
-```
-
-```sh
 $ yarn start
 ```
 
@@ -116,6 +110,6 @@ src
 ## 🚀 Deploy
 
 <img 
-  src="https://user-images.githubusercontent.com/23496927/148517276-c7fe849e-0921-4a75-88f8-959e2b7a8328.jpeg" 
+  src="https://res.cloudinary.com/dg0bagjoq/image/upload/v1683184442/bjy6fkweskay3lzmovak.png" 
   width="30%" 
-  title="Netlify_Logo"/>
+  alt="Vercel_Logo"/>
