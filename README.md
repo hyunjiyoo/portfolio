@@ -10,6 +10,7 @@
   <img src="https://img.shields.io/badge/Typescript-3178C6?style=flat-square&logo=Typescript&logoColor=white"/>
   <img src="https://img.shields.io/badge/PostCSS-DD3A0B?style=flat-square&logo=PostCSS&logoColor=white"/>
   <img src="https://img.shields.io/badge/Yarn-2B8EBB?style=flat-square&logo=Yarn&logoColor=white"/>
+  <img src="https://img.shields.io/badge/React Icons-E91E62?style=flat-square&logo=React&logoColor=white"/>
   <img src="https://img.shields.io/badge/EmailJS-FCA253?style=flat-square&logo=emailjs&logoColor=white"/>
 </div>
 
