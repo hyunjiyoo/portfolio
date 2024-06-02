@@ -1,6 +1,6 @@
-import { WorkType } from "./dataStructure";
+import { WorkType } from './dataStructure';
 
-export const works : WorkType[] = [
+export const works: WorkType[] = [
   {
     title: 'BALANCED LUNCH',
     description: '나만의 도시락을 만들어 주는 쇼핑몰입니다.',
@@ -8,7 +8,7 @@ export const works : WorkType[] = [
     imgUrl: '/images/project/project-6.png',
     imgAlt: 'portfolio',
     skillset: ['react', 'typescript', 'tailwind'],
-    color: 'purple'
+    color: 'purple',
   },
   {
     title: 'HYUNJI.YOO PORTFOLIO',
@@ -17,7 +17,7 @@ export const works : WorkType[] = [
     imgUrl: '/images/project/project-1.png',
     imgAlt: 'portfolio',
     skillset: ['react', 'typescript', 'postcss'],
-    color: 'yellow'
+    color: 'yellow',
   },
   {
     title: 'MOTION PROJECT',
@@ -26,16 +26,7 @@ export const works : WorkType[] = [
     imgUrl: '/images/project/project-2.png',
     imgAlt: 'portfolio',
     skillset: ['react', 'javascript', 'postcss'],
-    color: 'purple'
-  },
-  {
-    title: 'JETFAN PROJECT',
-    description: '제트팬 관리 시스템은 터널 내 제트팬의 상태를 관리해주는 안드로이드용 웹앱입니다.',
-    projectUrl: 'https://github.com/hyunjiyoo/JetFan-project',
-    imgUrl: '/images/project/project-3.png',
-    skillset: ['javascript', 'python', 'less', 'mysql'],
-    imgAlt: 'portfolio',
-    color: 'yellow'
+    color: 'purple',
   },
   {
     title: 'YOUTUBE CRAWLING',
@@ -44,7 +35,7 @@ export const works : WorkType[] = [
     imgUrl: '/images/project/project-4.png',
     skillset: ['python'],
     imgAlt: 'portfolio',
-    color: 'purple'
+    color: 'purple',
   },
   {
     title: 'PSEEK PROJECT',
@@ -53,6 +44,6 @@ export const works : WorkType[] = [
     imgUrl: '/images/project/project-5.png',
     skillset: ['nodejs', 'ejs', 'mysql'],
     imgAlt: 'portfolio',
-    color: 'yellow'
-  }
+    color: 'yellow',
+  },
 ];
