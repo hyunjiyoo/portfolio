@@ -11,7 +11,7 @@ const Testimonials = () => (
     <Title id={SECTION_KEY} />
     <div className={`container ${styles.testimonialset}`}>
       {
-        Object.keys(testimonials).map((key: string) => (
+        Object.keys(testimonials).reverse().map((key: string) => (
           <Testimonial key={key} person={testimonials[key]} />
         ))
       }
