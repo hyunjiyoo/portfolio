@@ -75,4 +75,17 @@ export const testimonials:Record<string, testimonial> = {
     결론적으로 뛰어난 협업 능력, 리더십 자질, 배려심을 갖춘 엔지니어로써 어느 조직에서도 필요한 동료가 될 것입니다.`,
     company: '/images/career/yogiyo_logo.png'
   },
+  '6': {
+    name: '최현주',
+    part: '탐지프로덕트개발팀',
+    img: '/images/testimonials/hju_profile.png',
+    text: `현지님이랑 같이 일하면서 피드백을 빠르게 반영하는 점이 인상적이었습니다. 코드 리뷰 과정 중에 피드백 차원으로 남긴 코멘트는 모두 반영했습니다. 
+    
+    커뮤니케이션에도 강점이 있어 같은 직군 뿐만 아니라 기획, 백엔드 등 다양한 다른 직군과 협업하여 프로젝트를 완수하는 등 다양한 성과를 만들어 냈습니다.
+
+    기술에 대한 호기심이 많아 개인을 넘어 조직 차원에서도 개발 스터디를 이끈 경험도 있습니다. 이를 통해 조직 차원에서도 긍정적인 분위기를 만들어 냈습니다.
+    `,
+    company: '/images/career/nexon_logo.png',
+    position: 'R',
+  }
 };
