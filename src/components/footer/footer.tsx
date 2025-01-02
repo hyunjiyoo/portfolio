@@ -7,7 +7,7 @@ const Footer = (): JSX.Element => (
       <a href='https://github.com/hyunjiyoo' target='blank'>
         <BsGithub className={styles.github} />
       </a>
-      <a href='https://bit.ly/32GAoT6' target='blank'>
+      <a href='https://shorturl.at/yaDQ1' target='blank'>
         <img className={styles.notion} src='https://bit.ly/3r19OMX' alt='' />
       </a>
     </div>
