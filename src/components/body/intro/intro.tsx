@@ -17,11 +17,10 @@ const Intro = ({activeEffect}: IntroProps): JSX.Element => {
   return (
     <section id="intro" className={`${styles.intro} container`}>
       <div className={styles.contents}>
-        <span className={styles.span}>___ Hello Hyunji World!</span>
+        <span className={styles.span}>___ Hello Hyunji</span>
         <h1 className={styles.title}>
-          FRONT-END<br/>
-          DEVELOPER,<br/>
-          who have good habits.
+          Frontend Developer, <br />
+          Growing Through Habitual Effort
         </h1>
         <button className={styles.button} onClick={moveContactSection}>CONTACT ME</button>
       </div>
