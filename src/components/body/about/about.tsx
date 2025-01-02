@@ -12,7 +12,7 @@ const About = (): JSX.Element => (
       <div className={styles.items}>
         <div className={styles.item}>
           <div id={styles.frontend} className={styles.subject}>FRONT END</div>
-          <p className={styles.description}>HTML, CSS, Javascript, React, Typescript</p>
+          <p className={styles.description}>React, Vue, Typescript</p>
         </div>
         <div className={styles.item}>
           <div id={styles.infra} className={styles.subject}>INFRA</div>
